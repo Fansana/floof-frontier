@@ -227,6 +227,7 @@ flavor-complex-tea = like tea
 flavor-complex-ice = like ice
 flavor-complex-mopwata = like stagnant, dirty water
 flavor-complex-gin = like fermented grain with juniper berries
+flavor-complex-nikkonectar = like creamy blueberries.
 
 ## Cocktails
 flavor-complex-arnold-palmer = like a hole-in-one
