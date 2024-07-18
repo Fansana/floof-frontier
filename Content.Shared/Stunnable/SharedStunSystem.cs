@@ -16,6 +16,7 @@ using Content.Shared.StatusEffect;
 using Content.Shared.Throwing;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Containers;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Physics.Systems;
@@ -32,6 +33,8 @@ public abstract class SharedStunSystem : EntitySystem
     [Dependency] private readonly EntityWhitelistSystem _entityWhitelist = default!;
     [Dependency] private readonly StandingStateSystem _standingState = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
+    [Dependency] private readonly SharedLayingDownSystem _layingDown = default!; // EE
+    [Dependency] private readonly SharedContainerSystem _container = default!; // EE
 
     /// <summary>
     /// Friction modifier for knocked down players.
@@ -43,7 +46,7 @@ public abstract class SharedStunSystem : EntitySystem
     {
         SubscribeLocalEvent<KnockedDownComponent, ComponentInit>(OnKnockInit);
         SubscribeLocalEvent<KnockedDownComponent, ComponentShutdown>(OnKnockShutdown);
-        SubscribeLocalEvent<KnockedDownComponent, StandAttemptEvent>(OnStandAttempt);
+        SubscribeLocalEvent<KnockedDownComponent, StandingStateSystem.StandAttemptEvent>(OnStandAttempt);
 
         SubscribeLocalEvent<SlowedDownComponent, ComponentInit>(OnSlowInit);
         SubscribeLocalEvent<SlowedDownComponent, ComponentShutdown>(OnSlowRemove);
@@ -136,15 +139,28 @@ public abstract class SharedStunSystem : EntitySystem
 
     private void OnKnockInit(EntityUid uid, KnockedDownComponent component, ComponentInit args)
     {
-        _standingState.Down(uid);
+        // EE changes
+        RaiseNetworkEvent(new CheckAutoGetUpEvent(GetNetEntity(uid)));
+        _layingDown.TryLieDown(uid, null, null, DropHeldItemsBehavior.DropIfStanding);
     }
 
     private void OnKnockShutdown(EntityUid uid, KnockedDownComponent component, ComponentShutdown args)
     {
-        _standingState.Stand(uid);
+        // EE changes
+        if (!TryComp(uid, out StandingStateComponent? standing))
+            return;
+
+        if (TryComp(uid, out LayingDownComponent? layingDown))
+        {
+            if (layingDown.AutoGetUp && !_container.IsEntityInContainer(uid))
+                _layingDown.TryStandUp(uid, layingDown);
+            return;
+        }
+
+        _standingState.Stand(uid, standing);
     }
 
-    private void OnStandAttempt(EntityUid uid, KnockedDownComponent component, StandAttemptEvent args)
+    private void OnStandAttempt(EntityUid uid, KnockedDownComponent component, StandingStateSystem.StandAttemptEvent args)
     {
         if (component.LifeStage <= ComponentLifeStage.Running)
             args.Cancel();
