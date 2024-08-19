@@ -10,6 +10,12 @@
   price: 100
   equipment:
     neck: ClothingNeckCollarBlack
+
+- type: loadout
+  id: FloofClothingPinkCollar
+  price: 100
+  equipment:
+    neck: ClothingNeckCollarPink
    
 #T1   
 - type: loadout
@@ -71,3 +77,4 @@
   id: FloofClothingCollarSyndi # TODO finish integration - PirateNeck? It's commented out as-is... not sure if it makes sense to go in any other loadouts.
   equipment:
     neck: ClothingNeckCollarSyndi
+   
