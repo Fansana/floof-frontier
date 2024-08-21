@@ -16,6 +16,7 @@ using Content.Shared.Station;
 using Robust.Shared.Console;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Content.Server.Silicon.IPC;
 
 namespace Content.Server.Administration.Commands
 {
@@ -163,7 +164,7 @@ namespace Content.Server.Administration.Commands
                 var stationSpawning = entityManager.System<SharedStationSpawningSystem>();
                 stationSpawning.EquipRoleLoadout(target, roleLoadout, jobProto);
             }
-
+            InternalEncryptionKeySpawner.TryInsertEncryptionKey(target, startingGear, entityManager, profile);
             return true;
         }
     }

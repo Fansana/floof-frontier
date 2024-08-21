@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "copyright": "Sprites from Paradise Station (https://github.com/ParadiseSS13/Paradise). Edited by Timemaster99",
   "license": "CC-BY-SA-3.0",
   "copyright": "drawn by Pigeonpeas",
   "size": {
@@ -11,7 +12,15 @@
       "name": "icon"
     },
     {
-      "name": "equipped-NECK",
+      "name": "equipped-NECK-1",
+      "directions": 4
+    },
+	{
+      "name": "head-2",
+      "directions": 4
+    },
+	{
+      "name": "head-3",
       "directions": 4
     }
   ]

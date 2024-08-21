@@ -137,3 +137,4 @@
       whitelist:
         components:
         - SecretStash
+    - type: Organ # Estacao Pirata - IPCs

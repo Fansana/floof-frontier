@@ -12,5 +12,6 @@ species-name-vox = Vox
 species-name-gingerbread = delicious baked good
 
 ## Misc species things
+species-name-ipc = IPC
 
 snail-hurt-by-salt-popup = The salty solution burns like acid!

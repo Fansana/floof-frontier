@@ -17,6 +17,7 @@
     - Felinid # DeltaV
     - Oni # DeltaV
 #    - Rodentia # DeltaV
+    - IPCs
 
 - type: guideEntry
   id: Arachnid
@@ -57,3 +58,8 @@
   id: Vox
   name: species-name-vox
   text: "/ServerInfo/Guidebook/Mobs/Vox.xml"
+
+- type: guideEntry
+  id: IPCs
+  name: species-name-ipc
+  text: "/ServerInfo/Guidebook/Mobs/IPCs.xml"
