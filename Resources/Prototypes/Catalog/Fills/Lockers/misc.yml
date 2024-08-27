@@ -127,6 +127,29 @@
     - id: BalloonSyn
     - id: WeaponSniperMosin
       weight: 2
+      
+- type: entityTable # Floof - Start
+  id: LewdMaintLoot
+  table: !type:GroupSelector
+    children:
+    - id: LewdWand 
+    - id: LewdVibeGreen
+    - id: LewdVibeTeal
+    - id: LewdVibePink
+    - id: LewdVibeRed
+    - id: LewdVibeYellow
+    - id: LewdFleshlightGreen
+    - id: LewdFleshlightTeal
+    - id: LewdFleshlightPink
+    - id: LewdFleshlightRed
+    - id: LewdFleshlightYellow
+    - id: AvianDildo
+    - id: CanineDildo
+    - id: HorseDildo
+    - id: DragonDildo
+    - id: NormalDildo
+    - id: TentacleDildo
+    - id: DoubleDildo # Floof - End
 
 - type: entityTable
   id: MaintenanceLockerLoot
@@ -162,6 +185,12 @@
     # Recursive
 #    - id: ClosetMaintenanceFilledRandom # Frontier: don't trust this
 #      prob: 0.01 # Frontier: don't trust this
+    # Lewd - Floof
+    - !type:NestedSelector
+      tableId: LewdMaintLoot
+      prob: 0.15
+      rolls: !type:RangeNumberSelector
+        range: 1, 2
 
 - type: entity
   id: ClosetMaintenanceFilledRandom
