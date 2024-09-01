@@ -149,7 +149,20 @@
     - id: DragonDildo
     - id: NormalDildo
     - id: TentacleDildo
-    - id: DoubleDildo # Floof - End
+    - id: DoubleDildo 
+    - id: WhipPink
+      weight: 0.5
+    - id: WhipTeal
+      weight: 0.5
+    - id: WhipPinkCrotch
+      weight: 0.5
+    - id: WhipTealCrotch
+      weight: 0.5
+    - id: SpankPinkPaddle
+      weight: 0.5
+    - id: SpankTealPaddle
+      weight: 0.5
+    # Floof - End
 
 - type: entityTable
   id: MaintenanceLockerLoot
