@@ -119,7 +119,7 @@ public partial class SharedBodySystem
 
         // Setup the rest of the body entities.
         SetupOrgans((rootPartUid, rootPart), protoRoot.Organs);
-        MapInitParts(rootPartUid, prototype);
+        MapInitParts(rootPartUid, prototype); // Shitmed Change
     }
 
     private void OnBodyCanDrag(Entity<BodyComponent> ent, ref CanDragEvent args)
@@ -167,7 +167,7 @@ public partial class SharedBodySystem
                 cameFromEntities[connection] = childPart;
 
                 var childPartComponent = Comp<BodyPartComponent>(childPart);
-                var partSlot = CreatePartSlot(parentEntity, connection, childPartComponent.PartType, parentPartComponent);
+                TryCreatePartSlot(parentEntity, connection, childPartComponent.PartType, out var partSlot, parentPartComponent);
                 var cont = Containers.GetContainer(parentEntity, GetPartSlotContainerId(connection));
 
                 if (partSlot is null || !Containers.Insert(childPart, cont))
@@ -234,6 +234,8 @@ public partial class SharedBodySystem
         if (id is null
             || !Resolve(id.Value, ref body, logMissing: false)
             || body.RootContainer.ContainedEntity is null
+            || body is null // Shitmed Change
+            || body.RootContainer == default // Shitmed Change
             || !Resolve(body.RootContainer.ContainedEntity.Value, ref rootPart))
         {
             yield break;

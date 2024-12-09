@@ -26,12 +26,12 @@
 - type: guideEntry
   id: Diona
   name: species-name-diona
-  text: "/ServerInfo/_NF/Guidebook/Mobs/Diona.xml" # Frontier: moved to _NF folder
+  text: "/ServerInfo/Guidebook/Mobs/Diona.xml"
 
 - type: guideEntry
   id: Dwarf
   name: species-name-dwarf
-  text: "/ServerInfo/_NF/Guidebook/Mobs/Dwarf.xml" # Frontier: moved to _NF folder
+  text: "/ServerInfo/Guidebook/Mobs/Dwarf.xml"
 
 - type: guideEntry
   id: Human
@@ -53,7 +53,28 @@
   name: species-name-slime
   text: "/ServerInfo/Guidebook/Mobs/SlimePerson.xml"
 
+# Goobstation
+- type: guideEntry
+  id: Gingerbread
+  name: species-name-gingerbread
+  text: "/ServerInfo/Guidebook/Mobs/Gingerbread.xml"
+
 - type: guideEntry
   id: Vox
   name: species-name-vox
   text: "/ServerInfo/Guidebook/Mobs/Vox.xml"
+
+- type: guideEntry
+  id: Rodentia
+  name: species-name-rodentia
+  text: "/ServerInfo/Guidebook/Mobs/DeltaV/Rodentia.xml"
+
+- type: guideEntry
+  id: Yowie
+  name: species-name-yowie
+  text: "/ServerInfo/Guidebook/Mobs/Yowie.xml"
+
+- type: guideEntry
+  id: IPC
+  name: species-name-ipc
+  text: "/ServerInfo/Guidebook/Mobs/IPCs.xml"
