@@ -32,6 +32,7 @@ using Content.Shared._NF.Bank.Components; // DeltaV
 using Content.Server._NF.Bank; // Frontier
 using Content.Server.Preferences.Managers; // Frontier
 using System.Linq; // Frontier
+using Content.Server._EinsteinEngines.Silicon.IPC; // Goobstation
 
 namespace Content.Server.Station.Systems;
 
@@ -54,6 +55,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
     [Dependency] private readonly PdaSystem _pdaSystem = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly InternalEncryptionKeySpawner _internalEncryption = default!; // Goobstation
     [Dependency] private readonly IDependencyCollection _dependencyCollection = default!; // Frontier
     [Dependency] private readonly IServerPreferencesManager _preferences = default!; // Frontier
 
@@ -269,6 +271,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                 _bank.TryBankWithdraw(session!, prefs!, profile!, initialBankBalance - bankBalance, out var newBalance);
             }
             /// End Frontier: overwriting EquipRoleLoadout
+            _internalEncryption.TryInsertEncryptionKey(entity.Value, startingGear, EntityManager); // Goobstation
         }
 
         var gearEquippedEv = new StartingGearEquippedEvent(entity.Value);
