@@ -555,7 +555,7 @@
       - SheetifierMachineCircuitboard
       - ShuttleConsoleCircuitboard
       - RadarConsoleCircuitboard
-      # - TechDiskComputerCircuitboard # Frontier
+      - TechDiskComputerCircuitboard # Frontier
       - DawInstrumentMachineCircuitboard
       - CloningConsoleComputerCircuitboard
       - StasisBedMachineCircuitboard
@@ -584,7 +584,7 @@
       - ExosuitFabricatorMachineCircuitboard
       - AnomalyVesselCircuitboard
       - AnomalyVesselExperimentalCircuitboard
-      # - AnomalySynchronizerCircuitboard # Frontier: doesn't make sense for Frontier gameplay
+      - AnomalySynchronizerCircuitboard
       - APECircuitboard
       - ArtifactAnalyzerMachineCircuitboard
       - ArtifactCrusherMachineCircuitboard
