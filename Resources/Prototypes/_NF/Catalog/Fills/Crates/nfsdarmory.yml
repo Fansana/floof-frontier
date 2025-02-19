@@ -19,8 +19,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: WeaponShotgunKammerer
-        amount: 2
       - id: WeaponShotgunEnforcer
         amount: 2
       - id: BoxLethalshot
@@ -93,8 +91,6 @@
     - id: WeaponEnergyGun
       amount: 4
     - id: WeaponPistolMk58
-      amount: 4
-    - id: WeaponRevolverInspector
       amount: 4
 
 - type: entity
