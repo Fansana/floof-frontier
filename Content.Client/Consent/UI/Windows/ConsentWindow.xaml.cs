@@ -7,6 +7,7 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using System.Linq;
 
 namespace Content.Client.Consent.UI.Windows;
 
@@ -149,7 +150,9 @@ public sealed partial class ConsentWindow : FancyWindow
             ConsentList.RemoveAllChildren();
         _entries.Clear();
 
-        var consentprototypelist = _protoManager.EnumeratePrototypes<ConsentTogglePrototype>();
+        var consentprototypelist = _protoManager.EnumeratePrototypes<ConsentTogglePrototype>().ToList();
+        consentprototypelist.Sort();
+
         foreach (var prototype in consentprototypelist)
             AddConsentEntry(prototype);
 
