@@ -8,8 +8,8 @@
   id: Phantom
   parent: BaseVessel
   name: NTC Phantom
-  description: A 1-2 crew expedition ship with research capability.
-  price: 46950
+  description: An extremely agile salvage and bounty hunting ship.
+  price: 50815
   category: Medium
   group: Expedition
   shuttlePath: /Maps/_NF/Shuttles/Expedition/phantom.yml
