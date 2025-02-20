@@ -16,8 +16,6 @@
   guidebookPage: ShipyardPhantom
   class:
   - Expedition
-  - Medical
-  - Engineering
   - Salvage
   engine:
   - AME
