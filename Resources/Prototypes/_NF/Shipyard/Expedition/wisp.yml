@@ -8,8 +8,8 @@
   id: Wisp
   parent: BaseVessel
   name: NTC Wisp
-  description: A compact, extremely fast salvage and solo expedition ship.
-  price: 28146 # appraise value, not worth this at all tbh.
+  description: A small, fast salvage and expedition ship.
+  price: 27480 # not worth this at all tbh.
   category: Small
   group: Expedition
   shuttlePath: /Maps/_NF/Shuttles/Expedition/wisp.yml
