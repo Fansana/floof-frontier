@@ -261,15 +261,14 @@
   parent: BaseComputerCircuitboard
   id: TechDiskComputerCircuitboard
   name: tech disk terminal board
-  categories: [ HideSpawnMenu ] # Frontier: no tech disks
   description: A computer printed circuit board for a technology disk terminal.
   components:
   - type: Sprite
     state: cpu_science
   - type: ComputerBoard
     prototype: ComputerTechnologyDiskTerminal
-#  - type: ComputerTabletopBoard # Frontier
-#    prototype: ComputerTabletopTechnologyDiskTerminal # Frontier
+  - type: ComputerTabletopBoard # Frontier
+    prototype: ComputerTabletopTechnologyDiskTerminal # Frontier
 
 - type: entity
   parent: BaseComputerCircuitboard
