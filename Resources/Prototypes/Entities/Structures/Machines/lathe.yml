@@ -708,6 +708,10 @@
     - RightLegBorgService
     - HeadBorgService
     - TorsoBorgService
+    - Quadborgendoskeleton
+    - BorgModuleStun
+    - BorgModuleKill
+    - BorgModuleInvestigation
     dynamicRecipes:
     - ProximitySensor
     - BorgModuleLightReplacer

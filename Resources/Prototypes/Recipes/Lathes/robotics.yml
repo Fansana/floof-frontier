@@ -61,6 +61,14 @@
   materials:
     Steel: 1500
 
+- type: latheRecipe
+  id: Quadborgendoskeleton
+  result: Quadborgendoskeleton
+  category: Robotics
+  completetime: 3
+  materials:
+    Steel: 1800
+
 # Generic
 
 - type: latheRecipe
@@ -415,3 +423,35 @@
   parent: BaseBorgModuleRecipe
   id: BorgModuleClowning
   result: BorgModuleClowning
+  
+# Security Recipes
+
+- type: latheRecipe
+  id: BorgModuleStun
+  result: BorgModuleStun
+  category: Weapons
+  completetime: 5
+  materials:
+    Steel: 700
+    Glass: 500
+    Plastic: 200
+
+- type: latheRecipe
+  id: BorgModuleKill
+  result: BorgModuleKill
+  category: Weapons
+  completetime: 5
+  materials:
+    Steel: 1500
+    Glass: 1000
+    Gold: 850
+
+- type: latheRecipe
+  id: BorgModuleInvestigation
+  result: BorgModuleInvestigation
+  category: Weapons
+  completetime: 5
+  materials:
+    Steel: 1500
+    Glass: 1000
+    Gold: 850
