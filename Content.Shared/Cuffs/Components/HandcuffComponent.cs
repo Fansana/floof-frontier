@@ -10,39 +10,51 @@ namespace Content.Shared.Cuffs.Components;
 public sealed partial class HandcuffComponent : Component
 {
     /// <summary>
-    ///     The time it takes to cuff an entity.
+    /// Whether or not the entity can rot when cuffed (for spooder cocoon)
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public bool NoRot = false;
+
+    /// <summary>
+    /// Should the cuff be removed when used? (This will always give zipties to the target, i should do another system clone or move it to its own comp but so far, this works)
+    /// </summary>
+    [DataField]
+    public bool RemoveOnUse = true;
+
+    /// <summary>
+    ///     The time it takes to cuff an entity.
+    /// </summary>
+    [DataField]
     public float CuffTime = 3.5f;
 
     /// <summary>
     ///     The time it takes to uncuff an entity.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float UncuffTime = 3.5f;
 
     /// <summary>
     ///     The time it takes for a cuffed entity to uncuff itself.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float BreakoutTime = 15f;
 
     /// <summary>
     ///     If an entity being cuffed is stunned, this amount of time is subtracted from the time it takes to add/remove their cuffs.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float StunBonus = 2f;
 
     /// <summary>
     ///     Will the cuffs break when removed?
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool BreakOnRemove;
 
     /// <summary>
     ///     Will the cuffs break when removed?
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntProtoId? BrokenPrototype;
 
     /// <summary>
@@ -63,35 +75,42 @@ public sealed partial class HandcuffComponent : Component
     /// <summary>
     ///     The path of the RSI file used for the player cuffed overlay.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string? CuffedRSI = "Objects/Misc/handcuffs.rsi";
 
     /// <summary>
     ///     The iconstate used with the RSI file for the player cuffed overlay.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public string? BodyIconState = "body-overlay";
 
     /// <summary>
     /// An opptional color specification for <see cref="BodyIconState"/>
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public Color Color = Color.White;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier StartCuffSound = new SoundPathSpecifier("/Audio/Items/Handcuffs/cuff_start.ogg");
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier EndCuffSound = new SoundPathSpecifier("/Audio/Items/Handcuffs/cuff_end.ogg");
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier StartBreakoutSound = new SoundPathSpecifier("/Audio/Items/Handcuffs/cuff_breakout_start.ogg");
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier StartUncuffSound = new SoundPathSpecifier("/Audio/Items/Handcuffs/cuff_takeoff_start.ogg");
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier EndUncuffSound = new SoundPathSpecifier("/Audio/Items/Handcuffs/cuff_takeoff_end.ogg");
+
+    /// <summary>
+    ///     Acts as a two-state option for handcuff speed. When true, handcuffs will be easier to get out of if you are larger than average. Representing the use of strength to break things like zipties.
+    ///     When false, handcuffs are easier to get out of if you are smaller than average, representing the use of dexterity to slip the cuffs.
+    /// </summary>
+    [DataField]
+    public bool UncuffEasierWhenLarge = false;
 }
 
 /// <summary>
@@ -105,9 +124,3 @@ public record struct UncuffAttemptEvent(EntityUid User, EntityUid Target)
     public readonly EntityUid Target = Target;
     public bool Cancelled = false;
 }
-
-/// <summary>
-/// Event raised on an entity being uncuffed to determine any modifiers to the amount of time it takes to uncuff them.
-/// </summary>
-[ByRefEvent]
-public record struct ModifyUncuffDurationEvent(EntityUid User, EntityUid Target, float Duration);
