@@ -577,6 +577,18 @@ entities:
     - type: Transform
       pos: 6.5,-7.5
       parent: 1
+- proto: AirlockMedicalGlass
+  entities:
+  - uid: 353
+    components:
+    - type: Transform
+      pos: 5.5,-10.5
+      parent: 1
+  - uid: 446
+    components:
+    - type: Transform
+      pos: 4.5,-13.5
+      parent: 1
 - proto: AirlockMercenary
   entities:
   - uid: 43
@@ -592,23 +604,11 @@ entities:
       pos: -5.5,-3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -6796.7754
+      secondsUntilStateChange: -7363.8047
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
-- proto: AirlockScienceGlass
-  entities:
-  - uid: 21
-    components:
-    - type: Transform
-      pos: 5.5,-10.5
-      parent: 1
-  - uid: 709
-    components:
-    - type: Transform
-      pos: 4.5,-13.5
-      parent: 1
 - proto: AmeController
   entities:
   - uid: 96
@@ -1084,10 +1084,11 @@ entities:
       parent: 1
 - proto: BaseGasCondenser
   entities:
-  - uid: 773
+  - uid: 779
     components:
     - type: Transform
-      pos: 6.5,-13.5
+      rot: 3.141592653589793 rad
+      pos: 6.5,-15.5
       parent: 1
 - proto: Bed
   entities:
@@ -1111,10 +1112,9 @@ entities:
       parent: 1
 - proto: BedsheetMedical
   entities:
-  - uid: 446
+  - uid: 381
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: 5.5,-15.5
       parent: 1
 - proto: BenchSofaCorpLeft
@@ -1953,10 +1953,10 @@ entities:
       parent: 1
 - proto: ChemMaster
   entities:
-  - uid: 778
+  - uid: 379
     components:
     - type: Transform
-      pos: 6.5,-11.5
+      pos: 6.5,-13.5
       parent: 1
 - proto: CircuitImprinter
   entities:
@@ -2088,17 +2088,30 @@ entities:
       parent: 1
 - proto: CurtainsBlueOpen
   entities:
+  - uid: 21
+    components:
+    - type: Transform
+      pos: 5.5,-10.5
+      parent: 1
   - uid: 46
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 4.5,-14.5
       parent: 1
+    - type: Door
+      secondsUntilStateChange: -54.95389
+      state: Closing
   - uid: 166
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 4.5,-1.5
+      parent: 1
+  - uid: 421
+    components:
+    - type: Transform
+      pos: 4.5,-13.5
       parent: 1
   - uid: 437
     components:
@@ -2106,23 +2119,16 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.5,-12.5
       parent: 1
-  - uid: 644
+  - uid: 709
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,-13.5
+      pos: 5.5,-16.5
       parent: 1
   - uid: 743
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 6.5,-10.5
-      parent: 1
-  - uid: 779
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 5.5,-10.5
       parent: 1
   - uid: 783
     components:
@@ -2344,7 +2350,7 @@ entities:
       pos: 4.5,-8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -635.2733
+      secondsUntilStateChange: -1202.3025
       state: Closing
   - uid: 192
     components:
@@ -3281,10 +3287,9 @@ entities:
       parent: 1
     - type: AtmosPipeColor
       color: '#0055CCFF'
-  - uid: 787
+  - uid: 644
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: 6.5,-14.5
       parent: 1
 - proto: GasPressurePump
@@ -3681,19 +3686,19 @@ entities:
     - type: Transform
       pos: -2.5622644,-11.474328
       parent: 1
+- proto: HospitalCurtains
+  entities:
+  - uid: 807
+    components:
+    - type: Transform
+      pos: 6.5,-14.5
+      parent: 1
 - proto: HospitalCurtainsOpen
   entities:
   - uid: 639
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.5,-15.5
-      parent: 1
-  - uid: 744
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 5.5,-15.5
+      pos: 5.5,-14.5
       parent: 1
 - proto: Igniter
   entities:
@@ -3711,7 +3716,7 @@ entities:
       parent: 1
 - proto: LockerSalvageSpecialistFilled
   entities:
-  - uid: 420
+  - uid: 744
     components:
     - type: Transform
       pos: -0.5,-11.5
@@ -3770,9 +3775,16 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 7.5,-14.5
       parent: 1
+- proto: MachineCentrifuge
+  entities:
+  - uid: 420
+    components:
+    - type: Transform
+      pos: 6.5,-11.5
+      parent: 1
 - proto: MachineElectrolysisUnit
   entities:
-  - uid: 353
+  - uid: 773
     components:
     - type: Transform
       pos: 7.5,-11.5
@@ -3798,7 +3810,7 @@ entities:
       parent: 1
 - proto: MedicalBed
   entities:
-  - uid: 379
+  - uid: 778
     components:
     - type: Transform
       pos: 5.5,-15.5
@@ -4491,13 +4503,6 @@ entities:
     - type: Transform
       pos: 6.5857153,-4.4890885
       parent: 1
-- proto: StasisBed
-  entities:
-  - uid: 381
-    components:
-    - type: Transform
-      pos: 6.5,-15.5
-      parent: 1
 - proto: StructureGunRackMercenary
   entities:
   - uid: 109
@@ -4521,7 +4526,7 @@ entities:
       parent: 1
 - proto: SuitStorageSalv
   entities:
-  - uid: 421
+  - uid: 787
     components:
     - type: Transform
       pos: -1.5,-11.5
@@ -4559,6 +4564,11 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 7.5,-11.5
+      parent: 1
+  - uid: 806
+    components:
+    - type: Transform
+      pos: 6.5,-11.5
       parent: 1
 - proto: TableReinforced
   entities:
