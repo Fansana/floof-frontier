@@ -7,7 +7,6 @@ using Content.Shared.Buckle.Components;
 using Content.Shared.Contests;
 using Content.Shared.Cuffs.Components;
 using Content.Shared.Database;
-using Content.Shared.Flight;
 using Content.Shared.DoAfter;
 using Content.Shared.Hands;
 using Content.Shared.Hands.Components;
@@ -29,7 +28,6 @@ using Content.Shared.Timing;
 using Content.Shared.Verbs;
 using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.Audio.Systems;
-using Content.Shared.Mood;
 using Robust.Shared.Containers;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -175,18 +173,6 @@ namespace Content.Shared.Cuffs
             component.CanStillInteract = canInteract;
             Dirty(uid, component);
             _actionBlocker.UpdateCanMove(uid);
-
-            if (component.CanStillInteract)
-            {
-                _alerts.ClearAlert(uid, component.CuffedAlert);
-                RaiseLocalEvent(uid, new MoodRemoveEffectEvent("Handcuffed"));
-            }
-
-            else
-            {
-                _alerts.ShowAlert(uid, component.CuffedAlert);
-                RaiseLocalEvent(uid, new MoodEffectEvent("Handcuffed"));
-            }
 
             var ev = new CuffedStateChangeEvent();
             RaiseLocalEvent(uid, ref ev);
@@ -497,13 +483,6 @@ namespace Content.Shared.Cuffs
             if (cuffable.CuffedHandCount >= hands.Count)
             {
                 _popup.PopupClient(Loc.GetString("handcuff-component-target-has-no-free-hands-error",
-                    ("targetName", Identity.Name(target, EntityManager, user))), user, user);
-                return true;
-            }
-
-            if (TryComp<FlightComponent>(target, out var flight) && flight.On)
-            {
-                _popup.PopupClient(Loc.GetString("handcuff-component-target-flying-error",
                     ("targetName", Identity.Name(target, EntityManager, user))), user, user);
                 return true;
             }
