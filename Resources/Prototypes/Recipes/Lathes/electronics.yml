@@ -255,6 +255,11 @@
 
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
+  id: RadiationCollectorCircuitboard
+  result: RadiationCollectorCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
   id: ArtifactCrusherMachineCircuitboard
   result: ArtifactCrusherMachineCircuitboard
 

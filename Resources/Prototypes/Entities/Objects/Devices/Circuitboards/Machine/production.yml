@@ -285,6 +285,7 @@
     - type: PirateBountyItem # Frontier
       id: ArtifactAnalyzerMachineCircuitboard # Frontier
 
+
 - type: entity
   id: ArtifactCrusherMachineCircuitboard
   parent: BaseMachineCircuitboard
@@ -366,6 +367,21 @@
       stackRequirements:
         Cable: 1
         Glass: 1
+
+- type: entity
+  id: RadiationCollectorCircuitboard
+  parent: BaseMachineCircuitboard
+  name: radiation collector machine board
+  description: A machine printed circuit board for a radiation collector.
+  components:
+    - type: Sprite
+      state: engineering
+    - type: MachineBoard
+      prototype: RadiationCollectorFullTank
+      requirements: # Frontier
+        Capacitor: 2 # Frontier stackRequirements<requirements
+      stackRequirements:
+        Plasma: 1
 
 - type: entity
   id: ThermomachineFreezerMachineCircuitBoard

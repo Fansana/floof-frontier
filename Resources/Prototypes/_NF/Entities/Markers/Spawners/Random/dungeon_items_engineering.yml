@@ -583,6 +583,7 @@
     - PowerCellRechargerFlatpack
     - WeaponCapacitorRechargerFlatpack
     - BorgChargerFlatpack
+    - RadiationCollectorFlatpack
     - MachineFlatpackerFlatpack
     - PortableGeneratorJrPacmanFlatpack
     - PortableGeneratorPacmanFlatpack
