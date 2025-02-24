@@ -9,7 +9,7 @@
   parent: BaseVessel
   name: NTC Phantom
   description: An agile multi-functional bounty hunting and expedition ship.
-  price: 51790
+  price: 49863
   category: Medium
   group: Expedition
   shuttlePath: /Maps/_NF/Shuttles/Expedition/phantom.yml
@@ -17,6 +17,7 @@
   class:
   - Expedition
   - Salvage
+  - Chemistry
   engine:
   - AME
 
