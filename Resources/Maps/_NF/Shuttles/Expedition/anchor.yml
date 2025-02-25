@@ -2115,21 +2115,6 @@ entities:
     - type: Transform
       pos: 3.5,-28.5
       parent: 1
-  - uid: 443
-    components:
-    - type: Transform
-      pos: 17.5,-14.5
-      parent: 1
-  - uid: 506
-    components:
-    - type: Transform
-      pos: 17.5,-16.5
-      parent: 1
-  - uid: 693
-    components:
-    - type: Transform
-      pos: 17.5,-15.5
-      parent: 1
   - uid: 728
     components:
     - type: Transform
@@ -2144,19 +2129,16 @@ entities:
       parent: 1
 - proto: BedsheetMedical
   entities:
-  - uid: 68
+  - uid: 396
     components:
     - type: Transform
-      pos: 17.5,-14.5
-      parent: 1
-  - uid: 288
-    components:
-    - type: Transform
+      rot: -1.5707963267948966 rad
       pos: 17.5,-16.5
       parent: 1
-  - uid: 543
+  - uid: 443
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: 17.5,-15.5
       parent: 1
 - proto: BedsheetSpawner
@@ -3377,18 +3359,6 @@ entities:
     - type: Transform
       pos: 0.5,-12.5
       parent: 1
-- proto: CableApcStack
-  entities:
-  - uid: 395
-    components:
-    - type: Transform
-      pos: -6.6621842,-3.3624609
-      parent: 1
-  - uid: 396
-    components:
-    - type: Transform
-      pos: -6.3809342,-3.5499609
-      parent: 1
 - proto: CableHV
   entities:
   - uid: 39
@@ -4356,26 +4326,19 @@ entities:
     - type: Transform
       pos: 6.5,-18.5
       parent: 1
+- proto: ClothingBackpackDuffelSurgeryAdvancedFilled
+  entities:
+  - uid: 288
+    components:
+    - type: Transform
+      pos: 17.494883,-19.741
+      parent: 1
 - proto: ClothingBeltChaplainSashFilled
   entities:
   - uid: 1902
     components:
     - type: Transform
       pos: -18.5,-16.5
-      parent: 1
-- proto: ClothingBeltMercenaryWebbing
-  entities:
-  - uid: 98
-    components:
-    - type: Transform
-      pos: -5.7035966,-3.4349852
-      parent: 1
-- proto: ClothingEyesGlassesMercenary
-  entities:
-  - uid: 1780
-    components:
-    - type: Transform
-      pos: -5.0521164,-3.5206459
       parent: 1
 - proto: ClothingHandsGlovesBoxingBlue
   entities:
@@ -4407,13 +4370,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.5,-4.5
       parent: 1
-- proto: ClothingHeadBandMercenary
-  entities:
-  - uid: 1778
-    components:
-    - type: Transform
-      pos: -4.5833664,-3.5675209
-      parent: 1
 - proto: ClothingHeadBandSkull
   entities:
   - uid: 541
@@ -4421,26 +4377,12 @@ entities:
     - type: Transform
       pos: 2.5,-5.5
       parent: 1
-- proto: ClothingHeadHatBeretMercenary
-  entities:
-  - uid: 1457
-    components:
-    - type: Transform
-      pos: -5.0052414,-3.2706459
-      parent: 1
 - proto: ClothingHeadHatCasa
   entities:
   - uid: 717
     components:
     - type: Transform
       pos: -0.8169179,-17.190418
-      parent: 1
-- proto: ClothingHeadHelmetMercenary
-  entities:
-  - uid: 1779
-    components:
-    - type: Transform
-      pos: -4.1771164,-3.3643959
       parent: 1
 - proto: ClothingMaskBat
   entities:
@@ -9051,13 +8993,6 @@ entities:
     - type: Transform
       pos: -20.5,-8.5
       parent: 1
-- proto: GunSafeShuttleCaptain
-  entities:
-  - uid: 672
-    components:
-    - type: Transform
-      pos: -3.5,-1.5
-      parent: 1
 - proto: Gyroscope
   entities:
   - uid: 1072
@@ -9173,6 +9108,18 @@ entities:
     - type: Transform
       pos: 15.5,-21.5
       parent: 1
+- proto: LockerMercenaryFilled
+  entities:
+  - uid: 543
+    components:
+    - type: Transform
+      pos: -5.5,-3.5
+      parent: 1
+  - uid: 693
+    components:
+    - type: Transform
+      pos: -4.5,-3.5
+      parent: 1
 - proto: LockerWallEVAColorChaplainFilled
   entities:
   - uid: 1790
@@ -9188,12 +9135,31 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -5.5,-26.5
       parent: 1
+- proto: LockerWallMedicalFilled
+  entities:
+  - uid: 672
+    components:
+    - type: Transform
+      pos: 16.5,-13.5
+      parent: 1
 - proto: MaterialReclaimer
   entities:
   - uid: 1446
     components:
     - type: Transform
       pos: -18.5,-20.5
+      parent: 1
+- proto: MedicalBed
+  entities:
+  - uid: 68
+    components:
+    - type: Transform
+      pos: 17.5,-15.5
+      parent: 1
+  - uid: 98
+    components:
+    - type: Transform
+      pos: 17.5,-16.5
       parent: 1
 - proto: Mirror
   entities:
@@ -10684,6 +10650,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.5,-17.5
       parent: 1
+- proto: StasisBed
+  entities:
+  - uid: 395
+    components:
+    - type: Transform
+      pos: 17.5,-14.5
+      parent: 1
 - proto: StationMap
   entities:
   - uid: 1784
@@ -10745,10 +10718,10 @@ entities:
       parent: 1
 - proto: StructureGunRack
   entities:
-  - uid: 1811
+  - uid: 506
     components:
     - type: Transform
-      pos: -5.5,-1.5
+      pos: -6.5,-3.5
       parent: 1
 - proto: StructurePistolRack
   entities:
@@ -10775,6 +10748,13 @@ entities:
     components:
     - type: Transform
       pos: -18.5,-12.5
+      parent: 1
+- proto: SuitStorageScaf
+  entities:
+  - uid: 1266
+    components:
+    - type: Transform
+      pos: -3.5,-1.5
       parent: 1
 - proto: Table
   entities:
@@ -10813,21 +10793,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -8.5,-22.5
-      parent: 1
-  - uid: 1297
-    components:
-    - type: Transform
-      pos: -6.5,-3.5
-      parent: 1
-  - uid: 1298
-    components:
-    - type: Transform
-      pos: -5.5,-3.5
-      parent: 1
-  - uid: 1299
-    components:
-    - type: Transform
-      pos: -4.5,-3.5
       parent: 1
   - uid: 1300
     components:
