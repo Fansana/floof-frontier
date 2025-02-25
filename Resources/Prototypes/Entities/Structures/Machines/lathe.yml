@@ -561,6 +561,10 @@
       - StasisBedMachineCircuitboard
       - OreProcessorIndustrialMachineCircuitboard
       - CargoTelepadMachineCircuitboard
+      - AmmoTechFabCircuitboard
+      - MedicalTechFabCircuitboard
+      - MercenaryTechFabCircuitboard
+      - EngineeringTechFabCircuitboard
       - RipleyCentralElectronics
       - RipleyPeripheralsElectronics
       - HonkerCentralElectronics
