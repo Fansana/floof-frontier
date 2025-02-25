@@ -317,7 +317,9 @@ entities:
           1,-3:
             0: 65326
           1,-2:
-            0: 52692
+            0: 34260
+            3: 16384
+            4: 2048
           1,-1:
             0: 1237
             1: 32768
@@ -404,6 +406,36 @@ entities:
           moles:
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.14996
+          moles:
+          - 21.824879
+          - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.14996
+          moles:
+          - 20.078888
+          - 75.53487
           - 0
           - 0
           - 0
@@ -661,7 +693,7 @@ entities:
       pos: -5.5,-3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -8053.161
+      secondsUntilStateChange: -8214.93
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1230,15 +1262,19 @@ entities:
   - uid: 788
     components:
     - type: Transform
-      pos: 6.5857153,-4.4265885
-      parent: 1
+      parent: 142
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: BoxPaper
   entities:
   - uid: 191
     components:
     - type: Transform
-      pos: 6.6638403,-4.6609635
-      parent: 1
+      parent: 142
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
   - uid: 645
     components:
     - type: Transform
@@ -1249,8 +1285,10 @@ entities:
   - uid: 789
     components:
     - type: Transform
-      pos: 6.3513403,-4.5515885
-      parent: 1
+      parent: 142
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: ButtonFrameCaution
   entities:
   - uid: 129
@@ -2057,22 +2095,17 @@ entities:
   - uid: 793
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.5700903,-4.5672135
-      parent: 1
+      parent: 142
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
   - uid: 794
     components:
     - type: Transform
-      pos: 6.3982153,-4.4422135
-      parent: 1
-- proto: ComputerResearchAndDevelopment
-  entities:
-  - uid: 158
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.5,-5.5
-      parent: 1
+      parent: 142
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: ComputerShuttle
   entities:
   - uid: 22
@@ -2082,26 +2115,19 @@ entities:
       parent: 1
 - proto: ComputerTabletopIFF
   entities:
-  - uid: 404
+  - uid: 158
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 1.5,-0.5
+      pos: 1.5,0.5
       parent: 1
 - proto: ComputerTabletopPowerMonitoring
   entities:
   - uid: 185
     components:
     - type: Transform
-      pos: -1.5,-4.5
-      parent: 1
-- proto: ComputerTabletopResearchAndDevelopment
-  entities:
-  - uid: 190
-    components:
-    - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 1.5,0.5
+      pos: 1.5,-0.5
       parent: 1
 - proto: ComputerTabletopSalvageExpedition
   entities:
@@ -2143,8 +2169,44 @@ entities:
   - uid: 142
     components:
     - type: Transform
-      pos: 6.5,-4.5
+      pos: 7.5,-5.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14923
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+    - type: ContainerContainer
+      containers:
+        entity_storage: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 789
+          - 793
+          - 800
+          - 788
+          - 791
+          - 191
+          - 790
+          - 794
+        paper_label: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
 - proto: CurtainsBlackOpen
   entities:
   - uid: 174
@@ -2459,7 +2521,7 @@ entities:
       pos: 4.5,-8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -1891.6589
+      secondsUntilStateChange: -2053.428
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -4112,9 +4174,10 @@ entities:
   - uid: 800
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.51193,-4.6617193
-      parent: 1
+      parent: 142
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: PowerCellRecharger
   entities:
   - uid: 499
@@ -4513,13 +4576,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,1.5
       parent: 1
-- proto: ResearchAndDevelopmentServer
-  entities:
-  - uid: 739
-    components:
-    - type: Transform
-      pos: 7.5,-4.5
-      parent: 1
 - proto: RipleyChassis
   entities:
   - uid: 330
@@ -4727,13 +4783,17 @@ entities:
   - uid: 790
     components:
     - type: Transform
-      pos: 6.3357153,-4.5203385
-      parent: 1
+      parent: 142
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
   - uid: 791
     components:
     - type: Transform
-      pos: 6.5857153,-4.4890885
-      parent: 1
+      parent: 142
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: SubstationBasic
   entities:
   - uid: 97
@@ -5062,6 +5122,13 @@ entities:
         - Left: Forward
         - Right: Off
         - Middle: Off
+- proto: VendingMachineTankDispenserEVA
+  entities:
+  - uid: 190
+    components:
+    - type: Transform
+      pos: 7.5,-4.5
+      parent: 1
 - proto: WallmountTelevision
   entities:
   - uid: 175
