@@ -8,6 +8,7 @@ tilemap:
   1: FloorKitchen
   3: FloorLaundry
   113: FloorTechMaint
+  5: FloorWhitePlastic
   2: FloorWoodTile
   130: Lattice
   131: Plating
@@ -31,7 +32,7 @@ entities:
           version: 6
         -1,0:
           ind: -1,0
-          tiles: BAAAAAADgwAAAAAAgwAAAAAAgwAAAAAAIQAAAAAAcQAAAAAAgwAAAAAAgwAAAAAAIQAAAAACIQAAAAABgwAAAAAAIQAAAAACIQAAAAABgwAAAAAAIQAAAAABIQAAAAABcQAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAIQAAAAACgwAAAAAAIQAAAAAAIQAAAAADgwAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAIQAAAAABgwAAAAAAIQAAAAACIQAAAAACIQAAAAAAIQAAAAACgwAAAAAAIQAAAAACIQAAAAACIQAAAAABIQAAAAACIQAAAAADcQAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAIQAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAABAAAAAADgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAAAAAAAAAAAAAAAAAggAAAAAAgwAAAAAAIQAAAAABIQAAAAADgwAAAAAAAgAAAAABAgAAAAACgwAAAAAAAgAAAAADgwAAAAAAAgAAAAADgwAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAggAAAAAAgwAAAAAAIQAAAAAAIQAAAAAAgwAAAAAAAgAAAAABAgAAAAABgwAAAAAAAgAAAAAAgwAAAAAAAgAAAAADgwAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgwAAAAAAIQAAAAAAIQAAAAABgwAAAAAAcQAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAAQAAAAAAAQAAAAAAAAAAAAAABAAAAAABgwAAAAAAIQAAAAABIQAAAAACIQAAAAADIQAAAAACIQAAAAADIQAAAAACIQAAAAADIQAAAAABIQAAAAAAIQAAAAABIQAAAAACIQAAAAADIQAAAAACAAAAAAAAgwAAAAAAIQAAAAADIQAAAAAAIQAAAAABIQAAAAABIQAAAAABgwAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAAQAAAAAAAQAAAAAAIQAAAAAAIQAAAAADAAAAAAAAgwAAAAAAIQAAAAAAIQAAAAAAIQAAAAADIQAAAAACIQAAAAABgwAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAgwAAAAAAAQAAAAAAAQAAAAAAIQAAAAAAIQAAAAABAAAAAAAAgwAAAAAAIQAAAAACIQAAAAABIQAAAAACIQAAAAACIQAAAAABgwAAAAAAgwAAAAAAgwAAAAAAAwAAAAAAgwAAAAAAAQAAAAAAAQAAAAAAgwAAAAAAgwAAAAAAAAAAAAAAgwAAAAAAIQAAAAABIQAAAAABIQAAAAABIQAAAAADgwAAAAAAAAAAAAAAAAAAAAAABAAAAAADgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAABAAAAAADAAAAAAAAAAAAAAAABAAAAAADgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAABAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAggAAAAAAggAAAAAAggAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          tiles: BAAAAAADgwAAAAAAgwAAAAAAgwAAAAAAIQAAAAAAcQAAAAAAgwAAAAAAgwAAAAAAIQAAAAACIQAAAAABgwAAAAAAIQAAAAACIQAAAAABgwAAAAAAIQAAAAABIQAAAAABcQAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAIQAAAAACgwAAAAAAIQAAAAAAIQAAAAADgwAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAIQAAAAABgwAAAAAAIQAAAAACIQAAAAACIQAAAAAAIQAAAAACgwAAAAAAIQAAAAACIQAAAAACIQAAAAABIQAAAAACIQAAAAADcQAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAIQAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAABAAAAAADgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAAAAAAAAAAAAAAAAAAggAAAAAAgwAAAAAAIQAAAAABIQAAAAADgwAAAAAAAgAAAAABAgAAAAACgwAAAAAAAgAAAAADgwAAAAAABQAAAAAAgwAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAggAAAAAAgwAAAAAAIQAAAAAAIQAAAAAAgwAAAAAAAgAAAAABAgAAAAABgwAAAAAAAgAAAAAAgwAAAAAABQAAAAAAgwAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgwAAAAAAIQAAAAAAIQAAAAABgwAAAAAAcQAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAIQAAAAAAgwAAAAAAAQAAAAAAAQAAAAAAAAAAAAAABAAAAAABgwAAAAAAIQAAAAABIQAAAAACIQAAAAADIQAAAAACIQAAAAADIQAAAAACIQAAAAADIQAAAAABIQAAAAAAIQAAAAABIQAAAAAAIQAAAAADIQAAAAACAAAAAAAAgwAAAAAAIQAAAAADIQAAAAAAIQAAAAABIQAAAAABIQAAAAABgwAAAAAAgwAAAAAAgwAAAAAAcQAAAAAAgwAAAAAAAQAAAAAAAQAAAAAAIQAAAAAAIQAAAAADAAAAAAAAgwAAAAAAIQAAAAAAIQAAAAAAIQAAAAADIQAAAAACIQAAAAABgwAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAgwAAAAAAAQAAAAAAAQAAAAAAIQAAAAAAIQAAAAABAAAAAAAAgwAAAAAAIQAAAAACIQAAAAABIQAAAAACIQAAAAACIQAAAAABgwAAAAAAgwAAAAAAgwAAAAAAAwAAAAAAgwAAAAAAAQAAAAAAAQAAAAAAgwAAAAAAgwAAAAAAAAAAAAAAgwAAAAAAIQAAAAABIQAAAAABIQAAAAABIQAAAAADgwAAAAAAAAAAAAAAAAAAAAAABAAAAAADgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAABAAAAAADAAAAAAAAAAAAAAAABAAAAAADgwAAAAAAgwAAAAAAgwAAAAAAgwAAAAAABAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAggAAAAAAggAAAAAAggAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
           version: 6
         -1,-1:
           ind: -1,-1
@@ -768,11 +769,6 @@ entities:
       - 1117
 - proto: Airlock
   entities:
-  - uid: 718
-    components:
-    - type: Transform
-      pos: -3.5,7.5
-      parent: 1
   - uid: 722
     components:
     - type: Transform
@@ -875,6 +871,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 4.5,2.5
+      parent: 1
+- proto: AirlockFreezer
+  entities:
+  - uid: 631
+    components:
+    - type: Transform
+      pos: -3.5,7.5
       parent: 1
 - proto: AirlockGlassShuttle
   entities:
@@ -1349,6 +1352,18 @@ entities:
     - type: Transform
       pos: 5.5,-6.5
       parent: 1
+- proto: AtmosFixFreezerMarker
+  entities:
+  - uid: 1184
+    components:
+    - type: Transform
+      pos: -3.5,5.5
+      parent: 1
+  - uid: 1185
+    components:
+    - type: Transform
+      pos: -3.5,6.5
+      parent: 1
 - proto: Bed
   entities:
   - uid: 741
@@ -1361,11 +1376,6 @@ entities:
     - type: Transform
       pos: -5.5,5.5
       parent: 1
-  - uid: 743
-    components:
-    - type: Transform
-      pos: -3.5,5.5
-      parent: 1
 - proto: BedsheetSpawner
   entities:
   - uid: 465
@@ -1377,11 +1387,6 @@ entities:
     components:
     - type: Transform
       pos: -5.5,5.5
-      parent: 1
-  - uid: 746
-    components:
-    - type: Transform
-      pos: -3.5,5.5
       parent: 1
 - proto: BenchSofaLeft
   entities:
@@ -1497,6 +1502,13 @@ entities:
     components:
     - type: Transform
       pos: -5.573845,11.243024
+      parent: 1
+- proto: ButchCleaver
+  entities:
+  - uid: 718
+    components:
+    - type: Transform
+      pos: -3.5049446,6.5136104
       parent: 1
 - proto: ButtonFrameCaution
   entities:
@@ -4061,6 +4073,13 @@ entities:
       parent: 1
 - proto: FloorDrain
   entities:
+  - uid: 784
+    components:
+    - type: Transform
+      pos: -3.5,6.5
+      parent: 1
+    - type: Fixtures
+      fixtures: {}
   - uid: 896
     components:
     - type: Transform
@@ -5735,13 +5754,60 @@ entities:
     - type: Transform
       pos: -13.5,-8.5
       parent: 1
+- proto: KitchenElectricRange
+  entities:
+  - uid: 1069
+    components:
+    - type: Transform
+      pos: -3.5,11.5
+      parent: 1
 - proto: KitchenKnife
   entities:
   - uid: 1124
     components:
     - type: Transform
-      pos: -3.518915,10.611288
+      pos: -2.8530424,11.459391
       parent: 1
+- proto: KitchenReagentGrinder
+  entities:
+  - uid: 746
+    components:
+    - type: Transform
+      pos: -2.5,11.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        beakerSlot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: 783
+        inputContainer: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        machine_board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        machine_parts: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+- proto: KitchenSpike
+  entities:
+  - uid: 743
+    components:
+    - type: Transform
+      pos: -3.5,5.5
+      parent: 1
+- proto: LargeBeaker
+  entities:
+  - uid: 783
+    components:
+    - type: Transform
+      parent: 746
+    - type: Physics
+      canCollide: False
 - proto: LightBulb
   entities:
   - uid: 277
@@ -5779,10 +5845,10 @@ entities:
       parent: 1
 - proto: LockerFreezerBase
   entities:
-  - uid: 784
+  - uid: 1183
     components:
     - type: Transform
-      pos: -2.5,11.5
+      pos: -0.5,7.5
       parent: 1
 - proto: LockerSalvageSpecialistFilled
   entities:
@@ -5806,12 +5872,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -4.5,6.5
-      parent: 1
-  - uid: 1008
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -2.5,6.5
       parent: 1
 - proto: LockerWallColorGenericBlack
   entities:
@@ -6130,7 +6190,7 @@ entities:
   - uid: 1136
     components:
     - type: Transform
-      pos: -3.612665,11.945548
+      pos: -2.4624174,11.380731
       parent: 1
 - proto: Railing
   entities:
@@ -6293,6 +6353,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,-1.5
+      parent: 1
+- proto: ReagentContainerFlour
+  entities:
+  - uid: 1186
+    components:
+    - type: Transform
+      pos: -2.2242625,11.453091
       parent: 1
 - proto: ReinforcedWindow
   entities:
@@ -6808,7 +6875,7 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -2.5,7.5
+      pos: -4.5,7.5
       parent: 1
   - uid: 965
     components:
@@ -6879,11 +6946,6 @@ entities:
     components:
     - type: Transform
       pos: -5.5,6.5
-      parent: 1
-  - uid: 1069
-    components:
-    - type: Transform
-      pos: -3.5,6.5
       parent: 1
   - uid: 1070
     components:
@@ -7000,12 +7062,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -13.5,9.5
       parent: 1
-  - uid: 631
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,10.5
-      parent: 1
   - uid: 675
     components:
     - type: Transform
@@ -7042,16 +7098,15 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -11.5,12.5
       parent: 1
-  - uid: 783
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,11.5
-      parent: 1
   - uid: 990
     components:
     - type: Transform
       pos: -10.5,12.5
+      parent: 1
+  - uid: 1180
+    components:
+    - type: Transform
+      pos: -2.5,11.5
       parent: 1
 - proto: TableWood
   entities:
@@ -7351,6 +7406,13 @@ entities:
         - Left: Forward
         - Right: Reverse
         - Middle: Off
+- proto: VariantCubeBox
+  entities:
+  - uid: 1008
+    components:
+    - type: Transform
+      pos: -3.5055125,6.234341
+      parent: 1
 - proto: VendingMachineCargoDrobe
   entities:
   - uid: 1014
