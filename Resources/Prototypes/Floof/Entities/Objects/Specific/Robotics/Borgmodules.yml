@@ -23,7 +23,7 @@
     - WeaponBorgDisabler
     - BorgStunbaton
     - BorgFlash
-    - BorgZipties
+    # - BorgZipties
 
 - type: entity
   id: BorgModuleKill
