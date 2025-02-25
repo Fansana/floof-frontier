@@ -121,7 +121,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponPistolCHIMP
-  - AnomalySynchronizerCircuitboard
+  # - AnomalySynchronizerCircuitboard
   - AnomalyVesselExperimentalCircuitboard
   technologyPrerequisites:
   - BasicAnomalousResearch

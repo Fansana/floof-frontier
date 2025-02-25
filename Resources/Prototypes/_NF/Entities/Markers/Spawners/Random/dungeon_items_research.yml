@@ -257,7 +257,7 @@
     - APECircuitboard
     - ArtifactAnalyzerMachineCircuitboard
     - ArtifactCrusherMachineCircuitboard
-    - AnomalySynchronizerCircuitboard
+    # - AnomalySynchronizerCircuitboard
     - AnomalyVesselCircuitboard
     - AnomalyVesselExperimentalCircuitboard
     chance: 0.9
@@ -293,7 +293,7 @@
     - MachineArtifactCrusherFlatpack
     - ComputerResearchAndDevelopmentFlatpack
     - ResearchAndDevelopmentServerFlatpack
-    - MachineAnomalySynchronizerFlatpack
+    # - MachineAnomalySynchronizerFlatpack
     - MachineAnomalyVesselExperimentalFlatpack
     - MachineAnomalyVesselFlatpack
     chance: 0.95
