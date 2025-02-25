@@ -61,6 +61,7 @@ public sealed class PullingSystem : EntitySystem
         SubscribeLocalEvent<PullableComponent, JointRemovedEvent>(OnJointRemoved);
         SubscribeLocalEvent<PullableComponent, GetVerbsEvent<Verb>>(AddPullVerbs);
         SubscribeLocalEvent<PullableComponent, EntGotInsertedIntoContainerMessage>(OnPullableContainerInsert);
+        SubscribeLocalEvent<PullableComponent, ModifyUncuffDurationEvent>(OnModifyUncuffDuration);
         SubscribeLocalEvent<PullableComponent, StopBeingPulledAlertEvent>(OnStopBeingPulledAlert);
 
         SubscribeLocalEvent<PullerComponent, UpdateMobStateEvent>(OnStateChanged);
@@ -145,6 +146,18 @@ public sealed class PullingSystem : EntitySystem
     private void OnPullableContainerInsert(Entity<PullableComponent> ent, ref EntGotInsertedIntoContainerMessage args)
     {
         TryStopPull(ent.Owner, ent.Comp);
+    }
+
+    private void OnModifyUncuffDuration(Entity<PullableComponent> ent, ref ModifyUncuffDurationEvent args)
+    {
+        if (!ent.Comp.BeingPulled)
+            return;
+
+        // We don't care if the person is being uncuffed by someone else
+        if (args.User != args.Target)
+            return;
+
+        args.Duration *= 2;
     }
 
     private void OnStopBeingPulledAlert(Entity<PullableComponent> ent, ref StopBeingPulledAlertEvent args)
