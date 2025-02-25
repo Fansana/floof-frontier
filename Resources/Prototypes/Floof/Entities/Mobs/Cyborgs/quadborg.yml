@@ -275,7 +275,7 @@
   - type: SpriteMovement
     movementLayers:
       movement:
-        state: Apex_moving
+        state: apex_moving
     noMovementLayers:
       movement:
         state: Apex
