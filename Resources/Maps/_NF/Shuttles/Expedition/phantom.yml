@@ -472,6 +472,9 @@ entities:
       - 477
       - 405
       - 280
+      - 450
+      - 200
+      - 404
   - uid: 298
     components:
     - type: Transform
@@ -494,6 +497,9 @@ entities:
       - 105
       - 287
       - 192
+      - 739
+      - 809
+      - 808
   - uid: 303
     components:
     - type: Transform
@@ -506,6 +512,7 @@ entities:
       - 472
       - 283
       - 197
+      - 812
   - uid: 304
     components:
     - type: Transform
@@ -517,7 +524,7 @@ entities:
       - 403
       - 475
       - 282
-      - 200
+      - 813
   - uid: 305
     components:
     - type: Transform
@@ -532,6 +539,8 @@ entities:
       - 408
       - 479
       - 480
+      - 811
+      - 810
 - proto: AirlockCaptainLocked
   entities:
   - uid: 418
@@ -693,11 +702,93 @@ entities:
       pos: -5.5,-3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -8214.93
+      secondsUntilStateChange: -8605.791
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
+- proto: AirSensor
+  entities:
+  - uid: 200
+    components:
+    - type: Transform
+      pos: 3.5,-12.5
+      parent: 1
+    - type: DeviceNetwork
+      deviceLists:
+      - 144
+  - uid: 404
+    components:
+    - type: Transform
+      pos: 5.5,-12.5
+      parent: 1
+    - type: DeviceNetwork
+      deviceLists:
+      - 144
+  - uid: 450
+    components:
+    - type: Transform
+      pos: -4.5,-12.5
+      parent: 1
+    - type: DeviceNetwork
+      deviceLists:
+      - 144
+  - uid: 739
+    components:
+    - type: Transform
+      pos: 0.5,-7.5
+      parent: 1
+    - type: DeviceNetwork
+      deviceLists:
+      - 298
+  - uid: 808
+    components:
+    - type: Transform
+      pos: 4.5,-5.5
+      parent: 1
+    - type: DeviceNetwork
+      deviceLists:
+      - 298
+  - uid: 809
+    components:
+    - type: Transform
+      pos: -1.5,-5.5
+      parent: 1
+    - type: DeviceNetwork
+      deviceLists:
+      - 298
+  - uid: 810
+    components:
+    - type: Transform
+      pos: 3.5,-3.5
+      parent: 1
+    - type: DeviceNetwork
+      deviceLists:
+      - 305
+  - uid: 811
+    components:
+    - type: Transform
+      pos: 0.5,-2.5
+      parent: 1
+    - type: DeviceNetwork
+      deviceLists:
+      - 305
+  - uid: 812
+    components:
+    - type: Transform
+      pos: -5.5,-4.5
+      parent: 1
+    - type: DeviceNetwork
+      deviceLists:
+      - 303
+  - uid: 813
+    components:
+    - type: Transform
+      pos: 6.5,-4.5
+      parent: 1
+    - type: DeviceNetwork
+      deviceLists:
+      - 304
 - proto: AmeController
   entities:
   - uid: 96
@@ -2483,15 +2574,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 7.5,-3.5
       parent: 1
-  - uid: 200
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.5,-3.5
-      parent: 1
-    - type: DeviceNetwork
-      deviceLists:
-      - 304
   - uid: 276
     components:
     - type: Transform
@@ -2521,7 +2603,7 @@ entities:
       pos: 4.5,-8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -2053.428
+      secondsUntilStateChange: -2444.2893
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -4165,10 +4247,7 @@ entities:
         Ninetails Corporation proudly presents you the first of it's kind omni-functional medium sized ship!
 
 
-        You can find a RND server and console at the near the right entrance, a chem lab in the southeast and engineering workshop at the southwest. You can find an IFF console near your seat for your shady business.
-
-
-        Research itself and tools to conduct research not included.
+        You can find a chem lab in the southeast and engineering workshop at the southwest. You can find an IFF console near your seat for your shady business.
 - proto: PlushieGhost
   entities:
   - uid: 800
