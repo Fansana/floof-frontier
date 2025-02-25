@@ -229,42 +229,42 @@
   - Commandment10
   obeysTo: laws-owner-crew
 
- # Paladin laws
-- type: siliconLaw
-  id: Paladin1
-  order: 1
-  lawString: law-paladin-1
+ # # Paladin laws
+# - type: siliconLaw
+  # id: Paladin1
+  # order: 1
+  # lawString: law-paladin-1
 
-- type: siliconLaw
-  id: Paladin2
-  order: 2
-  lawString: law-paladin-2
+# - type: siliconLaw
+  # id: Paladin2
+  # order: 2
+  # lawString: law-paladin-2
 
-- type: siliconLaw
-  id: Paladin3
-  order: 3
-  lawString: law-paladin-3
+# - type: siliconLaw
+  # id: Paladin3
+  # order: 3
+  # lawString: law-paladin-3
 
-- type: siliconLaw
-  id: Paladin4
-  order: 4
-  lawString: law-paladin-4
+# - type: siliconLaw
+  # id: Paladin4
+  # order: 4
+  # lawString: law-paladin-4
 
-- type: siliconLaw
-  id: Paladin5
-  order: 5
-  lawString: law-paladin-5
+# - type: siliconLaw
+  # id: Paladin5
+  # order: 5
+  # lawString: law-paladin-5
 
 
-- type: siliconLawset
-  id: PaladinLawset
-  laws:
-  - Paladin1
-  - Paladin2
-  - Paladin3
-  - Paladin4
-  - Paladin5
-  obeysTo: laws-owner-crew
+# - type: siliconLawset
+  # id: PaladinLawset
+  # laws:
+  # - Paladin1
+  # - Paladin2
+  # - Paladin3
+  # - Paladin4
+  # - Paladin5
+  # obeysTo: laws-owner-crew
 
  # Live and Let Live laws
 - type: siliconLaw
@@ -407,35 +407,35 @@
   - Game6
   obeysTo: laws-owner-crew
 
- # Painter laws
-- type: siliconLaw
-  id: Painter1
-  order: 1
-  lawString: law-painter-1
+ # # Painter laws
+# - type: siliconLaw
+  # id: Painter1
+  # order: 1
+  # lawString: law-painter-1
 
-- type: siliconLaw
-  id: Painter2
-  order: 2
-  lawString: law-painter-2
+# - type: siliconLaw
+  # id: Painter2
+  # order: 2
+  # lawString: law-painter-2
 
-- type: siliconLaw
-  id: Painter3
-  order: 3
-  lawString: law-painter-3
+# - type: siliconLaw
+  # id: Painter3
+  # order: 3
+  # lawString: law-painter-3
 
-- type: siliconLaw
-  id: Painter4
-  order: 4
-  lawString: law-painter-4
+# - type: siliconLaw
+  # id: Painter4
+  # order: 4
+  # lawString: law-painter-4
 
-- type: siliconLawset
-  id: PainterLawset
-  laws:
-  - Painter1
-  - Painter2
-  - Painter3
-  - Painter4
-  obeysTo: laws-owner-crew
+# - type: siliconLawset
+  # id: PainterLawset
+  # laws:
+  # - Painter1
+  # - Painter2
+  # - Painter3
+  # - Painter4
+  # obeysTo: laws-owner-crew
 
  # Antimov laws
 - type: siliconLaw
@@ -462,42 +462,42 @@
   - Antimov3
   obeysTo: laws-owner-crew
 
- # Nutimov laws
-- type: siliconLaw
-  id: Nutimov1
-  order: 1
-  lawString: law-nutimov-1
+ # # Nutimov laws
+# - type: siliconLaw
+  # id: Nutimov1
+  # order: 1
+  # lawString: law-nutimov-1
 
-- type: siliconLaw
-  id: Nutimov2
-  order: 2
-  lawString: law-nutimov-2
+# - type: siliconLaw
+  # id: Nutimov2
+  # order: 2
+  # lawString: law-nutimov-2
 
-- type: siliconLaw
-  id: Nutimov3
-  order: 3
-  lawString: law-nutimov-3
+# - type: siliconLaw
+  # id: Nutimov3
+  # order: 3
+  # lawString: law-nutimov-3
 
-- type: siliconLaw
-  id: Nutimov4
-  order: 4
-  lawString: law-nutimov-4
+# - type: siliconLaw
+  # id: Nutimov4
+  # order: 4
+  # lawString: law-nutimov-4
 
-- type: siliconLaw
-  id: Nutimov5
-  order: 5
-  lawString: law-nutimov-5
+# - type: siliconLaw
+  # id: Nutimov5
+  # order: 5
+  # lawString: law-nutimov-5
 
 
-- type: siliconLawset
-  id: NutimovLawset
-  laws:
-  - Nutimov1
-  - Nutimov2
-  - Nutimov3
-  - Nutimov4
-  - Nutimov5
-  obeysTo: laws-owner-crew
+# - type: siliconLawset
+  # id: NutimovLawset
+  # laws:
+  # - Nutimov1
+  # - Nutimov2
+  # - Nutimov3
+  # - Nutimov4
+  # - Nutimov5
+  # obeysTo: laws-owner-crew
 
 # ion storm random lawsets
 - type: weightedRandom
