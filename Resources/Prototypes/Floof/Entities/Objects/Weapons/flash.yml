@@ -1,6 +1,6 @@
 - type: entity
   name: Borg flash
-  parent: BaseItem
+  parent: [BaseItem, BaseC1Contraband] # Frontier: BaseSecurityScienceCommandContraband<BaseC1Contraband
   id: BorgFlash
   description: An ultrabright flashbulb with a trigger, which causes the victim to be dazed and lose their eyesight for a moment. Useless when burnt out.
   components:
@@ -15,7 +15,7 @@
         shader: unshaded
     - type: Flash
     - type: UseDelay
-      delay: 3
+      delay: 5
     - type: MeleeWeapon
       wideAnimationRotation: 180
       damage:
@@ -25,11 +25,6 @@
     - type: Item
       size: Small
       sprite: Objects/Weapons/Melee/flash.rsi
-#    - type: DynamicPrice
-#      price: 40
-    - type: ReverseEngineering # Nyano
-      recipes:
-        - Flash
     - type: StaticPrice
       price: 40
     - type: Appearance
@@ -45,3 +40,4 @@
     - type: GuideHelp
       guides:
       - Security
+    # - Antagonists # Frontier: guidebook entry removed
