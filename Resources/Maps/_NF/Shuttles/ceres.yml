@@ -3444,6 +3444,15 @@ entities:
       parent: 2
     - type: AtmosPipeColor
       color: '#990000FF'
+- proto: GeneratorRTG
+  entities:
+  - uid: 205
+    components:
+    - type: Transform
+      pos: -3.5,-11.5
+      parent: 2
+    - type: Anchorable
+      flags: Anchorable
 - proto: GravityGeneratorMini
   entities:
   - uid: 767
@@ -3948,15 +3957,6 @@ entities:
     - type: Transform
       pos: 8.5,-8.5
       parent: 2
-- proto: PortableGeneratorSuperPacmanShuttle
-  entities:
-  - uid: 773
-    components:
-    - type: Transform
-      pos: -3.5,-11.5
-      parent: 2
-    - type: FuelGenerator
-      targetPower: 24000
 - proto: PottedPlantRandom
   entities:
   - uid: 103
@@ -4201,13 +4201,6 @@ entities:
     components:
     - type: Transform
       pos: 7.5,-12.5
-      parent: 2
-- proto: SheetUranium
-  entities:
-  - uid: 205
-    components:
-    - type: Transform
-      pos: -3.5,-11.5
       parent: 2
 - proto: ShipyardCeresInfo
   entities:
