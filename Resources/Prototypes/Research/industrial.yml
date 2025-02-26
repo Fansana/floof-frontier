@@ -13,6 +13,8 @@
   - MiningDrill
   - WeaponGrapplingGun # Frontier
   - MineralScannerEmpty
+  - BorgModuleMining
+  - BorgModuleGrapplingGun
   - OreProcessorIndustrialMachineCircuitboard
   - ClothingMaskWeldingGas
 
@@ -172,10 +174,7 @@
     - JawsOfLife
     - UtilityBeltChiefEngineer
     - BorgModuleAdvancedTool
-    - BorgModuleJetpack # Frontier
-    - NFBlueprintPowerDrill # Frontier
-    - NFBlueprintJawsOfLife # Frontier
-    - NFBlueprintWelderExperimental # Frontier
+    - BorgModuleRCD
 
 - type: technology
   id: MassExcavation
