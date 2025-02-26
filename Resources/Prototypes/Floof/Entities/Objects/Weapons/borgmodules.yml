@@ -12,7 +12,7 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
-    fireOnDropChance: 1
+    # fireOnDropChance: 1
 
 # - type: entity
   # id: BorgZipties

@@ -86,7 +86,7 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
-    fireOnDropChance: 0.5
+    # fireOnDropChance: 0.5
   - type: ProjectileBatteryAmmoProvider
     proto: BulletPistol
     fireCost: 100
