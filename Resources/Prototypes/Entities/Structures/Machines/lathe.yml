@@ -555,7 +555,7 @@
       - SheetifierMachineCircuitboard
       - ShuttleConsoleCircuitboard
       - RadarConsoleCircuitboard
-      - TechDiskComputerCircuitboard # Frontier
+      # - TechDiskComputerCircuitboard # Frontier
       - DawInstrumentMachineCircuitboard
       - CloningConsoleComputerCircuitboard
       - StasisBedMachineCircuitboard

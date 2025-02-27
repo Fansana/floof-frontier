@@ -45,17 +45,19 @@
   - AnalysisComputerCircuitboard
   - ArtifactAnalyzerMachineCircuitboard
 
-- type: technology
-  id: AlternativeResearch
-  name: research-technology-alternative-research
-  icon:
-    sprite: Structures/Machines/tech_disk_printer.rsi
-    state: display
-  discipline: Experimental
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - TechDiskComputerCircuitboard
+# Frontier: no tech disks
+# - type: technology
+#   id: AlternativeResearch
+#   name: research-technology-alternative-research
+#   icon:
+#     sprite: Structures/Machines/tech_disk_printer.rsi
+#     state: display
+#   discipline: Experimental
+#   tier: 1
+#   cost: 5000
+#   recipeUnlocks:
+#   - TechDiskComputerCircuitboard
+# End Frontier: no tech disks
 
 - type: technology
   id: MagnetsTech

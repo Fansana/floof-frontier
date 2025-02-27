@@ -216,11 +216,9 @@
     - ResearchDisk
     - ResearchDisk
     - ResearchDisk5000
-    - TechnologyDisk
     chance: 0.95
     offset: 0.0
     rarePrototypes:
-    - TechnologyDiskRare
     - ResearchDisk10000
     - WeaponCaseShortDocumentsFilled
     rareChance: 0.05
@@ -245,7 +243,6 @@
     # Computers
     - ResearchComputerCircuitboard
     - AnalysisComputerCircuitboard
-    - TechDiskComputerCircuitboard
     # Lathes
     - CircuitImprinterMachineCircuitboard
     - ExosuitFabricatorMachineCircuitboard
