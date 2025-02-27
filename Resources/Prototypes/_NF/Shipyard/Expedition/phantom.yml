@@ -9,7 +9,7 @@
   parent: BaseVessel
   name: NTC Phantom
   description: An agile multi-functional bounty hunting and expedition ship.
-  price: 60795 #50663 appraise value +20% (10132) markup
+  price: 75795 
   category: Medium
   group: Expedition
   shuttlePath: /Maps/_NF/Shuttles/Expedition/phantom.yml
