@@ -21,7 +21,7 @@
   class:
   - Kitchen
   engine:
-  - RTG
+  - Uranium
 
 - type: gameMap
   id: Ceres
