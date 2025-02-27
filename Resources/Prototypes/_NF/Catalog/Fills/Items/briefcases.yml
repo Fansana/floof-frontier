@@ -60,7 +60,7 @@
 - type: entity
   parent: SpaceCashExpedition
   id: SpaceCashExpeditionT4
-  name: spesos (40,000)
+  name: spesos (30,000)
   categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
@@ -75,7 +75,7 @@
 - type: entity
   parent: SpaceCashExpedition
   id: SpaceCashExpeditionT5
-  name: spesos (70,000)
+  name: spesos (45,000)
   categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
