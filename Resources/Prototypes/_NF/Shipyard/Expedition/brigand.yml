@@ -13,14 +13,13 @@
   parent: BaseVessel
   name: LVHI Brigand
   description: Civilian conversion of an old military light frigate from the early days of humanity's expansion to the stars, predating FTL technology. Manufactured by Langstad-Voigt Heavy Industries.
-  price: 42307 # 35256 on appraise + 7051 from 20% markup
+  price: 55500 # ~42645$ on mapinit + ~12800$ from 30% markup
   category: Medium
   group: Expedition
   shuttlePath: /Maps/_NF/Shuttles/Expedition/brigand.yml
   guidebookPage: ShipyardBrigand
   class:
   - Expedition
-  - Chemistry
   engine:
   - AME
 
@@ -29,7 +28,7 @@
   mapName: 'Brigand'
   mapPath: /Maps/_NF/Shuttles/Expedition/brigand.yml
   minPlayers: 0
-  stations:
+  stations: 
     Brigand:
       stationProto: StandardFrontierExpeditionVessel
       components:
