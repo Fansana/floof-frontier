@@ -702,7 +702,7 @@ entities:
       pos: -5.5,-3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -10672.837
+      secondsUntilStateChange: -10948.003
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2207,6 +2207,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 1.5,0.5
       parent: 1
+    - type: Anchorable
+      flags: Anchorable
     - type: StaticPrice
       price: 9500
 - proto: ComputerTabletopPowerMonitoring
@@ -2600,7 +2602,7 @@ entities:
       pos: 4.5,-8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -4511.3354
+      secondsUntilStateChange: -4786.501
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -4038,6 +4040,8 @@ entities:
     - type: Transform
       pos: 2.5,-3.5
       parent: 1
+    - type: Lock
+      locked: False
 - proto: Gyroscope
   entities:
   - uid: 321
