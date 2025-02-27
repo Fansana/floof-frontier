@@ -702,7 +702,7 @@ entities:
       pos: -5.5,-3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -8605.791
+      secondsUntilStateChange: -10672.837
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2152,6 +2152,8 @@ entities:
     - type: Transform
       pos: 7.5,-13.5
       parent: 1
+    - type: StaticPrice
+      price: 5000
 - proto: ChemistryHotplate
   entities:
   - uid: 772
@@ -2165,13 +2167,6 @@ entities:
     components:
     - type: Transform
       pos: 6.5,-13.5
-      parent: 1
-- proto: CircuitImprinter
-  entities:
-  - uid: 343
-    components:
-    - type: Transform
-      pos: -6.5,-14.5
       parent: 1
 - proto: CleanerDispenser
   entities:
@@ -2212,6 +2207,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 1.5,0.5
       parent: 1
+    - type: StaticPrice
+      price: 9500
 - proto: ComputerTabletopPowerMonitoring
   entities:
   - uid: 185
@@ -2603,7 +2600,7 @@ entities:
       pos: 4.5,-8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -2444.2893
+      secondsUntilStateChange: -4511.3354
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -4116,7 +4113,7 @@ entities:
       parent: 1
 - proto: LockerWallChemistryFilled
   entities:
-  - uid: 61
+  - uid: 343
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -4165,6 +4162,16 @@ entities:
       parent: 1
 - proto: MachineFrame
   entities:
+  - uid: 61
+    components:
+    - type: Transform
+      pos: -6.5,-14.5
+      parent: 1
+  - uid: 410
+    components:
+    - type: Transform
+      pos: -4.5,-15.5
+      parent: 1
   - uid: 764
     components:
     - type: Transform
@@ -4191,6 +4198,8 @@ entities:
     - type: Transform
       pos: 2.5,-6.5
       parent: 1
+    - type: StaticPrice
+      price: 14500
 - proto: ModularGrenade
   entities:
   - uid: 796
@@ -4400,13 +4409,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -3.5,-6.5
-      parent: 1
-- proto: Protolathe
-  entities:
-  - uid: 508
-    components:
-    - type: Transform
-      pos: -4.5,-15.5
       parent: 1
 - proto: Rack
   entities:
@@ -4817,6 +4819,14 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 7.5,-1.5
       parent: 1
+- proto: SinkStemlessWater
+  entities:
+  - uid: 508
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -5.5,-2.5
+      parent: 1
 - proto: SinkWide
   entities:
   - uid: 302
@@ -4851,11 +4861,6 @@ entities:
     components:
     - type: Transform
       pos: -0.5,-8.5
-      parent: 1
-  - uid: 410
-    components:
-    - type: Transform
-      pos: -1.5,-8.5
       parent: 1
 - proto: SprayBottleSpaceCleaner
   entities:
