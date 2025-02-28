@@ -1,0 +1,43 @@
+- type: entity
+  name: Borg flash
+  parent: [BaseItem, BaseC1Contraband] # Frontier: BaseSecurityScienceCommandContraband<BaseC1Contraband
+  id: BorgFlash
+  description: An ultrabright flashbulb with a trigger, which causes the victim to be dazed and lose their eyesight for a moment. Useless when burnt out.
+  components:
+    - type: Sprite
+      sprite: Objects/Weapons/Melee/flash.rsi
+      layers:
+      - state: flash
+        map: [ "enum.FlashVisuals.BaseLayer" ]
+      - state: flashing
+        map: [ "enum.FlashVisuals.LightLayer" ]
+        visible: false
+        shader: unshaded
+    - type: Flash
+    - type: UseDelay
+      delay: 5
+    - type: MeleeWeapon
+      wideAnimationRotation: 180
+      damage:
+        types:
+          Blunt: 0 # melee weapon to allow flashing individual targets
+      angle: 10
+    - type: Item
+      size: Small
+      sprite: Objects/Weapons/Melee/flash.rsi
+    - type: StaticPrice
+      price: 40
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.FlashVisuals.Burnt:
+          enum.FlashVisuals.BaseLayer:
+            True: {state: burnt}
+        enum.FlashVisuals.Flashing:
+          enum.FlashVisuals.LightLayer:
+            True: {visible: true}
+            False: {visible: false}
+    - type: GuideHelp
+      guides:
+      - Security
+    # - Antagonists # Frontier: guidebook entry removed
