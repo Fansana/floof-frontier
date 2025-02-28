@@ -1288,6 +1288,14 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,0.5
       parent: 1
+- proto: ComputerPowerMonitoring
+  entities:
+  - uid: 98
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -0.5,-4.5
+      parent: 1
 - proto: ComputerSalvageExpedition
   entities:
   - uid: 363
@@ -2062,20 +2070,15 @@ entities:
     - type: Transform
       pos: -3.5,-9.5
       parent: 1
-- proto: PortableGeneratorPacmanShuttle
+- proto: PortableGeneratorSuperPacmanShuttle
   entities:
-  - uid: 112
+  - uid: 99
     components:
     - type: Transform
       pos: 1.5,-5.5
       parent: 1
     - type: MaterialStorageMagnetPickup
       magnetEnabled: True
-  - uid: 149
-    components:
-    - type: Transform
-      pos: 1.5,-4.5
-      parent: 1
 - proto: Poweredlight
   entities:
   - uid: 146
@@ -2357,27 +2360,17 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 1.5,2.5
       parent: 1
-- proto: SheetPlasma
+- proto: SheetUranium
   entities:
-  - uid: 98
+  - uid: 97
     components:
     - type: Transform
-      pos: 1.5378153,-4.5262976
+      pos: 1.5356381,-5.4612055
       parent: 1
-  - uid: 141
+  - uid: 112
     components:
     - type: Transform
-      pos: 1.5539796,-5.655863
-      parent: 1
-  - uid: 160
-    components:
-    - type: Transform
-      pos: 1.558358,-5.560172
-      parent: 1
-  - uid: 243
-    components:
-    - type: Transform
-      pos: 1.5378153,-4.5262976
+      pos: 1.5356381,-5.4612055
       parent: 1
 - proto: ShuttersNormalOpen
   entities:
@@ -2437,10 +2430,10 @@ entities:
         - Pressed: Toggle
 - proto: SMESAdvanced
   entities:
-  - uid: 260
+  - uid: 141
     components:
     - type: Transform
-      pos: -0.5,-4.5
+      pos: 1.5,-4.5
       parent: 1
 - proto: SpawnPointLatejoin
   entities:
@@ -2501,18 +2494,6 @@ entities:
     - type: Transform
       pos: -5.5,1.5
       parent: 1
-  - uid: 97
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -6.5,-1.5
-      parent: 1
-  - uid: 99
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.5,-1.5
-      parent: 1
   - uid: 100
     components:
     - type: Transform
@@ -2554,6 +2535,16 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 4.5,-12.5
+      parent: 1
+  - uid: 149
+    components:
+    - type: Transform
+      pos: -6.5,-1.5
+      parent: 1
+  - uid: 160
+    components:
+    - type: Transform
+      pos: 7.5,-1.5
       parent: 1
   - uid: 165
     components:
