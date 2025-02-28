@@ -563,7 +563,7 @@
       - CargoTelepadMachineCircuitboard
       - AmmoTechFabCircuitboard
       - MedicalTechFabCircuitboard
-      - MercenaryTechFabCircuitboard
+      - MercenaryTechFabCircuitboardNF
       - EngineeringTechFabCircuitboard
       - RipleyCentralElectronics
       - RipleyPeripheralsElectronics
