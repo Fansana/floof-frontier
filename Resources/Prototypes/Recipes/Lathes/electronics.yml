@@ -600,8 +600,8 @@
 
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
-  id: MercenaryTechFabCircuitboard
-  result: MercenaryTechFabCircuitboard
+  id: MercenaryTechFabCircuitboardNF
+  result: MercenaryTechFabCircuitboardNF
   
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
