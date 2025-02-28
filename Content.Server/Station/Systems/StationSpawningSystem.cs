@@ -5,6 +5,7 @@ using Content.Server.IdentityManagement;
 using Content.Server.Mind.Commands;
 using Content.Server.PDA;
 using Content.Server.Shuttles.Systems;
+using Content.Server.Silicon.IPC;
 using Content.Server.Spawners.EntitySystems;
 using Content.Server.Station.Components;
 using Content.Shared.Access.Components;
@@ -221,6 +222,8 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                         bankBalance -= int.Max(0, loadoutProto.Price); // Treat negatives as zero.
                         EquipStartingGear(entity.Value, loadoutProto, raiseEvent: false);
                         equippedItems.Add(loadoutProto.ID);
+                        InternalEncryptionKeySpawner.TryInsertEncryptionKey(entity.Value, startingGear, EntityManager, profile); // Parkstation - IPC
+
                     }
                 }
 
@@ -249,6 +252,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                         }
 
                         EquipStartingGear(entity.Value, loadoutProto, raiseEvent: false);
+                        InternalEncryptionKeySpawner.TryInsertEncryptionKey(entity.Value, startingGear, EntityManager, profile); // Parkstation - IPC
                         equippedItems.Add(fallback);
                         // Minimum number of items equipped, no need to load more prototypes.
                         if (equippedItems.Count >= groupPrototype.MinLimit)
@@ -261,6 +265,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             // and deduct loadout costs from a bank account if we have one.
             if (prototype?.StartingGear is not null)
                 EquipStartingGear(entity.Value, prototype.StartingGear, raiseEvent: false);
+                InternalEncryptionKeySpawner.TryInsertEncryptionKey(entity.Value, startingGear, EntityManager, profile); // Parkstation - IPC
 
             var bankComp = EnsureComp<BankAccountComponent>(entity.Value);
 

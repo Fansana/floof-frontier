@@ -9,6 +9,7 @@ namespace Content.Shared.Electrocution
         public readonly EntityUid TargetUid;
         public readonly EntityUid? SourceUid;
         public float SiemensCoefficient = 1f;
+        public readonly float? ShockDamage = null;
 
         public ElectrocutionAttemptEvent(EntityUid targetUid, EntityUid? sourceUid, float siemensCoefficient, SlotFlags targetSlots)
         {
@@ -25,11 +26,12 @@ namespace Content.Shared.Electrocution
         public readonly EntityUid? SourceUid;
         public readonly float SiemensCoefficient;
 
-        public ElectrocutedEvent(EntityUid targetUid, EntityUid? sourceUid, float siemensCoefficient)
+        public ElectrocutedEvent(EntityUid targetUid, EntityUid? sourceUid, float siemensCoefficient, float shockDamage)
         {
             TargetUid = targetUid;
             SourceUid = sourceUid;
             SiemensCoefficient = siemensCoefficient;
+            ShockDamage = shockDamage;
         }
     }
 }
