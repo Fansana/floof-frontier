@@ -17,7 +17,7 @@
   class:
   - Expedition
   engine:
-  - Plasma
+  - Uranium
 
 - type: gameMap
   id: Wisp
