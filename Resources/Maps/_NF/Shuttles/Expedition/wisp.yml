@@ -1280,6 +1280,13 @@ entities:
     - type: Transform
       pos: -1.5,-7.5
       parent: 1
+- proto: CargoPallet
+  entities:
+  - uid: 262
+    components:
+    - type: Transform
+      pos: -1.5,-1.5
+      parent: 1
 - proto: ChairPilotSeat
   entities:
   - uid: 14
@@ -1302,6 +1309,13 @@ entities:
     components:
     - type: Transform
       pos: 0.5,1.5
+      parent: 1
+- proto: DefibrillatorCabinetFilled
+  entities:
+  - uid: 261
+    components:
+    - type: Transform
+      pos: -2.5,-1.5
       parent: 1
 - proto: EmergencyLight
   entities:
