@@ -321,7 +321,8 @@ entities:
           1,-2:
             0: 52692
           1,-1:
-            0: 1237
+            0: 1109
+            3: 128
             1: 32768
           1,-5:
             1: 35907
@@ -415,6 +416,21 @@ entities:
           - 0
           - 0
           - 0
+        - volume: 2500
+          temperature: 293.15
+          moles:
+          - 21.6852
+          - 81.57766
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
@@ -430,7 +446,6 @@ entities:
       devices:
       - 478
       - 406
-      - 785
       - 329
       - 276
       - 268
@@ -640,6 +655,11 @@ entities:
       parent: 1
 - proto: AirlockMedicalGlass
   entities:
+  - uid: 109
+    components:
+    - type: Transform
+      pos: 5.5,-14.5
+      parent: 1
   - uid: 353
     components:
     - type: Transform
@@ -665,7 +685,7 @@ entities:
       pos: -5.5,-3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -13779.961
+      secondsUntilStateChange: -16381.018
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1234,14 +1254,6 @@ entities:
     - type: Transform
       pos: -5.5,-15.5
       parent: 1
-- proto: BaseGasCondenser
-  entities:
-  - uid: 779
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 6.5,-15.5
-      parent: 1
 - proto: Bed
   entities:
   - uid: 45
@@ -1286,10 +1298,11 @@ entities:
       parent: 1
 - proto: BedsheetMedical
   entities:
-  - uid: 381
+  - uid: 644
     components:
     - type: Transform
-      pos: 5.5,-15.5
+      rot: -1.5707963267948966 rad
+      pos: 6.5,-15.5
       parent: 1
 - proto: BenchSofaCorpLeft
   entities:
@@ -1332,10 +1345,15 @@ entities:
   - uid: 788
     components:
     - type: Transform
-      parent: 142
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
+      pos: 7.047285,-11.250191
+      parent: 1
+- proto: BoxBuildABuddySlime
+  entities:
+  - uid: 844
+    components:
+    - type: Transform
+      pos: 4.30167,-2.1107414
+      parent: 1
 - proto: BoxPaper
   entities:
   - uid: 191
@@ -1887,13 +1905,6 @@ entities:
     - type: Transform
       pos: -5.9818416,-11.841453
       parent: 1
-- proto: CableApcStack10
-  entities:
-  - uid: 635
-    components:
-    - type: Transform
-      pos: 3.0633373,-12.016093
-      parent: 1
 - proto: CableHV
   entities:
   - uid: 236
@@ -2113,7 +2124,7 @@ entities:
   - uid: 186
     components:
     - type: Transform
-      pos: 3.5,-5.5
+      pos: 4.5,-5.5
       parent: 1
 - proto: ChairOfficeDark
   entities:
@@ -2133,34 +2144,10 @@ entities:
       parent: 1
 - proto: ChemDispenser
   entities:
-  - uid: 776
-    components:
-    - type: Transform
-      pos: 7.5,-13.5
-      parent: 1
-    - type: StaticPrice
-      price: 5000
-- proto: ChemistryHotplate
-  entities:
-  - uid: 772
+  - uid: 350
     components:
     - type: Transform
       pos: 7.5,-12.5
-      parent: 1
-- proto: ChemMaster
-  entities:
-  - uid: 379
-    components:
-    - type: Transform
-      pos: 6.5,-13.5
-      parent: 1
-- proto: CleanerDispenser
-  entities:
-  - uid: 792
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 5.5,-4.5
       parent: 1
 - proto: CleanerGrenade
   entities:
@@ -2240,6 +2227,18 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -3.5,-14.5
       parent: 1
+- proto: CrateEmptySpawner
+  entities:
+  - uid: 776
+    components:
+    - type: Transform
+      pos: 2.5,-11.5
+      parent: 1
+  - uid: 843
+    components:
+    - type: Transform
+      pos: 3.5,-11.5
+      parent: 1
 - proto: CrateTrashCart
   entities:
   - uid: 142
@@ -2253,8 +2252,8 @@ entities:
         immutable: False
         temperature: 293.14923
         moles:
-        - 1.7459903
-        - 6.568249
+        - 1.8856695
+        - 7.0937095
         - 0
         - 0
         - 0
@@ -2271,14 +2270,14 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 789
-          - 793
-          - 800
-          - 788
-          - 791
-          - 191
-          - 790
           - 794
+          - 790
+          - 191
+          - 791
+          - 800
+          - 793
+          - 789
+          - 110
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -2321,12 +2320,6 @@ entities:
     components:
     - type: Transform
       pos: 5.5,-10.5
-      parent: 1
-  - uid: 109
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,-14.5
       parent: 1
   - uid: 166
     components:
@@ -2420,7 +2413,7 @@ entities:
       parent: 1
 - proto: DefibrillatorCabinetFilled
   entities:
-  - uid: 840
+  - uid: 420
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -2577,10 +2570,17 @@ entities:
       parent: 1
 - proto: ExosuitFabricator
   entities:
-  - uid: 121
+  - uid: 431
     components:
     - type: Transform
       pos: -6.5,-12.5
+      parent: 1
+- proto: ExtinguisherCabinetFilled
+  entities:
+  - uid: 850
+    components:
+    - type: Transform
+      pos: 1.5,-7.5
       parent: 1
 - proto: FaxMachineShip
   entities:
@@ -2708,7 +2708,7 @@ entities:
       pos: 4.5,-8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -7618.459
+      secondsUntilStateChange: -10219.516
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -2811,15 +2811,6 @@ entities:
       deviceLists:
       - 144
       - 331
-  - uid: 785
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,-14.5
-      parent: 1
-    - type: DeviceNetwork
-      deviceLists:
-      - 144
   - uid: 786
     components:
     - type: Transform
@@ -2833,6 +2824,15 @@ entities:
     - type: Transform
       pos: -0.25594234,-0.018629193
       parent: 1
+- proto: FloorDrain
+  entities:
+  - uid: 379
+    components:
+    - type: Transform
+      pos: 6.5,-2.5
+      parent: 1
+    - type: Fixtures
+      fixtures: {}
 - proto: FoodSnackChips
   entities:
   - uid: 340
@@ -3694,14 +3694,9 @@ entities:
       parent: 1
     - type: AtmosPipeColor
       color: '#0055CCFF'
-  - uid: 644
-    components:
-    - type: Transform
-      pos: 6.5,-14.5
-      parent: 1
-- proto: GasPressurePump
+- proto: GasPressurePumpOn
   entities:
-  - uid: 431
+  - uid: 639
     components:
     - type: Transform
       pos: 2.5,-14.5
@@ -4143,6 +4138,19 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.5,-12.5
       parent: 1
+  - uid: 807
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,-14.5
+      parent: 1
+- proto: GunSafe
+  entities:
+  - uid: 742
+    components:
+    - type: Transform
+      pos: 4.5,-6.5
+      parent: 1
 - proto: GunSafeShuttleCaptain
   entities:
   - uid: 48
@@ -4160,6 +4168,10 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -8.5,-12.5
       parent: 1
+    - type: Thruster
+      enabled: False
+    - type: ApcPowerReceiver
+      powerLoad: 1
   - uid: 322
     components:
     - type: Transform
@@ -4185,39 +4197,68 @@ entities:
     - type: Transform
       pos: -2.5622644,-11.474328
       parent: 1
-- proto: HospitalCurtains
-  entities:
-  - uid: 807
-    components:
-    - type: Transform
-      pos: 6.5,-14.5
-      parent: 1
 - proto: HospitalCurtainsOpen
   entities:
-  - uid: 639
+  - uid: 778
     components:
     - type: Transform
       pos: 5.5,-14.5
+      parent: 1
+  - uid: 779
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,-14.5
       parent: 1
 - proto: Igniter
   entities:
   - uid: 797
     components:
     - type: Transform
-      pos: 7.702066,-11.92681
+      pos: 7.7074676,-11.558748
       parent: 1
-- proto: LockerMercenaryFilled
+- proto: KitchenReagentGrinder
   entities:
   - uid: 111
     components:
     - type: Transform
-      pos: 4.5,-6.5
+      pos: 7.5,-11.5
       parent: 1
-  - uid: 358
+    - type: ContainerContainer
+      containers:
+        beakerSlot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: 121
+        inputContainer: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        machine_board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        machine_parts: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+- proto: LargeBeaker
+  entities:
+  - uid: 121
     components:
     - type: Transform
-      pos: 3.5,-6.5
-      parent: 1
+      parent: 111
+    - type: Physics
+      canCollide: False
+- proto: LightReplacer
+  entities:
+  - uid: 110
+    components:
+    - type: Transform
+      parent: 142
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: LockerSalvageSpecialistFilled
   entities:
   - uid: 744
@@ -4227,11 +4268,10 @@ entities:
       parent: 1
 - proto: LockerWallChemistryFilled
   entities:
-  - uid: 343
+  - uid: 772
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 8.5,-11.5
+      pos: 7.5,-10.5
       parent: 1
 - proto: LockerWallEVAColorEmergencyFilled
   entities:
@@ -4252,27 +4292,13 @@ entities:
     - type: Transform
       pos: -6.5,-10.5
       parent: 1
-- proto: LockerWallMedicalFilled
-  entities:
-  - uid: 756
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.5,-14.5
-      parent: 1
-- proto: MachineCentrifuge
-  entities:
-  - uid: 420
-    components:
-    - type: Transform
-      pos: 6.5,-11.5
-      parent: 1
-- proto: MachineElectrolysisUnit
+- proto: LockerWallMedicalDoctorFilled
   entities:
   - uid: 773
     components:
     - type: Transform
-      pos: 7.5,-11.5
+      rot: 1.5707963267948966 rad
+      pos: 4.5,-14.5
       parent: 1
 - proto: MachineFrame
   entities:
@@ -4280,6 +4306,11 @@ entities:
     components:
     - type: Transform
       pos: -6.5,-14.5
+      parent: 1
+  - uid: 343
+    components:
+    - type: Transform
+      pos: 7.5,-13.5
       parent: 1
   - uid: 410
     components:
@@ -4300,10 +4331,10 @@ entities:
       parent: 1
 - proto: MedicalBed
   entities:
-  - uid: 778
+  - uid: 648
     components:
     - type: Transform
-      pos: 5.5,-15.5
+      pos: 6.5,-15.5
       parent: 1
 - proto: MercenaryTechFab
   entities:
@@ -4319,7 +4350,7 @@ entities:
   - uid: 796
     components:
     - type: Transform
-      pos: 7.405191,-12.036185
+      pos: 7.4574676,-11.355623
       parent: 1
 - proto: NFHolopadShip
   entities:
@@ -4371,6 +4402,9 @@ entities:
 
 
         You can find a chem lab in the southeast and engineering workshop at the southwest. You can find an IFF console near your seat for your shady business.
+
+
+        Mercfab and IFF console etc. prices included in ship price.
 - proto: PlushieGhost
   entities:
   - uid: 800
@@ -4480,6 +4514,18 @@ entities:
       parent: 1
 - proto: PoweredlightExterior
   entities:
+  - uid: 98
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 10.5,-11.5
+      parent: 1
+  - uid: 635
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 10.5,-6.5
+      parent: 1
   - uid: 730
     components:
     - type: Transform
@@ -4489,6 +4535,54 @@ entities:
     components:
     - type: Transform
       pos: 4.5,-17.5
+      parent: 1
+  - uid: 774
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -9.5,-11.5
+      parent: 1
+  - uid: 785
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -9.5,-6.5
+      parent: 1
+  - uid: 842
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -8.5,-14.5
+      parent: 1
+  - uid: 845
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -8.5,-3.5
+      parent: 1
+  - uid: 846
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 9.5,-3.5
+      parent: 1
+  - uid: 847
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 9.5,-14.5
+      parent: 1
+  - uid: 848
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -4.5,1.5
+      parent: 1
+  - uid: 849
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 5.5,1.5
       parent: 1
 - proto: PoweredlightGreen
   entities:
@@ -4714,6 +4808,12 @@ entities:
       rot: 3.141592653589793 rad
       pos: 8.5,-12.5
       parent: 1
+  - uid: 381
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,-14.5
+      parent: 1
   - uid: 527
     components:
     - type: Transform
@@ -4771,13 +4871,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 2.5,1.5
-      parent: 1
-- proto: RipleyChassis
-  entities:
-  - uid: 648
-    components:
-    - type: Transform
-      pos: 2.4773402,-11.504988
       parent: 1
 - proto: ShelfMetal
   entities:
@@ -4983,16 +5076,9 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 5.5,-11.5
       parent: 1
-- proto: SmartFridge
-  entities:
-  - uid: 476
-    components:
-    - type: Transform
-      pos: 4.5,-14.5
-      parent: 1
 - proto: SMESBasic
   entities:
-  - uid: 98
+  - uid: 792
     components:
     - type: Transform
       pos: -3.5,-6.5
@@ -5020,6 +5106,20 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+- proto: StructureGunRackMercenary
+  entities:
+  - uid: 756
+    components:
+    - type: Transform
+      pos: 3.5,-6.5
+      parent: 1
+- proto: StructurePistolRackWallmountedMercenary
+  entities:
+  - uid: 358
+    components:
+    - type: Transform
+      pos: 2.5,-1.5
+      parent: 1
 - proto: SubstationBasic
   entities:
   - uid: 97
@@ -5042,18 +5142,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.5,-3.5
       parent: 1
-- proto: SuitStorageWallmountMercenary
+- proto: SuitStorageWallmountEVAMercenary
   entities:
-  - uid: 110
+  - uid: 806
     components:
     - type: Transform
       pos: 4.5,-4.5
-      parent: 1
-  - uid: 350
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 5.5,-5.5
       parent: 1
 - proto: TableCounterMetal
   entities:
@@ -5062,22 +5156,12 @@ entities:
     - type: Transform
       pos: -2.5,-11.5
       parent: 1
-  - uid: 742
+- proto: TableGlass
+  entities:
+  - uid: 840
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.5,-12.5
-      parent: 1
-  - uid: 774
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
       pos: 7.5,-11.5
-      parent: 1
-  - uid: 806
-    components:
-    - type: Transform
-      pos: 6.5,-11.5
       parent: 1
 - proto: TableReinforced
   entities:
@@ -5844,6 +5928,11 @@ entities:
     components:
     - type: Transform
       pos: 1.5,-6.5
+      parent: 1
+  - uid: 476
+    components:
+    - type: Transform
+      pos: 4.5,-14.5
       parent: 1
   - uid: 647
     components:
