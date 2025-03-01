@@ -62,7 +62,6 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
     [ValidatePrototypeId<DamageTypePrototype>]
     private const string DamageType = "Shock";
 
-    // Multiply and shift the log scale for shock damage.
     // Yes, this is absurdly small for a reason.
     public const float ElectrifiedDamagePerWatt = 0.0015f; // This information is allowed to be public, and was needed in BatteryElectrocuteChargeSystem.cs
 
@@ -122,15 +121,15 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
         while (query.MoveNext(out var uid, out var activated, out var electrified, out var transform))
         {
             activated.TimeLeft -= frameTime;
-            if (activated.TimeLeft <= 0 || !IsPowered(uid, electrified, transform))
+            if (activated.TimeLeft <= 0 || !IsElectrified(uid, electrified, transform))
             {
-                _appearance.SetData(uid, ElectrifiedVisuals.ShowSparks, false);
+                _appearance.SetData(uid, ElectrifiedVisuals.IsElectrified, false);
                 RemComp<ActivatedElectrifiedComponent>(uid);
             }
         }
     }
 
-    private bool IsPowered(EntityUid uid, ElectrifiedComponent electrified, TransformComponent transform)
+    private bool IsElectrified(EntityUid uid, ElectrifiedComponent electrified, TransformComponent transform)
     {
         if (!electrified.Enabled)
             return false;
@@ -149,7 +148,7 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
         }
         if (electrified.UsesApcPower)
         {
-            if (!this.IsPowered(uid, EntityManager))
+            if (!this.IsElectrified(uid, EntityManager,))
                 return false;
         }
         else if (electrified.RequirePower && PoweredNode(uid, electrified) == null)
@@ -169,7 +168,7 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
         if (!electrified.OnAttacked)
             return;
 
-        if (_meleeWeapon.GetDamage(args.Used, args.User).Empty)
+        if (!_meleeWeapon.GetDamage(args.Used, args.User).AnyPositive())
             return;
 
         TryDoElectrifiedAct(uid, args.User, 1, electrified);
@@ -186,7 +185,7 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
         if (!component.CurrentLit || args.Used != args.User)
             return;
 
-        if (_meleeWeapon.GetDamage(args.Used, args.User).Empty)
+        if (!_meleeWeapon.GetDamage(args.Used, args.User).AnyPositive())
             return;
 
         DoCommonElectrocution(args.User, uid, component.UnarmedHitShock, component.UnarmedHitStun, false);
@@ -213,14 +212,14 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
         if (!Resolve(uid, ref electrified, ref transform, false))
             return false;
 
-        if (!IsPowered(uid, electrified, transform))
+        if (!IsElectrified(uid, electrified, transform))
             return false;
 
         if (!_random.Prob(electrified.Probability))
             return false;
 
         EnsureComp<ActivatedElectrifiedComponent>(uid);
-        _appearance.SetData(uid, ElectrifiedVisuals.ShowSparks, true);
+        _appearance.SetData(uid, ElectrifiedVisuals.IsElectrified, true);
 
         siemens *= electrified.SiemensCoefficient;
         if (!DoCommonElectrocutionAttempt(targetUid, uid, ref siemens) || siemens <= 0)
@@ -306,8 +305,6 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
         RaiseLocalEvent(uid, new ElectrocutedEvent(uid, sourceUid, siemensCoefficient, shockDamage), true);
             return true;
         }
-        return true;
-    }
 
     private bool TryDoElectrocutionPowered(
         EntityUid uid,

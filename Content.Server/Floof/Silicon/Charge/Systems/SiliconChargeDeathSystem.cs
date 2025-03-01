@@ -1,6 +1,5 @@
 using Content.Server.Power.Components;
 using Content.Shared.Silicon.Systems;
-using Content.Server.Bed.Sleep;
 using Content.Shared.Bed.Sleep;
 using Content.Server.Silicon.Charge;
 using Content.Server.Humanoid;
