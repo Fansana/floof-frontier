@@ -8,10 +8,11 @@
     damage:
       types:
         Slash: 2
-    heavyRateModifier: 0.5
-    heavyDamageBaseModifier: 1.75
-    heavyStaminaCost: 10
-    maxTargets: 1
+    # Flooftier - removed as frontier doesn't have the EE combat system.
+    # heavyRateModifier: 0.5
+    # heavyDamageBaseModifier: 1.75
+    # heavyStaminaCost: 10
+    # maxTargets: 1
     angle: 120
     animation: WeaponArcSlash
     soundHit:
