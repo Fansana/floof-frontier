@@ -20,10 +20,10 @@
     maxTransferAmount: 10
     minTransferAmount: 1
     canChangeTransferAmount: true
-  - type: UserInterface
-    interfaces:
-    - key: enum.TransferAmountUiKey.Key
-      type: TransferAmountBoundUserInterface
+  # - type: UserInterface # Flooftier - not needed and causes errors
+    # interfaces:
+    # - key: enum.TransferAmountUiKey.Key
+      # type: TransferAmountBoundUserInterface
   - type: Spillable
     solution: fleshlight
   - type: DrawableSolution
