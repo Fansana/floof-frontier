@@ -1,6 +1,7 @@
 using Content.Server.Administration.Logs;
 using Content.Server.Cargo.Components;
 using Content.Server.Stack;
+using Content.Shared.Cargo.Components;
 using Content.Shared.Silicon.BlindHealing;
 using Content.Shared.Damage;
 using Content.Shared.Database;

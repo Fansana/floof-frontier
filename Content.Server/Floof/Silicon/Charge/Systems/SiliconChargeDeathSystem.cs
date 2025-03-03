@@ -62,7 +62,7 @@ public sealed class SiliconDeathSystem : EntitySystem
     private void SiliconUnDead(EntityUid uid, SiliconDownOnDeadComponent siliconDeadComp, BatteryComponent? batteryComp, EntityUid batteryUid)
     {
         RemComp<ForcedSleepingComponent>(uid);
-        _sleep.TryWaking(uid, null, true);
+        _sleep.TryWaking(uid, true);
 
         siliconDeadComp.Dead = false;
 
