@@ -94,17 +94,17 @@
       path: /Audio/Effects/Silicon/startup.ogg
   - type: EmitBuzzWhileDamaged
   - type: CanHostGuardian
-  - type: LanguageKnowledge
-    speaks:
-    - TauCetiBasic
-    - RobotTalk
-    understands:
-    - TauCetiBasic
-    - RobotTalk
+  # - type: LanguageKnowledge
+    # speaks:
+    # - TauCetiBasic
+    # - RobotTalk
+    # understands:
+    # - TauCetiBasic
+    # - RobotTalk
   - type: WeldingHealable
-  - type: PsionicInsulation
-  - type: OfferItem
-  - type: LayingDown
+  # - type: PsionicInsulation
+  # - type: OfferItem
+  # - type: LayingDown
   - type: Carriable
   - type: StepTriggerImmune
     whitelist:
