@@ -15,6 +15,7 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+    - IPCMaskWearable # Estacao Pirata - IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -137,6 +138,7 @@
     tags:
     - PetWearable
     - WhitelistChameleon
+    - IPCMaskWearable # Estacao Pirata - IPCs
 
 - type: entity
   parent: ClothingMaskBreathMedical
@@ -176,6 +178,7 @@
     tags:
     - PetWearable
     - WhitelistChameleon
+    - IPCMaskWearable # Estacao Pirata - IPCs
   - type: PhysicalComposition
     materialComposition:
       Steel: 50
@@ -200,6 +203,7 @@
     tags:
     - ClownMask
     - WhitelistChameleon
+    - IPCMaskWearable # Estacao Pirata - IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -213,6 +217,7 @@
     - ClownMask
     - HamsterWearable
     - WhitelistChameleon
+    - IPCMaskWearable # Estacao Pirata - IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -280,6 +285,7 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+    - IPCMaskWearable # Estacao Pirata - IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -370,6 +376,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - IPCMaskWearable # Estacao Pirata - IPCs
   - type: HideLayerClothing
     slots:
     - Hair
@@ -416,6 +423,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - IPCMaskWearable # Estacao Pirata - IPCs
   - type: HideLayerClothing
     slots:
     - Hair
@@ -464,6 +472,7 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+    - IPCMaskWearable # Estacao Pirata - IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -580,6 +589,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - IPCMaskWearable # Estacao Pirata - IPCs
 
 - type: entity
   parent: ClothingMaskNeckGaiter

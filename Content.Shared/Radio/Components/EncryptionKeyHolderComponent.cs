@@ -42,6 +42,10 @@ public sealed partial class EncryptionKeyHolderComponent : Component
     public Container KeyContainer = default!;
     public const string KeyContainerName = "key_slots";
 
+    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("examineWhileLocked")]
+    public bool ExamineWhileLocked = true;
+
     /// <summary>
     ///     Combined set of radio channels provided by all contained keys.
     /// </summary>

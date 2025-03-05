@@ -5,6 +5,7 @@ using Content.Server.IdentityManagement;
 using Content.Server.Mind.Commands;
 using Content.Server.PDA;
 using Content.Server.Shuttles.Systems;
+using Content.Server.Silicon.IPC;
 using Content.Server.Spawners.EntitySystems;
 using Content.Server.Station.Components;
 using Content.Shared.Access.Components;
@@ -221,6 +222,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                         bankBalance -= int.Max(0, loadoutProto.Price); // Treat negatives as zero.
                         EquipStartingGear(entity.Value, loadoutProto, raiseEvent: false);
                         equippedItems.Add(loadoutProto.ID);
+
                     }
                 }
 
