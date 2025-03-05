@@ -41,7 +41,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopLArm
   bodyPart: LArm
-  markingCategory: LeftArm
+  markingCategory: Arms
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian]
   sprites:
   - sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
@@ -54,7 +54,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopLHand
   bodyPart: LHand
-  markingCategory: LeftHand
+  markingCategory: Arms
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian]
   sprites:
   - sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
@@ -63,7 +63,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopLLeg
   bodyPart: LLeg
-  markingCategory: LeftLeg
+  markingCategory: Legs
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian]
   sprites:
   - sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
@@ -75,7 +75,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopLFoot
   bodyPart: LFoot
-  markingCategory: LeftFoot
+  markingCategory: Legs
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian]
   sprites:
   - sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
@@ -86,7 +86,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopRArm
   bodyPart: RArm
-  markingCategory: RightArm
+  markingCategory: Arms
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian]
   sprites:
   - sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
@@ -100,7 +100,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopRHand
   bodyPart: RHand
-  markingCategory: RightHand
+  markingCategory: Arms
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian]
   sprites:
   - sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
@@ -109,7 +109,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopRLeg
   bodyPart: RLeg
-  markingCategory: RightLeg
+  markingCategory: Legs
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian]
   sprites:
   - sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
@@ -121,7 +121,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopRFoot
   bodyPart: RFoot
-  markingCategory: RightFoot
+  markingCategory: Legs
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian]
   sprites:
   - sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi

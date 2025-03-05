@@ -5,7 +5,6 @@
   abstract: true
   components:
     # - type: Vore # Floofstation - Vore
-      # canVore: true
     - type: ContentEye
     - type: CameraRecoil
     - type: Reactive
@@ -81,7 +80,7 @@
         - trigger: !type:DamageTrigger
             damage: 500
           behaviors:
-            - !type:GibBehavior { }
+            - !type:GibBehavior {}
     - type: Icon
       sprite: Mobs/Species/IPC/parts.rsi
       state: full
@@ -195,25 +194,18 @@
             True: { visible: true }
             False: { visible: false }
     - type: Cuffable
-    - type: Mood
+    # - type: Mood
     - type: AnimationPlayer
     - type: Buckle
     - type: CreamPied
     - type: Stripping
     - type: Strippable
-    # - type: SurgeryTarget
-    - type: Targeting
     - type: UserInterface
       interfaces:
         enum.HumanoidMarkingModifierKey.Key:
           type: HumanoidMarkingModifierBoundUserInterface
         enum.StrippingUiKey.Key:
           type: StrippableBoundUserInterface
-        enum.SurgeryUIKey.Key:
-          type: SurgeryBui
-        enum.InstrumentUiKey.Key: # Floof - M3739 - Funnily enough, this was never given to this prototype at first, resulting in it being unable to utilize the singing trait at all.
-          type: InstrumentBoundUserInterface
-          requireInputValidation: false
     - type: Emoting
     - type: Grammar
       attributes:
@@ -311,4 +303,3 @@
     Cold: 0.2
     Heat: 2
     Shock: 2.5
-

@@ -43,7 +43,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusLArm
   bodyPart: LArm
-  markingCategory: LeftArm
+  markingCategory: Arms
   speciesRestriction: [IPC]
   coloring:
     default:
@@ -57,7 +57,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusLHand
   bodyPart: LHand
-  markingCategory: LeftHand
+  markingCategory: Arms
   speciesRestriction: [IPC]
   coloring:
     default:
@@ -71,7 +71,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusLLeg
   bodyPart: LLeg
-  markingCategory: LeftLeg
+  markingCategory: Legs
   speciesRestriction: [IPC]
   coloring:
     default:
@@ -86,7 +86,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusLFoot
   bodyPart: LFoot
-  markingCategory: LeftFoot
+  markingCategory: Legs
   speciesRestriction: [IPC]
   coloring:
     default:
@@ -102,7 +102,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusRArm
   bodyPart: RArm
-  markingCategory: RightArm
+  markingCategory: Arms
   speciesRestriction: [IPC]
   coloring:
     default:
@@ -117,7 +117,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusRHand
   bodyPart: RHand
-  markingCategory: RightHand
+  markingCategory: Arms
   speciesRestriction: [IPC]
   coloring:
     default:
@@ -131,7 +131,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusRLeg
   bodyPart: RLeg
-  markingCategory: RightLeg
+  markingCategory: Legs
   speciesRestriction: [IPC]
   coloring:
     default:
@@ -146,7 +146,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusRFoot
   bodyPart: RFoot
-  markingCategory: RightFoot
+  markingCategory: Legs
   speciesRestriction: [IPC]
   coloring:
     default:
