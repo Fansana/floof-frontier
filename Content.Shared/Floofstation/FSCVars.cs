@@ -10,4 +10,9 @@ namespace Content.Shared.Floofstation.FSCVars;
 public sealed class FSCVars
 {
     public static readonly CVarDef<string> ConsentRules = CVarDef.Create("floof.consent_rules", "", CVar.ARCHIVE | CVar.CLIENTONLY);
+    
+    /// <summary>
+    /// How many characters the consent text can be.
+    /// </summary>
+    public static readonly CVarDef<int> ConsentFreetextMaxLength = CVarDef.Create("consent.freetext_max_length", 1000, CVar.REPLICATED | CVar.SERVER);
 }
