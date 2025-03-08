@@ -133,6 +133,7 @@
       guides:
       - Cyborgs
       - Robotics
+    - type: Organ # Estacao Pirata - IPCs
     - type: ChangeVoiceInContainer
       whitelist:
         components:
