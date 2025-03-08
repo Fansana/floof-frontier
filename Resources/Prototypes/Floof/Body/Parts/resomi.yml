@@ -6,8 +6,8 @@
   name: "resomi body part"
   abstract: true
   components:
-  - type: Damageable
-    damageContainer: OrganicPart
+  # - type: Damageable
+    # damageContainer: OrganicPart
   - type: BodyPart
   - type: ContainerContainer
     containers:

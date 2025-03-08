@@ -1,0 +1,24 @@
+- type: emote
+  id: Gekker
+  name: chat-emote-name-gekker
+  category: Vocal
+  chatMessages: [ gekkers ]
+  chatTriggers:
+  - gekkers
+
+- type: emote
+  id: Yip
+  name: chat-emote-name-yip
+  category: Vocal
+  chatMessages: [ yips ]
+  chatTriggers:
+  - yip
+  - yips
+
+- type: emote
+  id: Yap
+  name: chat-emote-name-yap
+  chatMessages: [ yaps ]
+  chatTriggers:
+  - yap
+  - yaps
