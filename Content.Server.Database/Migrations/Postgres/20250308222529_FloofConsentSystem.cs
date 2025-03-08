@@ -1,12 +1,13 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace Content.Server.Database.Migrations.Sqlite
+namespace Content.Server.Database.Migrations.Postgres
 {
     /// <inheritdoc />
-    public partial class ConsentSystem : Migration
+    public partial class FloofConsentSystem : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,10 +16,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                 name: "consent_settings",
                 columns: table => new
                 {
-                    consent_settings_id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    user_id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    consent_freetext = table.Column<string>(type: "TEXT", nullable: false)
+                    consent_settings_id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    user_id = table.Column<Guid>(type: "uuid", nullable: false),
+                    consent_freetext = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -29,11 +30,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                 name: "consent_toggle",
                 columns: table => new
                 {
-                    consent_toggle_id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    consent_settings_id = table.Column<int>(type: "INTEGER", nullable: false),
-                    toggle_proto_id = table.Column<string>(type: "TEXT", nullable: false),
-                    toggle_proto_state = table.Column<string>(type: "TEXT", nullable: false)
+                    consent_toggle_id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    consent_settings_id = table.Column<int>(type: "integer", nullable: false),
+                    toggle_proto_id = table.Column<string>(type: "text", nullable: false),
+                    toggle_proto_state = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
