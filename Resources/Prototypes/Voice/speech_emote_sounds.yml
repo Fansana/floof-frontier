@@ -603,6 +603,6 @@
       params: # to prevent it from being definitively read by players as "OH SHIT A GRENADE"
         variation: 0.125
     Whirr:
-      collection: IPCWhirrs
+      path: /Audio/Voice/IPC/whirr1.ogg
       params:
         variation: 0
