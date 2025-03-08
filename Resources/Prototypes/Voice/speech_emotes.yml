@@ -384,20 +384,6 @@
   chatTriggers:
   - sdeathgasp
 
-- type: emote
-  id: Buzz
-  name: chat-emote-name-buzz
-  category: Vocal
-  icon: Interface/Emotes/buzz.png
-  whitelist:
-    requireAll: true
-    components:
-    - BorgChassis
-    - Vocal
-  chatMessages: ["chat-emote-msg-buzz"]
-  chatTriggers:
-    - buzzes
-
 # Machine Emotes
 - type: emote
   id: Beep
