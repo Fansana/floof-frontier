@@ -16,6 +16,8 @@
     - Harpy # DeltaV
     - Felinid # DeltaV
     - Oni # DeltaV
+    - Resomi
+    - IPCs
 #    - Rodentia # DeltaV
 
 - type: guideEntry
@@ -57,3 +59,13 @@
   id: Vox
   name: species-name-vox
   text: "/ServerInfo/Guidebook/Mobs/Vox.xml"
+  
+- type: guideEntry
+  id: Resomi
+  name: species-name-resomi
+  text: "/ServerInfo/Guidebook/Mobs/Resomi.xml"
+  
+- type: guideEntry
+  id: IPCs
+  name: species-name-ipc
+  text: "/ServerInfo/Guidebook/Mobs/IPCs.xml"
