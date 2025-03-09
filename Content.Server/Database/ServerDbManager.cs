@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
 using Content.Shared.Administration.Logs;
 using Content.Shared.CCVar;
-using Content.Shared.Consent;
+using Content.Shared.Consent; // Floofstation
 using Content.Shared.Database;
 using Content.Shared.Preferences;
 using Content.Shared.Ghost.Roles; // Frontier: ghost role whitelists
@@ -1002,13 +1002,13 @@ namespace Content.Server.Database
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.MarkMessageAsSeen(id, dismissedToo));
         }
-        public Task SavePlayerConsentSettingsAsync(NetUserId userId, PlayerConsentSettings consentSettings)
+        public Task SavePlayerConsentSettingsAsync(NetUserId userId, PlayerConsentSettings consentSettings) // Floofstation
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.SavePlayerConsentSettingsAsync(userId, consentSettings));
         }
 
-        public Task<PlayerConsentSettings> GetPlayerConsentSettingsAsync(NetUserId userId)
+        public Task<PlayerConsentSettings> GetPlayerConsentSettingsAsync(NetUserId userId) // Floofstation
         {
             DbReadOpsMetric.Inc();
             return RunDbCommand(() => _db.GetPlayerConsentSettingsAsync(userId));
