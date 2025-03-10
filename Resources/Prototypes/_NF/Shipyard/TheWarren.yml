@@ -14,7 +14,7 @@
   parent: BaseVessel
   name: ESS The Warren
   description: A large, multi-crew vessel intended for use as a self-sufficient Erotic Bunny Bar. Provided by Elysium Star Shipyards, Ltd.
-  price: 100000
+  price: 125000
   category: Large
   group: Shipyard
   shuttlePath: /Maps/_NF/Shuttles/TheWarren.yml
