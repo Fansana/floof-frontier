@@ -1,16 +1,14 @@
 using Robust.Shared.Configuration;
 
-namespace Content.Shared.Floofstation.FSCVars;
+namespace Content.Shared.FloofStation;
 
 /// <summary>
-/// Floofstation cvars!
+/// Floofstation specific cvars.
 /// </summary>
 [CVarDefs]
-// Using Delta's to go off of, do not know if this will work.
+// ReSharper disable once InconsistentNaming - Shush you
 public sealed class FSCVars
-{
-    public static readonly CVarDef<string> ConsentRules = CVarDef.Create("floof.consent_rules", "", CVar.ARCHIVE | CVar.CLIENTONLY);
-    
+{   
     /// <summary>
     /// How many characters the consent text can be.
     /// </summary>
