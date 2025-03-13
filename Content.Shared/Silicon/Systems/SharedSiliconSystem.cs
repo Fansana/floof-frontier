@@ -1,4 +1,4 @@
-using Content.Shared.Silicon.Components;
+/* using Content.Shared.Silicon.Components;
 using Content.Shared.Alert;
 using Robust.Shared.Serialization;
 using Content.Shared.Movement.Systems;
@@ -107,3 +107,4 @@ public sealed class SiliconChargeStateUpdateEvent : EntityEventArgs
         ChargePercent = chargePercent;
     }
 }
+ */
