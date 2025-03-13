@@ -12,7 +12,11 @@
       "name": "icon"
     },
     {
-      "name": "equipped-NECK-1",
+      "name": "equipped-NECK",
+      "directions": 4
+    },
+	{
+      "name": "head-1",
       "directions": 4
     },
 	{

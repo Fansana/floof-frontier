@@ -1,4 +1,4 @@
-using Content.Server.Administration.Logs;
+/* using Content.Server.Administration.Logs;
 using Content.Server.Cargo.Components;
 using Content.Server.Stack;
 using Content.Shared.Silicon.BlindHealing;
@@ -119,3 +119,4 @@ namespace Content.Server.Silicon.BlindHealing
         }
     }
 }
+ */

@@ -327,6 +327,7 @@
 
 - type: emote
   id: SiliconDeathgasp
+  name: chat-emote-name-deathgasp
   chatMessages: ["chat-emote-msg-deathgasp-silicon"]
   chatTriggers:
   - sdeathgasp

@@ -1,4 +1,4 @@
-using System.Diagnostics;
+/* using System.Diagnostics;
 using Content.Server.Silicon.WeldingHealing;
 using Content.Server.Administration.Logs;
 using Content.Server.Stack;
@@ -119,3 +119,4 @@ namespace Content.Server.Silicon.WeldingHealable
         }
     }
 }
+ */

@@ -49,9 +49,9 @@
       glass:
         canReact: false
   # Estacao Pirata - IPC Healing
-  - type: BlindHealing
-    damageContainers: 
-      - Silicon
+  # - type: BlindHealing
+    # damageContainers: 
+      # - Silicon
   - type: StackPrice
     price: 2
 

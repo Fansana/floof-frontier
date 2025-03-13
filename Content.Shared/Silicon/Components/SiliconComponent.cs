@@ -1,4 +1,4 @@
-using Robust.Shared.GameStates;
+/* using Robust.Shared.GameStates;
 using Content.Shared.Silicon.Systems;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 using Robust.Shared.Containers;
@@ -106,3 +106,4 @@ public sealed partial class SiliconComponent : Component
     [DataField("fireStackMultiplier"), ViewVariables(VVAccess.ReadWrite)]
     public float FireStackMultiplier = 1f;
 }
+ */

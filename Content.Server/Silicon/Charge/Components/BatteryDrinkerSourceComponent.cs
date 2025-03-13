@@ -1,4 +1,4 @@
-using Robust.Shared.Audio;
+/* using Robust.Shared.Audio;
 
 namespace Content.Server.Silicon.Charge;
 
@@ -23,4 +23,4 @@ public sealed partial class BatteryDrinkerSourceComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier? DrinkSound = new SoundCollectionSpecifier("sparks");
-}
+} */
