@@ -3,7 +3,7 @@
   parent: BaseVessel
   name: NC Hauler
   description: A medium sized vessel specializing in long-haul salvage, mining, and cargo operations.
-  price: 58340 #20% of 48615 = 9723
+  price: 77000
   category: Medium
   group: Shipyard
   shuttlePath: /Maps/_NF/Shuttles/hauler.yml

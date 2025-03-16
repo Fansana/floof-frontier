@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: NC Bocadillo
   description: A tiny food truck perfect for a solo chef.
-  price: 16500
+  price: 25000 # TODO: fix this value, getting tests to pass - Whatstone
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_NF/Shuttles/bocadillo.yml
