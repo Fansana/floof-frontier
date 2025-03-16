@@ -3,6 +3,8 @@ namespace Content.Server._EinsteinEngines.Silicon.BlindHealing;
 [RegisterComponent]
 public sealed partial class BlindHealingComponent : Component
 {
+    public string SolutionName = "BatteryDrinkerSource";
+    
     [DataField]
     public int DoAfterDelay = 3;
 
