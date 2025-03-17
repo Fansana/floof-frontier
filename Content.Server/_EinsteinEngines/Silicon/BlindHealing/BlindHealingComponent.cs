@@ -1,9 +1,8 @@
 namespace Content.Server._EinsteinEngines.Silicon.BlindHealing;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class BlindHealingComponent : Component
 {
-    public string SolutionName = "BlindHealing";
     
     [DataField]
     public int DoAfterDelay = 3;
