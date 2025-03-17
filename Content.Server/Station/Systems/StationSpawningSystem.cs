@@ -271,7 +271,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                 _bank.TryBankWithdraw(session!, prefs!, profile!, initialBankBalance - bankBalance, out var newBalance);
             }
             /// End Frontier: overwriting EquipRoleLoadout
-            _internalEncryption.TryInsertEncryptionKey(entity.Value, startingGear, EntityManager); // Goobstation
+            _internalEncryption.TryInsertEncryptionKey(entity.Value, loadoutProto, EntityManager); // Goobstation
         }
 
         var gearEquippedEv = new StartingGearEquippedEvent(entity.Value);

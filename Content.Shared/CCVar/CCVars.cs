@@ -12,6 +12,11 @@ namespace Content.Shared.CCVar;
 [CVarDefs]
 public sealed partial class CCVars : CVars
 {
+    /// <summary>
+    ///     Goobstation: The amount of time between NPC Silicons draining their battery in seconds.
+    /// </summary>
+    public static readonly CVarDef<float> SiliconNpcUpdateTime =
+        CVarDef.Create("silicon.npcupdatetime", 1.5f, CVar.SERVERONLY);
     // Only debug stuff lives here.
 
     /// <summary>
