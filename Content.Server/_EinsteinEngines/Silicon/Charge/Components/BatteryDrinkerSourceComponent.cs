@@ -4,8 +4,7 @@ namespace Content.Server._EinsteinEngines.Silicon.Charge;
 
 [RegisterComponent]
 public sealed partial class BatteryDrinkerSourceComponent : Component
-{   
-    public string SolutionName = "BatteryDrinkerSource";
+{
     /// <summary>
     ///     The max amount of power this source can provide in one sip.
     ///     No limit if null.
