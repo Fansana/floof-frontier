@@ -38,7 +38,7 @@ public sealed class BlindHealingSystem : SharedBlindHealingSystem
 
         if (TryComp<StackComponent>(uid, out var stackComponent)
             && TryComp<StackPriceComponent>(uid, out var stackPrice))
-            _stackSystem.SetCount(args.Target, _stackSystem.GetMaxCount(stack), stack);
+            _stackSystem.SetCount(uid, (int) (_stackSystem.GetCount(uid, stackComponent) - stackPrice.Price), stackComponent);
 
         _blindableSystem.AdjustEyeDamage((args.Target.Value, blindComp), -blindComp.EyeDamage);
 
