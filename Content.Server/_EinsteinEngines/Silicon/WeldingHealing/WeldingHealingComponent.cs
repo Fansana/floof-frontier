@@ -4,10 +4,9 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 
 namespace Content.Server._EinsteinEngines.Silicon.WeldingHealing
 {
-    [RegisterComponent]
+    [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
     public sealed partial class WeldingHealingComponent : Component
     {
-        public string SolutionName = "WeldingHealing";
         /// <summary>
         ///     All the damage to change information is stored in this <see cref="DamageSpecifier"/>.
         /// </summary>
