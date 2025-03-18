@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Original by Emisse, modified by EmoGarbage404. Vox states by Flareguy for SS14",
+  "copyright": "Original by Emisse, modified by EmoGarbage404. Vulpkanin version made by Floofers. Vox states by Flareguy for SS14",
   "size": {
     "x": 32,
     "y": 32
@@ -45,6 +45,10 @@
     },
     {
       "name": "equipped-head-unshaded-vox",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-feroxi",
       "directions": 4
     }
   ]

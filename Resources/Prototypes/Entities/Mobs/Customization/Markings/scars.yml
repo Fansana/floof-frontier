@@ -2,7 +2,14 @@
   id: ScarEyeRight
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Goblin, Felinid, Oni, Rodentia] # Frontier: added Felinid, Oni, Goblin, Rodentia
+  speciesRestriction:
+    - Human
+    - Dwarf
+    - Goblin # Frontier
+    - Felinid # Frontier
+    - Oni # Frontier
+    - Rodentia # Frontier
+    - Feroxi # Flooftier
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -12,7 +19,14 @@
   id: ScarEyeLeft
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Goblin, Felinid, Oni, Rodentia] # Frontier: added Felinid, Oni, Goblin, Rodentia
+  speciesRestriction:
+    - Human
+    - Dwarf
+    - Goblin # Frontier
+    - Felinid # Frontier
+    - Oni # Frontier
+    - Rodentia # Frontier
+    - Feroxi # Flooftier
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -22,7 +36,13 @@
   id: ScarTopSurgeryShort
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Goblin, Felinid, Oni] # Frontier: added Felinid, Oni, Goblin
+  speciesRestriction:
+    - Human
+    - Dwarf
+    - Goblin # Frontier
+    - Felinid # Frontier
+    - Oni # Frontier
+    - Feroxi # Flooftier
   sexRestriction: [Male]
   followSkinColor: true
   sprites:
@@ -33,7 +53,13 @@
   id: ScarTopSurgeryLong
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Goblin, Felinid, Oni] # Frontier: added Felinid, Oni, Goblin
+  speciesRestriction:
+    - Human
+    - Dwarf
+    - Goblin # Frontier
+    - Felinid # Frontier
+    - Oni # Frontier
+    - Feroxi # Flooftier
   sexRestriction: [Male]
   followSkinColor: true
   sprites:
@@ -44,7 +70,13 @@
   id: ScarChest
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Goblin, Felinid, Oni] # Frontier: added Felinid, Oni, Goblin
+  speciesRestriction:
+    - Human
+    - Dwarf
+    - Goblin # Frontier
+    - Felinid # Frontier
+    - Oni # Frontier
+    - Feroxi # Flooftier
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
