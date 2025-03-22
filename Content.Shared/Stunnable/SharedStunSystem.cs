@@ -46,7 +46,7 @@ public abstract class SharedStunSystem : EntitySystem
     {
         SubscribeLocalEvent<KnockedDownComponent, ComponentInit>(OnKnockInit);
         SubscribeLocalEvent<KnockedDownComponent, ComponentShutdown>(OnKnockShutdown);
-        SubscribeLocalEvent<KnockedDownComponent, StandingStateSystem.StandAttemptEvent>(OnStandAttempt);
+        SubscribeLocalEvent<KnockedDownComponent, StandAttemptEvent>(OnStandAttempt);
 
         SubscribeLocalEvent<SlowedDownComponent, ComponentInit>(OnSlowInit);
         SubscribeLocalEvent<SlowedDownComponent, ComponentShutdown>(OnSlowRemove);
@@ -160,7 +160,7 @@ public abstract class SharedStunSystem : EntitySystem
         _standingState.Stand(uid, standing);
     }
 
-    private void OnStandAttempt(EntityUid uid, KnockedDownComponent component, StandingStateSystem.StandAttemptEvent args)
+    private void OnStandAttempt(EntityUid uid, KnockedDownComponent component, StandAttemptEvent args)
     {
         if (component.LifeStage <= ComponentLifeStage.Running)
             args.Cancel();

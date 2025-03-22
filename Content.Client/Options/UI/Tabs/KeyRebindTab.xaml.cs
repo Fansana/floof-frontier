@@ -202,9 +202,10 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(ContentKeyFunctions.SaveItemLocation);
             // EE section
             AddButton(ContentKeyFunctions.ToggleStanding);
+            AddButton(ContentKeyFunctions.ToggleCrawlingUnder);
             AddButton(ContentKeyFunctions.LookUp);
-            AddCheckBox("ui-options-function-auto-get-up", _cfg.GetCVar(CCVars.AutoGetUp), HandleToggleAutoGetUp);
-            AddCheckBox("ui-options-function-hold-look-up", _cfg.GetCVar(CCVars.HoldLookUp), HandleHoldLookUp);
+            AddCheckBox("ui-options-function-auto-get-up", _cfg.GetCVar(FloofCCVars.AutoGetUp), HandleToggleAutoGetUp);
+            AddCheckBox("ui-options-function-hold-look-up", _cfg.GetCVar(FloofCCVars.HoldLookUp), HandleHoldLookUp);
             // EE section end
 
             AddHeader("ui-options-header-interaction-adv");

@@ -1,6 +1,7 @@
 using System.Numerics;
 using Content.Client.Viewport;
 using Content.Shared.CCVar;
+using Content.Shared.Floofstation;
 using Content.Shared.Telescope;
 using Content.Shared.Input;
 using Robust.Client.GameObjects;
@@ -33,7 +34,7 @@ public sealed class TelescopeSystem : SharedTelescopeSystem
     {
         base.Initialize();
 
-        _cfg.OnValueChanged(CCVars.HoldLookUp,
+        _cfg.OnValueChanged(FloofCCVars.HoldLookUp,
             val =>
             {
                 var input = val ? null : InputCmdHandler.FromDelegate(_ => _toggled = !_toggled);

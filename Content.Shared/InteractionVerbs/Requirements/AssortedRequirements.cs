@@ -15,7 +15,7 @@ public sealed partial class EntityWhitelistRequirement : InteractionRequirement
 {
     [DataField] public EntityWhitelist? Whitelist = new(), Blacklist = new();
 
-    private EntityWhitelistSystem? _wlField; // Floofstation - wizden changed whitelists so we have to retrofit this
+    [NonSerialized] private EntityWhitelistSystem? _wlField; // Floofstation - wizden changed whitelists so we have to retrofit this
 
     public override bool IsMet(InteractionArgs args, InteractionVerbPrototype proto, InteractionAction.VerbDependencies deps)
     {
