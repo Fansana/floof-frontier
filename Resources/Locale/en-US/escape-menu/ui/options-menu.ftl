@@ -150,6 +150,8 @@ ui-options-function-swap-hands-previous = Swap hands (previous)
 ui-options-function-move-stored-item = Move stored item
 ui-options-function-rotate-stored-item = Rotate stored item
 ui-options-function-save-item-location = Save item location
+ui-options-function-toggle-standing = Toggle standing
+ui-options-function-toggle-crawling-under = Toggle crawling under furniture
 ui-options-static-storage-ui = Lock storage window to hotbar
 
 ui-options-function-smart-equip-backpack = Smart-equip to backpack
@@ -285,3 +287,8 @@ ui-options-colorblind-friendly = Colorblind friendly mode
 ui-options-reduced-motion = Reduce motion of visual effects
 ui-options-chat-window-opacity = Chat window opacity
 ui-options-screen-shake-intensity = Screen shake intensity
+
+## EE - Combat Options
+ui-options-function-look-up = Look up/Take aim
+ui-options-function-auto-get-up = Automatically get up after falling
+ui-options-function-hold-look-up = Hold down the key to aim
