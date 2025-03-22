@@ -1,5 +1,5 @@
 using Content.Shared.InteractionVerbs;
-using Content.Shared.Mood;
+// using Content.Shared.Mood;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.InteractionVerbs.Actions;

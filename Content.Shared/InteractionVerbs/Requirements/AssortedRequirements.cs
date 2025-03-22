@@ -20,7 +20,7 @@ public sealed partial class EntityWhitelistRequirement : InteractionRequirement
     public override bool IsMet(InteractionArgs args, InteractionVerbPrototype proto, InteractionAction.VerbDependencies deps)
     {
         // Floofstation - changed to conform to the new style (bleugh)
-        _wlField ??= IoCManager.Resolve<EntitySystemManager>().GetEntitySystem<EntityWhitelistSystem>();
+        _wlField ??= IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<EntityWhitelistSystem>();
         return _wlField.CheckBoth(args.Target, Blacklist, Whitelist);
     }
 }
