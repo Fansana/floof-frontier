@@ -1,4 +1,8 @@
-﻿mood-show-effects-start = [font size=12]Mood:[/font]
+﻿# Floofstation notice:
+# This file comes from EE. Flooftier does not currently have the mood system, and likely never will.
+# These are only here for compatibility.
+
+mood-show-effects-start = [font size=12]Mood:[/font]
 
 mood-effect-HungerOverfed = I ate so much, I feel as though I'm about to burst!
 mood-effect-HungerOkay = I am feeling full.
