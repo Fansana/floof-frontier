@@ -12,7 +12,7 @@
     neck: ClothingNeckCollarBlack
 
 - type: loadout
-  id: FloofClothingPinkCollar
+  id: FloofClothingCollarPink # ContractorNeck
   price: 100
   equipment:
     neck: ClothingNeckCollarPink
