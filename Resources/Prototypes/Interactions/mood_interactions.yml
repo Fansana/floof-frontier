@@ -11,6 +11,8 @@
     !type:MobStateRequirement
     inverted: true
 # Flooftier doesn't have mood
+  action:
+    !type:NoOpAction
 #  action:
 #    # TODO: this should pull the target closer or sumth, but I need to code that action first
 #    !type:MoodAction
@@ -34,6 +36,8 @@
       whitelist:
         components: [HumanoidAppearance]
 # Flooftier doesn't have mood
+  action:
+    !type:NoOpAction
 #  action:
 #    !type:MoodAction
 #    effect: BeingPet
@@ -51,6 +55,8 @@
       blacklist:
         components: [HumanoidAppearance]
 # Flooftier doesn't have mood
+  action:
+    !type:NoOpAction
 #  action:
 #    !type:ComplexAction # TODO might wanna make a multiplexer action for situations like this
 #    actions:
