@@ -10,10 +10,11 @@
   requirement:
     !type:MobStateRequirement
     inverted: true
-  action:
-    # TODO: this should pull the target closer or sumth, but I need to code that action first
-    !type:MoodAction
-    effect: BeingHugged
+# Flooftier doesn't have mood
+#  action:
+#    # TODO: this should pull the target closer or sumth, but I need to code that action first
+#    !type:MoodAction
+#    effect: BeingHugged
 
 # Petting someone (people) - improves the mood of the target
 - type: Interaction
@@ -32,9 +33,10 @@
     - !type:EntityWhitelistRequirement
       whitelist:
         components: [HumanoidAppearance]
-  action:
-    !type:MoodAction
-    effect: BeingPet
+# Flooftier doesn't have mood
+#  action:
+#    !type:MoodAction
+#    effect: BeingPet
 
 # Petting someone (animals) - improves the mood of the user and the target
 - type: Interaction
@@ -48,13 +50,14 @@
     - !type:EntityWhitelistRequirement
       blacklist:
         components: [HumanoidAppearance]
-  action:
-    !type:ComplexAction # TODO might wanna make a multiplexer action for situations like this
-    actions:
-    - !type:MoodAction
-      effect: BeingPet
-    - !type:OnUserAction
-      action:
-        !type:MoodAction
-        effect: PetAnimal
+# Flooftier doesn't have mood
+#  action:
+#    !type:ComplexAction # TODO might wanna make a multiplexer action for situations like this
+#    actions:
+#    - !type:MoodAction
+#      effect: BeingPet
+#    - !type:OnUserAction
+#      action:
+#        !type:MoodAction
+#        effect: PetAnimal
 
