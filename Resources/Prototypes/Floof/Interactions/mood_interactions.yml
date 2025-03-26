@@ -8,10 +8,11 @@
   requirement:
     !type:MobStateRequirement
     inverted: true
-  action:
-    # TODO: this should pull the target closer or sumth, but I need to code that action first
-    !type:MoodAction
-    effect: BeingKissed
+# Flooftier doesn't have mood
+#  action:
+#    # TODO: this should pull the target closer or sumth, but I need to code that action first
+#    !type:MoodAction
+#    effect: BeingKissed
   effectSuccess:
     popup: Obvious
     sound: {path: /Audio/Floof/Lewd/kiss.ogg}
@@ -27,10 +28,11 @@
   requirement:
     !type:MobStateRequirement
     inverted: true
-  action:
-    # TODO: this should pull the target closer or sumth, but I need to code that action first
-    !type:MoodAction
-    effect: BeingLicked
+# Flooftier doesn't have mood
+#  action:
+#    # TODO: this should pull the target closer or sumth, but I need to code that action first
+#    !type:MoodAction
+#    effect: BeingLicked
   effectSuccess:
     popup: Obvious
     sound: {path: /Audio/Floof/Lewd/lick.ogg}
