@@ -1659,6 +1659,15 @@ entities:
       parent: 8756
     - type: AtmosPipeColor
       color: '#990000FF'
+- proto: GeneratorRTG
+  entities:
+  - uid: 64
+    components:
+    - type: Transform
+      pos: 6.5,6.5
+      parent: 8756
+    - type: Anchorable
+      flags: Anchorable
 - proto: GravityGeneratorMini
   entities:
   - uid: 241
@@ -1845,14 +1854,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 3.5,1.5
       parent: 8756
-- proto: LockerWallMaterialsFuelPlasmaFilled
-  entities:
-  - uid: 231
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 6.5,5.5
-      parent: 8756
 - proto: NapkinDrum5
   entities:
   - uid: 336
@@ -1906,13 +1907,6 @@ entities:
     components:
     - type: Transform
       pos: 4.428361,2.580597
-      parent: 8756
-- proto: PortableGeneratorPacmanShuttle
-  entities:
-  - uid: 64
-    components:
-    - type: Transform
-      pos: 6.5,6.5
       parent: 8756
 - proto: PosterContrabandEAT
   entities:
