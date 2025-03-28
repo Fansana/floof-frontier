@@ -172,6 +172,11 @@
 
 - type: latheRecipe
   parent: NFBaseBlueprintLatheRecipe
+  id: NFBlueprintWeaponLaserPrototypePulseRifle
+  result: NFBlueprintWeaponLaserPrototypePulseRifle
+
+- type: latheRecipe
+  parent: NFBaseBlueprintLatheRecipe
   id: NFBlueprintPortableRecharger
   result: NFBlueprintPortableRecharger
 

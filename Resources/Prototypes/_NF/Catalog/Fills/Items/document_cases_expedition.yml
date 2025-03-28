@@ -37,3 +37,6 @@
     - id: NFBlueprintWeaponXrayCannon
       prob: 0.2
       orGroup: Blueprints
+    - id: NFBlueprintWeaponLaserPrototypePulseRifle
+      prob: 0.2
+      orGroup: Blueprints

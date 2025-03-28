@@ -73,6 +73,26 @@
     Plastic: 1000
 
 - type: latheRecipe
+  id: WeaponPrototypePulseLaser
+  parent: BaseWeaponRecipeLong
+  result: WeaponPrototypePulseRifle
+  materials:
+    Wood: 1500
+    Gold: 850
+    Plasma: 1000
+    Steel: 1000
+
+- type: latheRecipe
+  id: WeaponPrototypePulseLaserCell
+  parent: BaseWeaponRecipeLong
+  result: PowerCellPulseRifle
+  materials:
+    Glass: 200
+    Gold: 850
+    Plasma: 500
+    Steel: 1000
+
+- type: latheRecipe
   id: CrossbowModern
   parent: BaseWeaponRecipeLong
   result: CrossbowModern

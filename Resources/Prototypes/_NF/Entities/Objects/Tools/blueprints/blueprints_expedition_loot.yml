@@ -126,6 +126,17 @@
     providedRecipes:
     - WeaponXrayCannon
 
+- type: entity
+  parent: NFBaseBlueprintArmory
+  id: NFBlueprintWeaponLaserPrototypePulseRifle
+  name: prototype pulse rifle blueprint
+  description: A blueprint with a schematic for a prototype pulse rifle. It can be inserted into an autolathe or a techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - WeaponPrototypePulseLaser
+    - WeaponPrototypePulseLaserCell
+
 # Tools
 
 - type: entity
