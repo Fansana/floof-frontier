@@ -37,6 +37,6 @@
     - id: NFBlueprintWeaponXrayCannon
       prob: 0.2
       orGroup: Blueprints
-    - id: NFBlueprintWeaponLaserPrototypePulseRifle
+    - id: FloofBlueprintWeaponLaserPrototypePulseRifle # Floof - Adding the Prototype Pulse Rifle Blueprint to the loot pool
       prob: 0.2
       orGroup: Blueprints

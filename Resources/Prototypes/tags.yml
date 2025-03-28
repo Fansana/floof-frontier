@@ -1102,9 +1102,6 @@
   id: PowerCell
 
 - type: Tag
-  id: PowerCellPulseRifle
-
-- type: Tag
   id: PowerCellSmall
 
 - type: Tag

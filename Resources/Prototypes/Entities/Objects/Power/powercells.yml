@@ -412,28 +412,3 @@
       visible: false
   - type: Battery
     startingCharge: 0
-
-- type: entity
-  id: PowerCellPulseRifle # For use with the Prototype Pulse Rifle
-  name: pulse rifle power cell
-  description: A rechargeable power cell for the prototype pulse rifle. It's a bit bulky...
-  parent: BasePowerCell
-  components:
-  - type: Tag
-    tags:
-      - PowerCellPulseRifle
-  - type: Sprite
-    sprite: Objects/Power/prototype_power_cell.rsi
-    layers:
-      - map: [ "enum.PowerCellVisualLayers.Base" ]
-        state: ppr-power-cell
-      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
-        state: o2
-        shader: unshaded
-        visible: false
-  - type: Battery
-    maxCharge: 700
-    startingCharge: 700
-  - type: HitscanBatteryAmmoProvider
-    proto: PulseWeak
-    fireCost: 100
