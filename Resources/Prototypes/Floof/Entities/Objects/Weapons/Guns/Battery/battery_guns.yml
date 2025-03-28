@@ -29,7 +29,7 @@
   - type: Clothing
     sprite: Floof/Objects/Weapons/Guns/Battery/prototype_pulse_rifle.rsi
     slots:
-    - Belt
+    - Back
     - suitStorage
   - type: Gun
     fireRate: 1.5
