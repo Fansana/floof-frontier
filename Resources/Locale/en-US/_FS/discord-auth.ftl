@@ -4,3 +4,4 @@ discord-auth-warn = Don't worry, it only takes a couple of clicks!
 discord-auth-link = Link:
 discord-auth-browser-btn = Open in browser
 discord-auth-quit-btn = Quit
+not-whitelisted = You are not whitelisted

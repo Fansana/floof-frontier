@@ -330,7 +330,7 @@ namespace Content.Server.Connection
                  if (await _discordAuthManager.IsWhitelisted(userId) || await _db.GetWhitelistStatusAsync(userId))
                      return null;
 
-                 return (ConnectionDenyReason.Whitelist, Loc.GetString(_cfg.GetCVar(CCVars.WhitelistReason)), null);
+                 return (ConnectionDenyReason.Whitelist, Loc.GetString("not-whitelisted"), null);
              }
 
             // Checks for whitelist IF it's enabled AND the user isn't an admin. Admins are always allowed.
