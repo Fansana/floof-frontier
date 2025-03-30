@@ -319,7 +319,7 @@ namespace Content.Server.Connection
                 return (ConnectionDenyReason.Full, Loc.GetString("soft-player-cap-full"), null);
             }
 
-            if (_cfg.GetCVar(FSDiscordCCVars.DiscordAuthEnabled) && _cfg.GetCVar(CCVars.WhitelistEnabled))
+            if (_cfg.GetCVar(FSCCVars.DiscordAuthEnabled) && _cfg.GetCVar(CCVars.WhitelistEnabled))
              {
                  if (await _discordAuthManager.IsVerified(userId) == false)
                      return null;
