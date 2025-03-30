@@ -2,7 +2,7 @@ using Robust.Shared.Configuration;
 
 namespace Content.Shared._FS.CCVar;
 
-public sealed partial class CCVars
+public sealed partial class FSDiscordCCVars
 {
     /// <summary>
     ///     Enable Discord linking, show linking button and modal window

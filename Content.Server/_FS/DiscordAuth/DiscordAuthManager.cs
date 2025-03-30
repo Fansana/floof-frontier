@@ -4,6 +4,7 @@ using System.Net.Http.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Shared.CCVar;
+using Content.Shared._FS.CCVar;
 using Content.Shared._FS.DiscordAuth;
 using JetBrains.Annotations;
 using Robust.Server.Player;
@@ -43,9 +44,9 @@ public sealed class DiscordAuthManager
     {
         _sawmill = Logger.GetSawmill("discord_auth");
 
-        _configuration.OnValueChanged(CCVars.DiscordAuthEnabled, v => _isEnabled = v, true);
-        _configuration.OnValueChanged(CCVars.DiscordAuthApiUrl, v => _apiUrl = v, true);
-        _configuration.OnValueChanged(CCVars.DiscordAuthApiKey, v => _apiKey = v, true);
+        _configuration.OnValueChanged(FSDiscordCCVars.DiscordAuthEnabled, v => _isEnabled = v, true);
+        _configuration.OnValueChanged(FSDiscordCCVars.DiscordAuthApiUrl, v => _apiUrl = v, true);
+        _configuration.OnValueChanged(FSDiscordCCVars.DiscordAuthApiKey, v => _apiKey = v, true);
 
         _net.RegisterNetMessage<DiscordAuthRequiredMessage>();
         _net.RegisterNetMessage<DiscordAuthCheckMessage>(OnAuthCheck);
