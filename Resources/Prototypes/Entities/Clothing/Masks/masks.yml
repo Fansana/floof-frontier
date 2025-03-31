@@ -15,8 +15,6 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
-    - GasMask # goob edit
-    - Mask # goob edit
   - type: HideLayerClothing
     slots:
     - Snout
@@ -42,7 +40,6 @@
         Piercing: 0.95
         Heat: 0.95
   - type: IngestionBlocker # Goobstation
-    blockSmokeIngestion: true
 
 - type: entity
   parent: [ClothingMaskGas, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
@@ -67,9 +64,7 @@
     tags:
     - PetWearable
     - WhitelistChameleon
-    - SyndicateBreathMask
   - type: IngestionBlocker # Goobstation
-    blockSmokeIngestion: true
 
 - type: entity
   parent: ClothingMaskGas
@@ -448,7 +443,6 @@
         Piercing: 0.95
         Heat: 0.95
   - type: IngestionBlocker # Goobstation
-    blockSmokeIngestion: true
 
 - type: entity
   parent: ClothingMaskGasERT

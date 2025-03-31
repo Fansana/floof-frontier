@@ -43,6 +43,7 @@
     - Vulpkanin
     - Harpy
     - Rodentia
+    - IPC
 
 - type: loadoutEffectGroup
   id: NFNotDocOrStc
