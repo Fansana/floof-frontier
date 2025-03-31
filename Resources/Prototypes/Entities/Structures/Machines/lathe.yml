@@ -1278,6 +1278,8 @@
       - FloorTileItemArcadeBlue # Frontier
       - FloorTileItemArcadeBlue2 # Frontier
       - FloorTileItemArcadeRed # Frontier
+      # Floofstation - Collars
+      - ClothingNeckCollarCmd
   - type: EmagLatheRecipes
     emagStaticRecipes:
       # Clothing

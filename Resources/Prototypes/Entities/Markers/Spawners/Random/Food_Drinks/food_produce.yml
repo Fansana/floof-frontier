@@ -154,6 +154,9 @@
       - id: FoodHoneyComb # Frontier
         amount: !type:RangeNumberSelector # Frontier
           range: 1, 5 # Frontier
+      - id: FoodPomegranate # Floofstation
+        amount: !type:RangeNumberSelector # Floofstation
+          range: 1, 5 # Floofstation
     #rare
     - !type:GroupSelector
       children:

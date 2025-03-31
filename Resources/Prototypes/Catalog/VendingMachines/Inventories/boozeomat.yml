@@ -14,6 +14,7 @@
     DrinkKegPlastic: 2 # Frontier: kegs
     CustomDrinkJug: 2 #to allow for custom drinks in the soda/booze dispensers
     DrinkAbsintheBottleFull: 1
+    DrinkAnisetteBottleFull: 2 # Floofstation
     DrinkAleBottleFull: 5
     DrinkBeerBottleFull: 5
     DrinkBlueCuracaoBottleFull: 2
@@ -23,6 +24,7 @@
     DrinkEnergyDrinkCan: 8
     DrinkMilkCarton: 2
     DrinkCreamCarton: 5
+    DrinkCumBottleFull: 1 # Floofstation
     DrinkGinBottleFull: 3
     DrinkGildlagerBottleFull: 2 #if champagne gets less because its premium, then gildlager should match this and have two
     DrinkGrenadineBottleFull: 2
