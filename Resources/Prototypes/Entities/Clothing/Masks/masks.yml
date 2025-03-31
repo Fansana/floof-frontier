@@ -207,7 +207,6 @@
     - ClownMask
     - WhitelistChameleon
     - IPCMaskWearable # EE - IPCs
-    - Mask
   - type: HideLayerClothing
     slots:
     - Snout
