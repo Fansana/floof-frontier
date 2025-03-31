@@ -52,8 +52,6 @@
   - type: BlindHealing
     damageContainers:
       - Silicon
-  - type: StackPrice
-    price: 2
 
 - type: entity
   parent: SheetGlassBase

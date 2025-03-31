@@ -49,9 +49,9 @@ public partial class SharedBodySystem
     {
         if (!Resolve(parentEnt, ref parentEnt.Comp, logMissing: false))
             return null;
+
         Containers.EnsureContainer<ContainerSlot>(parentEnt, GetOrganContainerId(slotId));
         var slot = new OrganSlot(slotId);
-        Logger.Debug(parentEnt.Comp+" "+slotId+" "+slot.Id);
         parentEnt.Comp.Organs.Add(slotId, slot);
         return slot;
     }
@@ -75,13 +75,7 @@ public partial class SharedBodySystem
         Containers.EnsureContainer<ContainerSlot>(parent.Value, GetOrganContainerId(slotId));
         slot = new OrganSlot(slotId);
 
-        // Shitmed Change Start
-        if (!part.Organs.ContainsKey(slotId)
-            && !part.Organs.TryAdd(slotId, slot.Value))
-            return false;
-
-        return true;
-        // Shitmed Change End
+        return part.Organs.TryAdd(slotId, slot.Value);
     }
 
     /// <summary>
