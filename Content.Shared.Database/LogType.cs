@@ -453,5 +453,6 @@ public enum LogType
     /// An admin spawns a refund for a player.
     /// </summary>
     AdminRefund = 203,
-    AtmosDirectionChanged = 204,
+    AtmosDirectionChanged = 204,    
+    Consent = 12489, // Floofstation - random high number to avoid conflict when upstream adds new log types
 }

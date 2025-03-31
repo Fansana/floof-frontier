@@ -1,5 +1,6 @@
-﻿using System.Threading;
+using System.Threading;
 using System.Threading.Tasks;
+using Content.Server.Consent; // Floofstation
 using Content.Server.Preferences.Managers;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -19,6 +20,7 @@ public sealed class UserDbDataManager : IPostInjectInit
 {
     [Dependency] private readonly IServerPreferencesManager _prefs = default!;
     [Dependency] private readonly ILogManager _logManager = default!;
+    [Dependency] private readonly IServerConsentManager _consent = default!; // Floofstation
 
     private readonly Dictionary<NetUserId, UserData> _users = new();
     private readonly List<OnLoadPlayer> _onLoadPlayer = [];
@@ -50,6 +52,8 @@ public sealed class UserDbDataManager : IPostInjectInit
 
         data.Cancel.Cancel();
         data.Cancel.Dispose();
+        
+        _consent.OnClientDisconnected(session); // Floofstation
 
         foreach (var onDisconnect in _onPlayerDisconnect)
         {
@@ -69,6 +73,8 @@ public sealed class UserDbDataManager : IPostInjectInit
             {
                 tasks.Add(action(session, cancel));
             }
+            
+            tasks.Add(_consent.LoadData(session, cancel)); // Floofstation
 
             await Task.WhenAll(tasks);
 

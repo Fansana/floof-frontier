@@ -561,6 +561,10 @@
       - StasisBedMachineCircuitboard
       - OreProcessorIndustrialMachineCircuitboard
       - CargoTelepadMachineCircuitboard
+      - AmmoTechFabCircuitboard
+      - MedicalTechFabCircuitboard
+      - MercenaryTechFabCircuitboardNF
+      - EngineeringTechFabCircuitboard
       - RipleyCentralElectronics
       - RipleyPeripheralsElectronics
       - HonkerCentralElectronics
@@ -584,7 +588,7 @@
       - ExosuitFabricatorMachineCircuitboard
       - AnomalyVesselCircuitboard
       - AnomalyVesselExperimentalCircuitboard
-      # - AnomalySynchronizerCircuitboard # Frontier: doesn't make sense for Frontier gameplay
+      # - AnomalySynchronizerCircuitboard
       - APECircuitboard
       - ArtifactAnalyzerMachineCircuitboard
       - ArtifactCrusherMachineCircuitboard
@@ -604,22 +608,22 @@
       - SmallGyroscopeMachineCircuitboard # Frontier
       - MedicalAssemblerMachineCircuitboard # Frontier
       - KitchenAssemblerMachineCircuitboard # Frontier
-      - ElectricRangeMachineCircuitboard # Frontier
       - ChemDispenserMachineCircuitboard # Frontier
       - ChemMasterMachineCircuitboard # Frontier
       - ReagentGrinderMachineCircuitboard # Frontier
       - HotplateMachineCircuitboard # Frontier
       - MicrowaveMachineCircuitboard # Frontier
+      - ElectricRangeMachineCircuitboard #  flooftier
       - ElectricGrillMachineCircuitboard # Frontier
       - BoozeDispenserMachineCircuitboard # Frontier
       - SodaDispenserMachineCircuitboard # Frontier
       - MiniStationAnchorCircuitboard # Frontier
   - type: EmagLatheRecipes
     emagDynamicRecipes:
-      # - ShuttleGunDusterCircuitboard # Frontier
-      # - ShuttleGunFriendshipCircuitboard # Frontier
-      # - ShuttleGunPerforatorCircuitboard # Frontier
-      # - ShuttleGunSvalinnMachineGunCircuitboard # Frontier
+      - ShuttleGunDusterCircuitboard # Frontier
+      - ShuttleGunFriendshipCircuitboard # Frontier
+      - ShuttleGunPerforatorCircuitboard # Frontier
+      - ShuttleGunSvalinnMachineGunCircuitboard # Frontier
       - ShuttleGunKineticCircuitboard # Frontier
   - type: MaterialStorage
     whitelist:
@@ -668,6 +672,11 @@
     - BorgModuleFireExtinguisher
     - BorgModuleRadiationDetection
     - BorgModuleTool
+    - BorgModuleAppraisal
+    - BorgModuleConstruction
+    - BorgModuleService
+    - BorgModuleTreatment
+    - BorgModuleCleaning
     - CyborgEndoskeleton
     - LeftArmBorg
     - RightArmBorg
@@ -675,15 +684,54 @@
     - RightLegBorg
     - LightHeadBorg
     - TorsoBorg
+    - LeftArmBorgEngineer
+    - RightArmBorgEngineer
+    - LeftLegBorgEngineer
+    - RightLegBorgEngineer
+    - HeadBorgEngineer
+    - TorsoBorgEngineer
+    - LeftLegBorgJanitor
+    - RightLegBorgJanitor
+    - HeadBorgJanitor
+    - TorsoBorgJanitor
+    - LeftArmBorgMedical
+    - RightArmBorgMedical
+    - LeftLegBorgMedical
+    - RightLegBorgMedical
+    - HeadBorgMedical
+    - TorsoBorgMedical
+    - LeftArmBorgMining
+    - RightArmBorgMining
+    - LeftLegBorgMining
+    - RightLegBorgMining
+    - HeadBorgMining
+    - TorsoBorgMining
+    - LeftArmBorgService
+    - RightArmBorgService
+    - LeftLegBorgService
+    - RightLegBorgService
+    - HeadBorgService
+    - TorsoBorgService
+    - Quadborgendoskeleton
+    - BorgModuleStun
+    - BorgModuleKill
+    - BorgModuleInvestigation
     dynamicRecipes:
     - ProximitySensor
+    - BorgModuleLightReplacer
     - BorgModuleAdvancedCleaning
+    - BorgModuleMining
+    - BorgModuleGrapplingGun
     - BorgModuleAdvancedTool
     - BorgModuleGPS
+    - BorgModuleRCD
     - BorgModuleArtifact
     - BorgModuleAnomaly
     - BorgModuleGardening
     - BorgModuleHarvesting
+    - BorgModuleMusique
+    - BorgModuleClowning
+    - BorgModuleDiagnosis
     - BorgModuleDefibrillator
     - BorgModuleAdvancedTreatment
     - BorgModuleJetpack # Frontier
@@ -1230,6 +1278,8 @@
       - FloorTileItemArcadeBlue # Frontier
       - FloorTileItemArcadeBlue2 # Frontier
       - FloorTileItemArcadeRed # Frontier
+      # Floofstation - Collars
+      - ClothingNeckCollarCmd
   - type: EmagLatheRecipes
     emagStaticRecipes:
       # Clothing
