@@ -46,7 +46,7 @@
     hasMindState: quadspritel
     noMindState: quadspriter
   - type: AccessReader
-    access: [["Security"], ["Armory"], ["Command"]]
+    access: [["Security"], ["Armory"], ["Command"], ["Mercenary"]]
   - type: BorgTransponder
     sprite:
       sprite: Floof/Mobs/Silicon/quad.rsi
@@ -79,6 +79,8 @@
       shader: unshaded
       map: ["light"]
       visible: false
+  - type: AccessReader
+    access: [["Security"], ["Armory"], ["Command"]]
   - type: SpriteMovement
     movementLayers:
       movement:
@@ -133,7 +135,7 @@
     hasMindState: quadspritesalvl
     noMindState: quadspritesalvr
   - type: AccessReader
-    access: [["Cargo"], ["Salvage"], ["Command"], ["Research"]]
+    access: [["Cargo"], ["Salvage"], ["Command"], ["Research"], ["Maintenance"]]
   - type: SiliconLawProvider
     laws: Corporate
 
@@ -183,7 +185,7 @@
     hasMindState: quadspriteservl
     noMindState: quadspriteservr
   - type: AccessReader
-    access: [["Cargo"], ["Service"], ["Command"], ["Research"]]
+    access: [["Cargo"], ["Service"], ["Command"], ["Research"], ["Maintenance"]]
   - type: SiliconLawProvider
     laws: StationEfficiency
     
@@ -233,7 +235,7 @@
     hasMindState: quadspritemedl
     noMindState: quadspritemedr
   - type: AccessReader
-    access: [["Medical"], ["Salvage"], ["Command"], ["Research"]]
+    access: [["Medical"], ["Salvage"], ["Command"], ["Research"], ["Maintenance"]]
   - type: SiliconLawProvider
     laws: Medical
   # - type: LanguageKnowledge
@@ -310,6 +312,6 @@
     hasMindState: quadspritel
     noMindState: quadspriter
   - type: AccessReader
-    access: [["Medical"], ["Salvage"], ["Service"], ["Security"], ["Command"], ["Research"]]
+    access: [["Medical"], ["Salvage"], ["Service"], ["Security"], ["Command"], ["Research"], ["Mercenary"]]
   - type: SiliconLawProvider
     laws: Qborg

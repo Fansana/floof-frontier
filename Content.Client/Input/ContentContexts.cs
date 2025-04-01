@@ -74,6 +74,8 @@ namespace Content.Client.Input
             human.AddFunction(ContentKeyFunctions.SmartEquipBelt);
             human.AddFunction(ContentKeyFunctions.OpenBackpack);
             human.AddFunction(ContentKeyFunctions.OpenBelt);
+            human.AddFunction(ContentKeyFunctions.ToggleStanding); // EE
+            human.AddFunction(ContentKeyFunctions.ToggleCrawlingUnder); // EE
             human.AddFunction(ContentKeyFunctions.MouseMiddle);
             human.AddFunction(ContentKeyFunctions.RotateObjectClockwise);
             human.AddFunction(ContentKeyFunctions.RotateObjectCounterclockwise);
@@ -85,6 +87,7 @@ namespace Content.Client.Input
             human.AddFunction(ContentKeyFunctions.Arcade1);
             human.AddFunction(ContentKeyFunctions.Arcade2);
             human.AddFunction(ContentKeyFunctions.Arcade3);
+            human.AddFunction(ContentKeyFunctions.LookUp); // EE
 
             // actions should be common (for ghosts, mobs, etc)
             common.AddFunction(ContentKeyFunctions.OpenActionsMenu);
@@ -123,6 +126,7 @@ namespace Content.Client.Input
             common.AddFunction(ContentKeyFunctions.OpenSandboxWindow);
             common.AddFunction(ContentKeyFunctions.OpenTileSpawnWindow);
             common.AddFunction(ContentKeyFunctions.OpenDecalSpawnWindow);
+            common.AddFunction(ContentKeyFunctions.OpenConsentWindow); // Floofstation
             common.AddFunction(ContentKeyFunctions.OpenAdminMenu);
             common.AddFunction(ContentKeyFunctions.OpenGuidebook);
         }

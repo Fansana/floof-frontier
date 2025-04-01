@@ -48,6 +48,7 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction RotateObjectCounterclockwise = "RotateObjectCounterclockwise";
         public static readonly BoundKeyFunction FlipObject = "FlipObject";
         public static readonly BoundKeyFunction ToggleRoundEndSummaryWindow = "ToggleRoundEndSummaryWindow";
+        public static readonly BoundKeyFunction OpenConsentWindow = "OpenConsentWindow"; // Floofstation
         public static readonly BoundKeyFunction OpenEntitySpawnWindow = "OpenEntitySpawnWindow";
         public static readonly BoundKeyFunction OpenSandboxWindow = "OpenSandboxWindow";
         public static readonly BoundKeyFunction OpenTileSpawnWindow = "OpenTileSpawnWindow";
@@ -60,6 +61,9 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction ZoomOut = "ZoomOut";
         public static readonly BoundKeyFunction ZoomIn = "ZoomIn";
         public static readonly BoundKeyFunction ResetZoom = "ResetZoom";
+        public static readonly BoundKeyFunction ToggleStanding = "ToggleStanding"; // EE
+        public static readonly BoundKeyFunction ToggleCrawlingUnder = "ToggleCrawlingUnder"; // EE
+        public static readonly BoundKeyFunction LookUp = "LookUp"; // EE
 
         public static readonly BoundKeyFunction ArcadeUp = "ArcadeUp";
         public static readonly BoundKeyFunction ArcadeDown = "ArcadeDown";
