@@ -39,6 +39,7 @@
         Slash: 0.95
         Piercing: 0.95
         Heat: 0.95
+  - type: IngestionBlocker # Goobstation
 
 - type: entity
   parent: [ClothingMaskGas, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
@@ -59,6 +60,11 @@
         Slash: 0.95
         Piercing: 0.95
         Heat: 0.95
+  - type: Tag  # Goobstation - For survial boxes
+    tags:
+    - PetWearable
+    - WhitelistChameleon
+  - type: IngestionBlocker # Goobstation
 
 - type: entity
   parent: ClothingMaskGas
@@ -200,6 +206,7 @@
     tags:
     - ClownMask
     - WhitelistChameleon
+    - IPCMaskWearable # EE - IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -263,6 +270,9 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  - type: Tag
+    tags:
+    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -280,6 +290,7 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+    - IPCMaskWearable # EE - IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -430,6 +441,7 @@
         Slash: 0.95
         Piercing: 0.95
         Heat: 0.95
+  - type: IngestionBlocker # Goobstation
 
 - type: entity
   parent: ClothingMaskGasERT
@@ -464,6 +476,7 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+    - IPCMaskWearable # EE - IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -484,6 +497,9 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  - type: Tag
+    tags:
+    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -500,6 +516,9 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  - type: Tag
+    tags:
+    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -516,6 +535,9 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  - type: Tag
+    tags:
+    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -532,6 +554,9 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  - type: Tag
+    tags:
+    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -548,6 +573,9 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  - type: Tag
+    tags:
+    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -564,6 +592,9 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  - type: Tag
+    tags:
+    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -580,6 +611,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskNeckGaiter
@@ -666,3 +698,6 @@
   - type: EyeProtection
   - type: BreathMask
   - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - IPCMaskWearable # EE - IPCs
