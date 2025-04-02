@@ -170,7 +170,7 @@ entities:
     - type: Transform
       pos: 0.5,-1.5
       parent: 1
-- proto: APCHighCapacity
+- proto: APCBasic
   entities:
   - uid: 7
     components:
@@ -268,62 +268,6 @@ entities:
     - type: Transform
       pos: 1.6286176,0.44548643
       parent: 1
-    - type: Storage
-      storedItems:
-        154:
-          position: 0,0
-          _rotation: South
-        155:
-          position: 1,0
-          _rotation: South
-        156:
-          position: 2,0
-          _rotation: South
-        157:
-          position: 3,0
-          _rotation: South
-        158:
-          position: 0,1
-          _rotation: South
-        159:
-          position: 1,1
-          _rotation: South
-        160:
-          position: 2,1
-          _rotation: South
-        161:
-          position: 3,1
-          _rotation: South
-        162:
-          position: 0,2
-          _rotation: South
-        163:
-          position: 1,2
-          _rotation: South
-        164:
-          position: 2,2
-          _rotation: South
-        165:
-          position: 3,2
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 154
-          - 155
-          - 156
-          - 157
-          - 158
-          - 159
-          - 160
-          - 161
-          - 162
-          - 163
-          - 164
-          - 165
 - proto: ButtonFrameCaution
   entities:
   - uid: 152
@@ -948,56 +892,6 @@ entities:
     - type: Transform
       pos: 3.490264,-1.4759328
       parent: 1
-- proto: ShuttleGunSvalinnMachineGun
-  entities:
-  - uid: 100
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,0.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 101
-    - type: DeviceLinkSink
-      invokeCounter: 2
-      links:
-      - 109
-  - uid: 102
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 2.5,0.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 103
-    - type: DeviceLinkSink
-      invokeCounter: 2
-      links:
-      - 109
 - proto: SmallGyroscopeNfsd
   entities:
   - uid: 112
