@@ -134,7 +134,7 @@ namespace Content.Server.GameTicking
                         mind.Session = null;
                     }
 
-                    _userDb.ClientDisconnected(session);
+                     _userDb.ClientDisconnected(session);
                     break;
                 }
             }

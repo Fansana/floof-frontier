@@ -9,6 +9,7 @@ using Content.Server.Database;
 using Content.Server.GameTicking;
 using Content.Server.Preferences.Managers;
 using Content.Shared.CCVar;
+using Content.Shared._FS.CCVar; // Floofstation
 using Content.Shared._NF.CCVar; // Frontier
 using Content.Shared.GameTicking;
 using Content.Shared.Players.PlayTimeTracking;
@@ -20,6 +21,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Content.Server._NF.Auth; // Frontier
+using Content.Server._FS.DiscordAuth; // Floofstation
 
 /*
  * TODO: Remove baby jail code once a more mature gateway process is established. This code is only being issued as a stopgap to help with potential tiding in the immediate future.
@@ -65,6 +67,7 @@ namespace Content.Server.Connection
         [Dependency] private readonly IHttpClientHolder _http = default!;
         [Dependency] private readonly IAdminManager _adminManager = default!;
         [Dependency] private readonly MiniAuthManager _authManager = default!; //Frontier
+        [Dependency] private readonly DiscordAuthManager _discordAuthManager = default!; // Floofstation
 
         private ISawmill _sawmill = default!;
         private readonly Dictionary<NetUserId, TimeSpan> _temporaryBypasses = [];
@@ -315,6 +318,20 @@ namespace Content.Server.Connection
             {
                 return (ConnectionDenyReason.Full, Loc.GetString("soft-player-cap-full"), null);
             }
+
+            if (_cfg.GetCVar(FSCCVars.DiscordAuthEnabled) && _cfg.GetCVar(CCVars.WhitelistEnabled))
+             {
+                 if (await _discordAuthManager.IsVerified(userId) == false)
+                     return null;
+
+                 if (adminData is not null)
+                     return null;
+
+                 if (await _discordAuthManager.IsWhitelisted(userId) || await _db.GetWhitelistStatusAsync(userId))
+                     return null;
+
+                 return (ConnectionDenyReason.Whitelist, Loc.GetString("not-whitelisted"), null);
+             }
 
             // Checks for whitelist IF it's enabled AND the user isn't an admin. Admins are always allowed.
             if (_cfg.GetCVar(CCVars.WhitelistEnabled) && !wasInGame && adminData is null) // Frontier: allow users who joined before panic bunker was enforced to reconnect
