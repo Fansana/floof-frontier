@@ -653,11 +653,6 @@ entities:
       pos: 1.5,0.5
       parent: 1
     - type: DeviceLinkSource
-      linkedPorts:
-        102:
-        - Pressed: Toggle
-        100:
-        - Pressed: Toggle
 - proto: Paper
   entities:
   - uid: 154
@@ -835,18 +830,6 @@ entities:
     - type: Transform
       pos: 2.529564,-0.6842334
       parent: 1
-  - uid: 101
-    components:
-    - type: Transform
-      parent: 100
-    - type: Physics
-      canCollide: False
-  - uid: 103
-    components:
-    - type: Transform
-      parent: 102
-    - type: Physics
-      canCollide: False
   - uid: 104
     components:
     - type: Transform
