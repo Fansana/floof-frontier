@@ -2831,6 +2831,13 @@ entities:
     - type: Transform
       pos: -5.5950828,8.576897
       parent: 1
+- proto: ClothingHeadHatChef
+  entities:
+  - uid: 868
+    components:
+    - type: Transform
+      pos: 1.215144,5.819418
+      parent: 1
 - proto: ClothingHeadHatMcCrown
   entities:
   - uid: 128
@@ -2939,6 +2946,13 @@ entities:
     components:
     - type: Transform
       pos: 4.5,11.5
+      parent: 1
+- proto: CrateFunHoverbikeNF
+  entities:
+  - uid: 830
+    components:
+    - type: Transform
+      pos: -8.5,9.5
       parent: 1
 - proto: CrateFunParty
   entities:
@@ -3283,6 +3297,13 @@ entities:
     components:
     - type: Transform
       pos: -8.5,4.5
+      parent: 1
+- proto: DoubleEmergencyOxygenTankFilled
+  entities:
+  - uid: 865
+    components:
+    - type: Transform
+      pos: -8.459989,9.341131
       parent: 1
 - proto: DrinkGlass
   entities:
@@ -4845,6 +4866,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: 10.5,11.5
       parent: 1
+- proto: HandHeldMassScanner
+  entities:
+  - uid: 842
+    components:
+    - type: Transform
+      pos: -8.475614,9.450506
+      parent: 1
 - proto: HandLabeler
   entities:
   - uid: 147
@@ -5193,6 +5221,13 @@ entities:
       parent: 1
     - type: Physics
       bodyType: Static
+- proto: OxygenTankFilled
+  entities:
+  - uid: 862
+    components:
+    - type: Transform
+      pos: -8.491239,9.419256
+      parent: 1
 - proto: PaperOffice
   entities:
   - uid: 45
@@ -5206,6 +5241,13 @@ entities:
     components:
     - type: Transform
       pos: -8.362468,13.991705
+      parent: 1
+- proto: PinpointerUniversal
+  entities:
+  - uid: 861
+    components:
+    - type: Transform
+      pos: -8.553739,9.356756
       parent: 1
 - proto: PlantBag
   entities:

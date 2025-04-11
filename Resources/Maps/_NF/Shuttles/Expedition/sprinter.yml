@@ -1627,18 +1627,15 @@ entities:
     - type: Transform
       pos: -5.5,-1.5
       parent: 1
-  - uid: 598
+- proto: BedsheetMedical
+  entities:
+  - uid: 176
     components:
     - type: Transform
       pos: 5.5,-6.5
       parent: 1
 - proto: BedsheetSpawner
   entities:
-  - uid: 56
-    components:
-    - type: Transform
-      pos: 5.5,-6.5
-      parent: 1
   - uid: 59
     components:
     - type: Transform
@@ -3977,6 +3974,27 @@ entities:
     - type: Transform
       pos: -3.5,-11.5
       parent: 1
+- proto: KitchenElectricGrill
+  entities:
+  - uid: 605
+    components:
+    - type: Transform
+      pos: 3.5,2.5
+      parent: 1
+- proto: KitchenMicrowave
+  entities:
+  - uid: 607
+    components:
+    - type: Transform
+      pos: 2.5,2.5
+      parent: 1
+- proto: KitchenReagentGrinder
+  entities:
+  - uid: 609
+    components:
+    - type: Transform
+      pos: 4.5,0.5
+      parent: 1
 - proto: LockerBoozeFilled
   entities:
   - uid: 594
@@ -4031,12 +4049,19 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 1.5,6.5
       parent: 1
-- proto: LockerWallMedicalDoctorFilled
+- proto: LockerWallMedicalFilled
   entities:
-  - uid: 176
+  - uid: 480
     components:
     - type: Transform
       pos: 2.5,-5.5
+      parent: 1
+- proto: MedicalBed
+  entities:
+  - uid: 56
+    components:
+    - type: Transform
+      pos: 5.5,-6.5
       parent: 1
 - proto: Mirror
   entities:
@@ -4521,13 +4546,6 @@ entities:
     - type: Transform
       pos: -4.5,0.5
       parent: 1
-- proto: SinkStemless
-  entities:
-  - uid: 480
-    components:
-    - type: Transform
-      pos: 3.5,2.5
-      parent: 1
 - proto: SinkStemlessWater
   entities:
   - uid: 172
@@ -4535,6 +4553,14 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.5,-11.5
+      parent: 1
+- proto: SinkWide
+  entities:
+  - uid: 598
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 4.5,-0.5
       parent: 1
 - proto: SMESBasic
   entities:
@@ -4720,11 +4746,6 @@ entities:
     components:
     - type: Transform
       pos: -1.5,10.5
-      parent: 1
-  - uid: 735
-    components:
-    - type: Transform
-      pos: 3.5,2.5
       parent: 1
   - uid: 736
     components:
