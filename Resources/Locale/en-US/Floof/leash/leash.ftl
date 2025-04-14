@@ -21,3 +21,6 @@ leash-snap-popup = {THE($leash)} snaps off!
 leash-set-length-popup = Length set to {$length}m.
 
 leash-length-examine-text = Its current length is {$length}m.
+
+# Flooftier edits
+verb-categories-leash-config = Configure length
