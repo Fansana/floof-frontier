@@ -1,6 +1,6 @@
 # Floofstation - port from EE, which got it from Delta-V, which got it from Nyanotrasen
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckCollarBase
   id: ClothingNeckShockCollar
   name: shock collar
   description: Shocking. # DeltaV: sprite is fine
