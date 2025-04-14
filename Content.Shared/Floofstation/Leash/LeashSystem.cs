@@ -373,7 +373,8 @@ public sealed class LeashSystem : EntitySystem
             && TryGetLeashTarget(anchor!, out var leashTarget)
             && CompOrNull<LeashedComponent>(leashTarget)?.JointId == null
             && Transform(anchor).Coordinates.TryDistance(EntityManager, Transform(leash).Coordinates, out var dst)
-            && dst <= leash.Comp.Length;
+            && dst <= leash.Comp.Length
+            && anchor.Comp.Enabled; // Flooftier change
     }
 
 

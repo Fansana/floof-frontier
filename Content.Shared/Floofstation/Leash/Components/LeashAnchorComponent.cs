@@ -9,6 +9,12 @@ namespace Content.Shared.Floofstation.Leash.Components;
 public sealed partial class LeashAnchorComponent : Component
 {
     /// <summary>
+    ///     Flooftier change - whether this anchor is enabled.
+    /// </summary>
+    [DataField]
+    public bool Enabled = true;
+
+    /// <summary>
     ///     The visual offset of the "anchor point".
     /// </summary>
     [DataField]
