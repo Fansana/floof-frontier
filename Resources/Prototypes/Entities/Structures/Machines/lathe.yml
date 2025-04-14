@@ -216,6 +216,8 @@
       - BoxDispenserFlare # Frontier
       - Durathread # Frontier
       - FoodCondimentSqueezeBottleClear # Frontier
+      - ClothingNeckShockCollar # Floofstation
+      - LeashBasic # Floofstation
   - type: EmagLatheRecipes
     emagStaticRecipes:
       - BoxLethalshot
@@ -880,6 +882,7 @@
       - WeaponFlareGunSecurity
       - WeaponLaserCarbinePractice
       - Zipties
+      - ClothingNeckShockCollar # Floofstation
     dynamicRecipes:
       - BoxBeanbag
       - BoxShotgunIncendiary
