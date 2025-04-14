@@ -25,8 +25,8 @@
   components:
   - type: Leash
     length: 3
-    lengthConfigs: [1.5, 2.25, 3, 4.5, 6]
-    maxDistance: 6
+    lengthConfigs: [1.5, 2.25, 3, 4, 5]
+    maxDistance: 7
     attachDelay: 4
     detachDelay: 4
     selfDetachDelay: 10
@@ -37,7 +37,7 @@
   name: advanced leash
   components:
   - type: Leash
-    lengthConfigs: [1, 1.5, 2.25, 3, 4.5, 6]
+    lengthConfigs: [1, 1.5, 2.25, 3, 4, 5]
     maxJoints: 3
     attachDelay: 2.5
     detachDelay: 2
