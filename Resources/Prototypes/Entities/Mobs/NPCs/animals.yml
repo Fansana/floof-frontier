@@ -248,6 +248,7 @@
     factions:
     - Passive
     - Chicken # Frontier
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   parent: MobChicken
@@ -615,6 +616,7 @@
           32:
             sprite: Mobs/Animals/mothroach/displacement.rsi
             state: neck
+  - type: LeashAnchor # Floofstation - mothroach my beloved <3
 
 
 # Note that the mallard duck is actually a male drake mallard, with the brown duck being the female variant of the same species, however ss14 lacks sex specific textures
@@ -693,6 +695,7 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: white duck #Quack
@@ -880,6 +883,7 @@
     guides:
     - Chef
     - FoodRecipes
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: crab
@@ -1053,6 +1057,7 @@
   - type: HTN
     rootTask:
       task: RuminantHostileCompound
+  - type: LeashAnchor # Floofstation
 
 # Note that we gotta make this bitch vomit someday when you feed it anthrax or sumthin. Needs to be a small item thief too and aggressive if attacked.
 - type: entity
@@ -1103,6 +1108,7 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: gorilla
@@ -1158,6 +1164,7 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: kangaroo
@@ -1245,6 +1252,7 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: boxing kangaroo
@@ -1375,6 +1383,7 @@
       effects:
       - !type:WashCreamPieReaction
   - type: LabGrown # Frontier
+  - type: LeashAnchor # Floofstation
 
 
 
@@ -1803,6 +1812,7 @@
       Taco: RatTaco
       Burger: RatBurger
       Skewer: RatSkewer
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   parent: MobMouse
@@ -1997,6 +2007,7 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LeashAnchor # Floofstation
 
 
 - type: entity
@@ -2631,6 +2642,7 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: possum
@@ -2706,6 +2718,7 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: fox
@@ -2785,6 +2798,7 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: corgi
@@ -2846,6 +2860,7 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: corrupted corgi
@@ -3010,6 +3025,7 @@
   - type: NpcFactionMember # DeltaV - give cats faction so they fight mice
     factions:
     - Cat
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: calico cat
@@ -3283,6 +3299,7 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: hamster
@@ -3426,6 +3443,7 @@
   - type: FireVisuals
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: pig
@@ -3498,6 +3516,7 @@
   - type: HTN
     rootTask:
       task: RuminantCompound
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   name: diona nymph
