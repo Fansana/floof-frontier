@@ -10,7 +10,7 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [yap., yaps.]
+  chatMessages: [yaps]
   chatTriggers:
   - yap
   - yaps
@@ -28,6 +28,9 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [gekker.]
+  chatMessages: [gekkers]
   chatTriggers:
   - gekker
+  - gekkers
+  - gekkering
+  - gekkered
