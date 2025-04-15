@@ -1,0 +1,33 @@
+# Vulpkanin
+- type: emote
+  id: Yap
+  name: chat-emote-name-yap
+  category: Vocal
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [yap., yaps.]
+  chatTriggers:
+  - yap
+  - yaps
+  - yapped
+  - yapping
+
+- type: emote
+  id: Gekker
+  name: chat-emote-name-gekker
+  category: Vocal
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [gekker.]
+  chatTriggers:
+  - gekker
