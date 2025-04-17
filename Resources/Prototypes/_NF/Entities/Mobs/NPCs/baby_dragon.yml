@@ -3,8 +3,8 @@
   - SimpleSpaceMobBase
   - FlyingMobBase
   id: MobDragonPet
-  name: baby space dragon
-  description: Even a flying leviathan starts off small and from an egg.
+  name: Space Drake 
+  description: Smaller species of Space dragon.
   components:
   - type: Body
     prototype: Animal
@@ -26,6 +26,7 @@
       Starving: 10
       Dead: 0
     baseDecayRate: 0.00925925925926 # Guy needs to eat and drink
+  - type: LayingDown
   - type: Thirst
     thresholds:
       OverHydrated: 200
