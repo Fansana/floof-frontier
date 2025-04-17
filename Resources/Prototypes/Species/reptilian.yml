@@ -16,6 +16,8 @@
   id: MobReptilianSprites
   sprites:
     Head: MobReptilianHead
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
     Snout: MobHumanoidAnyMarking
     Chest: MobReptilianTorso
     HeadTop: MobHumanoidAnyMarking
@@ -33,13 +35,13 @@
 
 - type: markingPoints
   id: MobReptilianMarkingLimits
-  onlyWhitelisted: true
+  onlyWhitelisted: false
   points:
     Hair:
-      points: 0
+      points: 1
       required: false
     FacialHair:
-      points: 0
+      points: 1
       required: false
     Tail:
       points: 1
