@@ -163,6 +163,8 @@
       - WetFloorSign
       - DeskBell
       - BrbSign
+      - ClothingNeckShockCollar # Floofstation
+      - LeashBasic # Floofstation
     dynamicRecipes:
     # Shared lathe recipes
     ## Advanced tools
