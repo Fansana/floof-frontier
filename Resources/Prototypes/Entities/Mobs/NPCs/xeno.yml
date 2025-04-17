@@ -35,6 +35,7 @@
   - type: NpcFactionMember
     factions:
     - Xeno
+  - type: LayingDown
   - type: Hands
   - type: ComplexInteraction
   - type: Sprite
