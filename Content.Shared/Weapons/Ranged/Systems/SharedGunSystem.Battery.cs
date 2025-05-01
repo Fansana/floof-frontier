@@ -116,39 +116,6 @@ public abstract partial class SharedGunSystem
                 throw new ArgumentOutOfRangeException();
         }
     }
-
-    private void UpdateAmmoCount(EntityUid uid, bool prediction = true)
-    {
-        if (!TryComp<BatteryAmmoProviderComponent>(uid, out var component))
-            return;
-
-        // Use PowerCellSystem to get the battery from the power cell slot
-        if (EntitySystem.Get<PowerCellSystem>().TryGetBatteryFromSlot(uid, out var battery))
-        {
-            Logger.Info($"PowerCell found: CurrentCharge={battery.CurrentCharge}, MaxCharge={battery.MaxCharge}");
-            component.Shots = (int)(battery.CurrentCharge / component.FireCost);
-            component.Capacity = (int)(battery.MaxCharge / component.FireCost);
-        }
-        else
-        {
-            Logger.Info("No PowerCell found in slot.");
-            // Fallback to BatteryComponent if no power cell is found
-            if (TryComp<BatteryComponent>(uid, out var batteryComponent))
-            {
-                component.Shots = (int)(batteryComponent.CurrentCharge / component.FireCost);
-                component.Capacity = (int)(batteryComponent.MaxCharge / component.FireCost);
-            }
-            else
-            {
-                component.Shots = 0;
-                component.Capacity = 0;
-            }
-        }
-
-        if (!prediction)
-            Dirty(uid, component);
-    }
-
     [Serializable, NetSerializable]
     private sealed class BatteryAmmoProviderComponentState : ComponentState
     {
