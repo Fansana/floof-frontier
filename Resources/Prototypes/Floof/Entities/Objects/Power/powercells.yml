@@ -22,3 +22,7 @@
   - type: HitscanBatteryAmmoProvider
     proto: PulseWeak
     fireCost: 100
+  - type: Construction
+    deconstructionTarget: null
+    graph: Energyweapon
+    node: pulse

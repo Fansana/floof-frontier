@@ -1,0 +1,18 @@
+- type: constructionGraph
+  id: Energyweapon
+  start: laser
+  graph:
+  - node: laser
+    entity: PowerCellSmall
+    edges:
+    - to: pulse
+      steps:
+      - tool: Screwing
+        doAfter: 2
+  - node: pulse
+    entity: PowerCellPulseRifle
+    edges:
+    - to: laser
+      steps:
+      - tool: Screwing
+        doAfter: 2

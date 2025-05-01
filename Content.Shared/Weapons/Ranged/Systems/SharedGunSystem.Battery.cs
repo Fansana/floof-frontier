@@ -35,7 +35,7 @@ public abstract partial class SharedGunSystem
         component.Shots = state.Shots;
         component.Capacity = state.MaxShots;
         component.FireCost = state.FireCost;
-        UpdateAmmoCount(uid, prediction: false);
+        UpdateAmmoCount(uid, prediction: false); // Ensure ammo count is updated
     }
 
     private void OnBatteryGetState(EntityUid uid, BatteryAmmoProviderComponent component, ref ComponentGetState args)
@@ -57,7 +57,6 @@ public abstract partial class SharedGunSystem
     {
         var shots = Math.Min(args.Shots, component.Shots);
 
-        // Don't dirty if it's an empty fire.
         if (shots == 0)
             return;
 
@@ -68,6 +67,7 @@ public abstract partial class SharedGunSystem
         }
 
         TakeCharge(uid, component);
+        UpdateAmmoCount(uid, prediction: false); // Ensure ammo count is updated
         UpdateBatteryAppearance(uid, component);
         Dirty(uid, component);
     }
@@ -81,8 +81,15 @@ public abstract partial class SharedGunSystem
     /// <summary>
     /// Update the battery (server-only) whenever fired.
     /// </summary>
-    protected virtual void TakeCharge(EntityUid uid, BatteryAmmoProviderComponent component)
+    protected void TakeCharge(EntityUid uid, BatteryAmmoProviderComponent component)
     {
+        if (EntitySystem.Get<PowerCellSystem>().TryUseCharge(uid, component.FireCost))
+        {
+            Logger.Info("Charge successfully consumed from PowerCell.");
+            return;
+        }
+
+        Logger.Info("Failed to consume charge from PowerCell. Falling back to BatteryComponent.");
         UpdateAmmoCount(uid, prediction: false);
     }
 
@@ -108,6 +115,38 @@ public abstract partial class SharedGunSystem
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    }
+
+    private void UpdateAmmoCount(EntityUid uid, bool prediction = true)
+    {
+        if (!TryComp<BatteryAmmoProviderComponent>(uid, out var component))
+            return;
+
+        // Use PowerCellSystem to get the battery from the power cell slot
+        if (EntitySystem.Get<PowerCellSystem>().TryGetBatteryFromSlot(uid, out var battery))
+        {
+            Logger.Info($"PowerCell found: CurrentCharge={battery.CurrentCharge}, MaxCharge={battery.MaxCharge}");
+            component.Shots = (int)(battery.CurrentCharge / component.FireCost);
+            component.Capacity = (int)(battery.MaxCharge / component.FireCost);
+        }
+        else
+        {
+            Logger.Info("No PowerCell found in slot.");
+            // Fallback to BatteryComponent if no power cell is found
+            if (TryComp<BatteryComponent>(uid, out var batteryComponent))
+            {
+                component.Shots = (int)(batteryComponent.CurrentCharge / component.FireCost);
+                component.Capacity = (int)(batteryComponent.MaxCharge / component.FireCost);
+            }
+            else
+            {
+                component.Shots = 0;
+                component.Capacity = 0;
+            }
+        }
+
+        if (!prediction)
+            Dirty(uid, component);
     }
 
     [Serializable, NetSerializable]

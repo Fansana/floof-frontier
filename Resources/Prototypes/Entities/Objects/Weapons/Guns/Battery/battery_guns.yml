@@ -47,24 +47,19 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-  - type: MagazineAmmoProvider
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: PowerCellSmall
-        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
-        whitelist:
-          tags:
-            - PowerCell
-            - PowerCellSmall
   - type: Appearance
   - type: StaticPrice
     price: 500
   - type: ContainerContainer
     containers:
-      gun_magazine: !type:ContainerSlot
+      cell_slot: !type:ContainerSlot
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
 
 - type: entity
   id: BaseWeaponBatterySmall
@@ -104,7 +99,7 @@
 
 - type: entity
   name: svalinn laser pistol
-  parent: [ BaseWeaponPowerCellSmall, BaseC1Contraband ] # Frontier: BaseMajorContraband<BaseC1Contraband
+  parent: [ BaseWeaponPowerCellSmall, BaseC1Contraband ] # Use BaseWeaponPowerCellSmall for power cell support
   id: WeaponLaserSvalinn
   description: A cheap and widely used laser pistol.
   components:
@@ -122,6 +117,12 @@
     magState: mag
     steps: 5
     zeroVisible: true
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaser
+    fireCost: 50
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
 
 - type: entity
   name: retro laser blaster
