@@ -4,6 +4,7 @@ using Content.Shared.Weapons.Ranged.Events;
 using Robust.Shared.GameStates;
 using Robust.Shared.Map;
 using Robust.Shared.Serialization;
+using Content.Shared.PowerCell;
 
 namespace Content.Shared.Weapons.Ranged.Systems;
 
@@ -81,16 +82,9 @@ public abstract partial class SharedGunSystem
     /// <summary>
     /// Update the battery (server-only) whenever fired.
     /// </summary>
-    protected void TakeCharge(EntityUid uid, BatteryAmmoProviderComponent component)
+    protected virtual void TakeCharge(EntityUid uid, BatteryAmmoProviderComponent component)
     {
-        if (EntitySystem.Get<PowerCellSystem>().TryUseCharge(uid, component.FireCost))
-        {
-            Logger.Info("Charge successfully consumed from PowerCell.");
-            return;
-        }
-
-        Logger.Info("Failed to consume charge from PowerCell. Falling back to BatteryComponent.");
-        UpdateAmmoCount(uid, prediction: false);
+        // Shared logic (if any)
     }
 
     protected void UpdateBatteryAppearance(EntityUid uid, BatteryAmmoProviderComponent component)

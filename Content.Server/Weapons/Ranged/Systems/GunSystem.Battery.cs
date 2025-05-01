@@ -1,5 +1,8 @@
 using Content.Server.Power.Components;
-using Content.Server.PowerCell.Components;
+using Content.Server.Power.EntitySystems; // For BatterySystem
+using Content.Shared.PowerCell; // For PowerCellComponent
+using Content.Shared.PowerCell.Components; // For PowerCellSlotComponent
+using Content.Shared.Containers.ItemSlots; // For ItemSlotsSystem
 using Content.Shared.Damage;
 using Content.Shared.Damage.Events;
 using Content.Shared.FixedPoint;
@@ -35,14 +38,13 @@ public sealed partial class GunSystem
     private void OnBatteryChargeChange(EntityUid uid, BatteryAmmoProviderComponent component, ref ChargeChangedEvent args)
     {
         // Check for a PowerCellSlot component
-        if (TryComp<PowerCellSlotComponent>(uid, out var powerCellSlot) && powerCellSlot.HasCell)
+        if (TryComp<PowerCellSlotComponent>(uid, out var powerCellSlot) &&
+            EntitySystem.Get<ItemSlotsSystem>().TryGetSlot(uid, powerCellSlot.CellSlotId, out var slot) &&
+            slot.Item is { } powerCell &&
+            TryComp<BatteryComponent>(powerCell, out var battery))
         {
-            var powerCell = powerCellSlot.Cell;
-            if (powerCell != null)
-            {
-                UpdateShots(uid, component, powerCell.CurrentCharge, powerCell.MaxCharge);
-                return;
-            }
+            UpdateShots(uid, component, battery.CurrentCharge, battery.MaxCharge);
+            return;
         }
 
         // Fallback to the BatteryComponent if no power cell is found
@@ -52,27 +54,26 @@ public sealed partial class GunSystem
     private void UpdateShots(EntityUid uid, BatteryAmmoProviderComponent component)
     {
         // Check for a PowerCellSlot component
-        if (TryComp<PowerCellSlotComponent>(uid, out var powerCellSlot) && powerCellSlot.HasCell)
+        if (TryComp<PowerCellSlotComponent>(uid, out var powerCellSlot) &&
+            EntitySystem.Get<ItemSlotsSystem>().TryGetSlot(uid, powerCellSlot.CellSlotId, out var slot) &&
+            slot.Item is { } powerCell &&
+            TryComp<BatteryComponent>(powerCell, out var battery))
         {
-            var powerCell = powerCellSlot.Cell;
-            if (powerCell != null)
-            {
-                UpdateShots(uid, component, powerCell.CurrentCharge, powerCell.MaxCharge);
-                return;
-            }
+            UpdateShots(uid, component, battery.CurrentCharge, battery.MaxCharge);
+            return;
         }
 
         // Fallback to the BatteryComponent if no power cell is found
-        if (TryComp<BatteryComponent>(uid, out var battery))
+        if (TryComp<BatteryComponent>(uid, out var batteryComponent))
         {
-            UpdateShots(uid, component, battery.CurrentCharge, battery.MaxCharge);
+            UpdateShots(uid, component, batteryComponent.CurrentCharge, batteryComponent.MaxCharge);
         }
     }
 
     private void UpdateShots(EntityUid uid, BatteryAmmoProviderComponent component, float charge, float maxCharge)
     {
-        var shots = (int) (charge / component.FireCost);
-        var maxShots = (int) (maxCharge / component.FireCost);
+        var shots = (int)(charge / component.FireCost);
+        var maxShots = (int)(maxCharge / component.FireCost);
 
         if (component.Shots != shots || component.Capacity != maxShots)
         {
@@ -129,8 +130,11 @@ public sealed partial class GunSystem
 
     protected override void TakeCharge(EntityUid uid, BatteryAmmoProviderComponent component)
     {
-        // Use PowerCellSystem to consume charge from the power cell
-        if (EntitySystem.Get<PowerCellSystem>().TryUseCharge(uid, component.FireCost))
+        // Use PowerCellSlot to consume charge from the power cell
+        if (TryComp<PowerCellSlotComponent>(uid, out var powerCellSlot) &&
+            EntitySystem.Get<ItemSlotsSystem>().TryGetSlot(uid, powerCellSlot.CellSlotId, out var slot) &&
+            slot.Item is { } powerCell &&
+            EntitySystem.Get<BatterySystem>().TryUseCharge(powerCell, component.FireCost))
         {
             return;
         }
@@ -138,7 +142,11 @@ public sealed partial class GunSystem
         // Fallback to BatteryComponent if no power cell is found or charge cannot be consumed
         if (TryComp<BatteryComponent>(uid, out var battery))
         {
-            _battery.UseCharge(uid, component.FireCost);
+            EntitySystem.Get<BatterySystem>().UseCharge(uid, component.FireCost);
+        }
+        else
+        {
+            Logger.Warning($"Failed to consume charge from {nameof(PowerCellComponent)} or {nameof(BatteryComponent)}.");
         }
     }
 }
