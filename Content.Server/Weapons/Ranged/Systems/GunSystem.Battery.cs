@@ -1,14 +1,12 @@
 using Content.Server.Power.Components;
-using Content.Server.Power.EntitySystems; // For BatterySystem
-using Content.Shared.PowerCell; // For PowerCellComponent
-using Content.Shared.PowerCell.Components; // For PowerCellSlotComponent
-using Content.Shared.Containers.ItemSlots; // For ItemSlotsSystem
 using Content.Shared.Damage;
 using Content.Shared.Damage.Events;
 using Content.Shared.FixedPoint;
+using Content.Shared.PowerCell.Components;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Ranged;
 using Content.Shared.Weapons.Ranged.Components;
+using Content.Shared.Weapons.Ranged.Events;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Weapons.Ranged.Systems;
@@ -23,57 +21,42 @@ public sealed partial class GunSystem
         SubscribeLocalEvent<HitscanBatteryAmmoProviderComponent, ComponentStartup>(OnBatteryStartup);
         SubscribeLocalEvent<HitscanBatteryAmmoProviderComponent, ChargeChangedEvent>(OnBatteryChargeChange);
         SubscribeLocalEvent<HitscanBatteryAmmoProviderComponent, DamageExamineEvent>(OnBatteryDamageExamine);
+        SubscribeLocalEvent<HitscanBatteryAmmoProviderComponent, PowerCellChangedEvent>(OnPowerCellChanged);
 
         // Projectile
         SubscribeLocalEvent<ProjectileBatteryAmmoProviderComponent, ComponentStartup>(OnBatteryStartup);
         SubscribeLocalEvent<ProjectileBatteryAmmoProviderComponent, ChargeChangedEvent>(OnBatteryChargeChange);
         SubscribeLocalEvent<ProjectileBatteryAmmoProviderComponent, DamageExamineEvent>(OnBatteryDamageExamine);
+        SubscribeLocalEvent<ProjectileBatteryAmmoProviderComponent, PowerCellChangedEvent>(OnPowerCellChanged);
     }
 
-    private void OnBatteryStartup(EntityUid uid, BatteryAmmoProviderComponent component, ComponentStartup args)
+    private void OnBatteryStartup<T>(Entity<T> entity, ref ComponentStartup args) where T : BatteryAmmoProviderComponent
     {
-        UpdateShots(uid, component);
+        UpdateShots(entity, entity.Comp);
     }
 
-    private void OnBatteryChargeChange(EntityUid uid, BatteryAmmoProviderComponent component, ref ChargeChangedEvent args)
+    private void OnBatteryChargeChange<T>(Entity<T> entity, ref ChargeChangedEvent args) where T : BatteryAmmoProviderComponent
     {
-        // Check for a PowerCellSlot component
-        if (TryComp<PowerCellSlotComponent>(uid, out var powerCellSlot) &&
-            EntitySystem.Get<ItemSlotsSystem>().TryGetSlot(uid, powerCellSlot.CellSlotId, out var slot) &&
-            slot.Item is { } powerCell &&
-            TryComp<BatteryComponent>(powerCell, out var battery))
-        {
-            UpdateShots(uid, component, battery.CurrentCharge, battery.MaxCharge);
-            return;
-        }
+        UpdateShots(entity, entity.Comp, args.Charge, args.MaxCharge);
+    }
 
-        // Fallback to the BatteryComponent if no power cell is found
-        UpdateShots(uid, component, args.Charge, args.MaxCharge);
+    private void OnPowerCellChanged<T>(Entity<T> entity, ref PowerCellChangedEvent args) where T : BatteryAmmoProviderComponent
+    {
+        UpdateShots(entity, entity.Comp);
     }
 
     private void UpdateShots(EntityUid uid, BatteryAmmoProviderComponent component)
     {
-        // Check for a PowerCellSlot component
-        if (TryComp<PowerCellSlotComponent>(uid, out var powerCellSlot) &&
-            EntitySystem.Get<ItemSlotsSystem>().TryGetSlot(uid, powerCellSlot.CellSlotId, out var slot) &&
-            slot.Item is { } powerCell &&
-            TryComp<BatteryComponent>(powerCell, out var battery))
-        {
-            UpdateShots(uid, component, battery.CurrentCharge, battery.MaxCharge);
-            return;
-        }
+        var ev = new GetChargeEvent();
+        RaiseLocalEvent(uid, ref ev);
 
-        // Fallback to the BatteryComponent if no power cell is found
-        if (TryComp<BatteryComponent>(uid, out var batteryComponent))
-        {
-            UpdateShots(uid, component, batteryComponent.CurrentCharge, batteryComponent.MaxCharge);
-        }
+        UpdateShots(uid, component, ev.CurrentCharge, ev.MaxCharge);
     }
 
     private void UpdateShots(EntityUid uid, BatteryAmmoProviderComponent component, float charge, float maxCharge)
     {
-        var shots = (int)(charge / component.FireCost);
-        var maxShots = (int)(maxCharge / component.FireCost);
+        var shots = (int) (charge / component.FireCost);
+        var maxShots = (int) (maxCharge / component.FireCost);
 
         if (component.Shots != shots || component.Capacity != maxShots)
         {
@@ -81,12 +64,20 @@ public sealed partial class GunSystem
         }
 
         component.Shots = shots;
-        component.Capacity = maxShots;
+
+        if (maxShots > 0)
+            component.Capacity = maxShots;
+
         UpdateBatteryAppearance(uid, component);
+
+        var updateAmmoEv = new UpdateClientAmmoEvent();
+        RaiseLocalEvent(uid, ref updateAmmoEv);
     }
 
-    private void OnBatteryDamageExamine(EntityUid uid, BatteryAmmoProviderComponent component, ref DamageExamineEvent args)
+    private void OnBatteryDamageExamine<T>(Entity<T> entity, ref DamageExamineEvent args) where T : BatteryAmmoProviderComponent
     {
+        var component = entity.Comp; // Retrieve the component from the entity
+
         var damageSpec = GetDamage(component);
 
         if (damageSpec == null)
@@ -128,25 +119,9 @@ public sealed partial class GunSystem
         return null;
     }
 
-    protected override void TakeCharge(EntityUid uid, BatteryAmmoProviderComponent component)
+    protected override void TakeCharge(Entity<BatteryAmmoProviderComponent> entity)
     {
-        // Use PowerCellSlot to consume charge from the power cell
-        if (TryComp<PowerCellSlotComponent>(uid, out var powerCellSlot) &&
-            EntitySystem.Get<ItemSlotsSystem>().TryGetSlot(uid, powerCellSlot.CellSlotId, out var slot) &&
-            slot.Item is { } powerCell &&
-            EntitySystem.Get<BatterySystem>().TryUseCharge(powerCell, component.FireCost))
-        {
-            return;
-        }
-
-        // Fallback to BatteryComponent if no power cell is found or charge cannot be consumed
-        if (TryComp<BatteryComponent>(uid, out var battery))
-        {
-            EntitySystem.Get<BatterySystem>().UseCharge(uid, component.FireCost);
-        }
-        else
-        {
-            Logger.Warning($"Failed to consume charge from {nameof(PowerCellComponent)} or {nameof(BatteryComponent)}.");
-        }
+        var ev = new ChangeChargeEvent(-entity.Comp.FireCost);
+        RaiseLocalEvent(entity, ref ev);
     }
 }

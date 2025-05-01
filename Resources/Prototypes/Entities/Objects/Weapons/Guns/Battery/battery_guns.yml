@@ -50,16 +50,6 @@
   - type: Appearance
   - type: StaticPrice
     price: 500
-  - type: ContainerContainer
-    containers:
-      cell_slot: !type:ContainerSlot
-  - type: PowerCellSlot
-    cellSlotId: cell_slot
-  - type: ItemSlots
-    slots:
-      cell_slot:
-        name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellMedium
 
 - type: entity
   id: BaseWeaponBatterySmall
@@ -117,9 +107,19 @@
     magState: mag
     steps: 5
     zeroVisible: true
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
   - type: HitscanBatteryAmmoProvider
     proto: RedLaser
-    fireCost: 50
+    fireCost: 100
   - type: Appearance
   - type: StaticPrice
     price: 500

@@ -4,7 +4,6 @@ using Content.Shared.Weapons.Ranged.Events;
 using Robust.Shared.GameStates;
 using Robust.Shared.Map;
 using Robust.Shared.Serialization;
-using Content.Shared.PowerCell;
 
 namespace Content.Shared.Weapons.Ranged.Systems;
 
@@ -36,7 +35,7 @@ public abstract partial class SharedGunSystem
         component.Shots = state.Shots;
         component.Capacity = state.MaxShots;
         component.FireCost = state.FireCost;
-        UpdateAmmoCount(uid, prediction: false); // Ensure ammo count is updated
+        UpdateAmmoCount(uid, prediction: false);
     }
 
     private void OnBatteryGetState(EntityUid uid, BatteryAmmoProviderComponent component, ref ComponentGetState args)
@@ -58,6 +57,7 @@ public abstract partial class SharedGunSystem
     {
         var shots = Math.Min(args.Shots, component.Shots);
 
+        // Don't dirty if it's an empty fire.
         if (shots == 0)
             return;
 
@@ -67,8 +67,7 @@ public abstract partial class SharedGunSystem
             component.Shots--;
         }
 
-        TakeCharge(uid, component);
-        UpdateAmmoCount(uid, prediction: false); // Ensure ammo count is updated
+        TakeCharge((uid, component));
         UpdateBatteryAppearance(uid, component);
         Dirty(uid, component);
     }
@@ -82,9 +81,9 @@ public abstract partial class SharedGunSystem
     /// <summary>
     /// Update the battery (server-only) whenever fired.
     /// </summary>
-    protected virtual void TakeCharge(EntityUid uid, BatteryAmmoProviderComponent component)
+    protected virtual void TakeCharge(Entity<BatteryAmmoProviderComponent> entity)
     {
-        // Shared logic (if any)
+        UpdateAmmoCount(entity, prediction: false);
     }
 
     protected void UpdateBatteryAppearance(EntityUid uid, BatteryAmmoProviderComponent component)
@@ -110,6 +109,7 @@ public abstract partial class SharedGunSystem
                 throw new ArgumentOutOfRangeException();
         }
     }
+
     [Serializable, NetSerializable]
     private sealed class BatteryAmmoProviderComponentState : ComponentState
     {
