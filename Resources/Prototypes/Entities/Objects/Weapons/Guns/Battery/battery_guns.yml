@@ -48,6 +48,16 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
   - type: Appearance
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
   - type: StaticPrice
     price: 500
 
@@ -107,16 +117,6 @@
     magState: mag
     steps: 5
     zeroVisible: true
-  - type: ContainerContainer
-    containers:
-      cell_slot: !type:ContainerSlot
-  - type: PowerCellSlot
-    cellSlotId: cell_slot
-  - type: ItemSlots
-    slots:
-      cell_slot:
-        name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellMedium
   - type: HitscanBatteryAmmoProvider
     proto: RedLaser
     fireCost: 100
