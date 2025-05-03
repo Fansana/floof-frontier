@@ -1,6 +1,6 @@
 - type: entity
   name: energy gun
-  parent: [BaseWeaponBattery, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
+  parent: [BaseWeaponPowerCellSmall, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
   id: WeaponEnergyGun
   description: "A basic hybrid energy gun with two settings: disable and kill. On the handle is a label that says 'for authorized use only.'"
   components:
