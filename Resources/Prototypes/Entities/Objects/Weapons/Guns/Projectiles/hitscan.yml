@@ -68,13 +68,13 @@
       Heat: 7
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_laser
+    state: muzzle_laserlight
   travelFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: beam
+    state: beamlight
   impactFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_laser
+    state: impact_laserlight
 
 - type: hitscan
   id: XrayLaser
