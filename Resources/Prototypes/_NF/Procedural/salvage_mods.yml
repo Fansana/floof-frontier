@@ -484,42 +484,42 @@
   cost: 5
   desc: salvage-air-mod-unknown
   gases:
-    - 0 # oxygen
-    - 0 # nitrogen
+    - 33 # oxygen
+    - 37 # nitrogen
     - 0 # carbon dioxide
-    - 103.927899 # plasma
+    - 33.927899 # plasma
     - 0 # tritium
     - 0 # water vapor
     - 0 # miasma
     - 0 # nitrous oxide
     - 0 # frezon
 
-- type: salvageAirMod
-  id: Volatile2
-  cost: 5
-  desc: salvage-air-mod-unknown
-  gases:
-    - 0 # oxygen
-    - 0 # nitrogen
-    - 0 # carbon dioxide
-    - 0 # plasma
-    - 103.927899 # tritium
-    - 0 # water vapor
-    - 0 # miasma
-    - 0 # nitrous oxide
-    - 0 # frezon
+# - type: salvageAirMod
+  # id: Volatile2
+  # cost: 5
+  # desc: salvage-air-mod-unknown
+  # gases:
+    # - 0 # oxygen
+    # - 0 # nitrogen
+    # - 0 # carbon dioxide
+    # - 0 # plasma
+    # - 103.927899 # tritium
+    # - 0 # water vapor
+    # - 0 # miasma
+    # - 0 # nitrous oxide
+    # - 0 # frezon
 
-- type: salvageAirMod
-  id: Volatile3
-  cost: 5
-  desc: salvage-air-mod-unknown
-  gases:
-    - 0 # oxygen
-    - 0 # nitrogen
-    - 0 # carbon dioxide
-    - 0 # plasma
-    - 0 # tritium
-    - 0 # water vapor
-    - 0 # miasma
-    - 0 # nitrous oxide
-    - 103.927899 # frezon
+# - type: salvageAirMod
+  # id: Volatile3
+  # cost: 5
+  # desc: salvage-air-mod-unknown
+  # gases:
+    # - 0 # oxygen
+    # - 0 # nitrogen
+    # - 0 # carbon dioxide
+    # - 0 # plasma
+    # - 0 # tritium
+    # - 0 # water vapor
+    # - 0 # miasma
+    # - 0 # nitrous oxide
+    # - 103.927899 # frezon
