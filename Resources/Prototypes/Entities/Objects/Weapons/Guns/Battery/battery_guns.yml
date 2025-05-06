@@ -40,6 +40,12 @@
   - type: Item
     size: Huge
   - type: AmmoCounter
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
   - type: Gun
     fireRate: 2
     selectedMode: SemiAuto
