@@ -198,7 +198,7 @@
 #    balance:
 #      MercCoin: 0 # Waits for the player to put in money
   - type: AccessReader
-    access: [["NuclearOperative"], ["SyndicateAgent"],["Contractor"], ["Pilot"], ["Mercenary"]]
+    access: [["NuclearOperative"], ["SyndicateAgent"], ["Pilot"], ["Mercenary"]]
 
 - type: entity
   parent: VendingMachine
