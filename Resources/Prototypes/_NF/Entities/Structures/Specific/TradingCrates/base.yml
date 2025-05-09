@@ -118,11 +118,11 @@
     turnInValues:
       FrontierUplinkCoin: 3
       Doubloon: 2
-  - type: ShipyardSellCondition
-    blockSale: true
-    reason: shipyard-console-contraband-onboard
-    allowedShipyardTypes:
-    - Syndicate
-    - BlackMarket
+#  - type: ShipyardSellCondition
+#    blockSale: true
+#    reason: shipyard-console-contraband-onboard
+#    allowedShipyardTypes:
+#    - Syndicate
+#    - BlackMarket
   - type: PirateBountyItem
     id: ContrabandCrate
