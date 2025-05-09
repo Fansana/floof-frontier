@@ -489,8 +489,8 @@
     # - VendingMachineChemicalsSyndicate # A bit less Syndicate loot
     - VendingMachineArcadia
     # - VendingMachineSyndieDrobe # A bit less Syndicate loot
-    - VendingMachineSyndieContraband
-    rareChance: 0.03 # actually rare vs. entry frequencies
+    # - VendingMachineSyndieContraband # A bit less Syndicate loot
+    rareChance: 0.05
 
 - type: entity
   name: random vendomat
@@ -535,9 +535,9 @@
     - VendingMachineArcadia
     - VendingMachineBountyVendPunk
     # - VendingMachineSyndieDrobe # A bit less Syndicate loot
-    - VendingMachineSyndieContraband
+    # - VendingMachineSyndieContraband # A bit less Syndicate loot
     - SpawnDungeonMachineFrame
-    rareChance: 0.03
+    rareChance: 0.05
 
 - type: entity
   name: random vendomat
@@ -567,7 +567,7 @@
     - VendingMachineFlatpackVend
     - VendingMachineExpeditionaryFlatpackVend
     - VendingMachineAmmo
-    - VendingMachineSyndieContraband
+    # - VendingMachineSyndieContraband # A bit less Syndicate loot
     - VendingMachineSec
     - VendingMachineArcadia
     - SpawnDungeonMachineFrame
@@ -1107,3 +1107,6 @@
     - VendingMachineRestockPottedPlantVend
     chance: 0.95
     offset: 0.0
+#    rarePrototypes:
+#    - VendingMachineRestockSyndieContraband # A bit less Syndicate loot
+#    rareChance: 0.001
