@@ -155,7 +155,7 @@
     access: [["NuclearOperative"], ["SyndicateAgent"]]
 
 - type: entity
-  parent: [BaseStructureDisableAnchoring, StorePresetSecurityUplink, VendingMachine]
+  parent: [BaseStructureDisableAnchoring, StorePresetMercenaryUplink, VendingMachine]
   id: VendingMachineMercVend
   name: MercVend
   description: For every sophant a rifle.
@@ -195,7 +195,7 @@
     balance:
       MercCoin: 0 # Waits for the player to put in money
   - type: AccessReader
-    access: [["Mercenary"]]
+    access: [["Contractor"], ["Pilot"], ["Mercenary"]]
 
 - type: entity
   parent: VendingMachine

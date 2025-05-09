@@ -1,5 +1,5 @@
 - type: listing
-  id: UplinkMercenaryHardsuit
+  id: UplinkMercenaryHardsuits
   name:  uplink-mercenary-hardsuit-name
   description: uplink-mercenary-hardsuit-desc
   productEntity: ClothingOuterHardsuitScaf

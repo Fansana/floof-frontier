@@ -63,12 +63,12 @@
   - type: Store
     name: store-preset-name-merc-uplink
     categories:
-    - UplinkMercHardsuits
-    - UplinkMercWeapons
-    - UplinkMercAmmo
-    - UplinkMercUtility
-    - UplinkMercExplosives
-    - UplinkMercBundles
+    - UplinkMercenaryHardsuits
+    - UplinkMercenaryWeapons
+    - UplinkMercenaryAmmo
+    - UplinkMercenaryUtility
+    - UplinkMercenaryExplosives
+    - UplinkMercenaryBundles
     currencyWhitelist:
     - MercCoin
     balance:

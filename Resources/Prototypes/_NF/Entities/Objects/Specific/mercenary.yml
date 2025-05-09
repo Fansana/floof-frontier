@@ -71,3 +71,21 @@
   - type: Tag
     tags:
     - MercenaryUplink
+
+- type: entity
+  parent: BaseMercenaryUplinkRadio
+  id: BaseMercenaryUplinkRadioDebug
+  suffix: Mercenary, DEBUG
+  components:
+  - type: Store
+    balance:
+      MercCoin: 99999
+
+- type: entity
+  parent: BaseMercenaryUplinkRadio
+  id: BaseMercenaryUplinkRadioEmptyTesting
+  suffix: Mercenary, Empty (Testing)
+  components:
+  - type: Store
+    balance:
+      MercCoin: 0
