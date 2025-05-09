@@ -1,0 +1,15 @@
+- type: listing
+  id: UplinkMercenaryHardsuit
+  name:  uplink-mercenary-hardsuit-name
+  description: uplink-mercenary-hardsuit-desc
+  productEntity: ClothingOuterHardsuitScaf
+  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/scaf.rsi, state: icon }
+  cost:
+    MercCoin: 20
+  categories:
+    - UplinkMercenaryHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - MercenaryUplink

@@ -216,3 +216,7 @@ uplink-pirate-greengrenade-name = Green Pirate Grenade
 uplink-pirate-greengrenade-desc = A foul-smelling grenade that makes you feel fuzzy.
 uplink-pirate-graygrenade-name = Gray Pirate Grenade
 uplink-pirate-graygrenade-desc = A solid grenade that feels like a cannonball.
+
+# Mercenary Armor
+uplink-mercenary-hardsuit-name = SCAF Hardsuit
+uplink-mercenary-hardsuit-desc = A suit of vacuum-proof armor highly resistant to projectile weaponry.

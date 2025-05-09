@@ -45,3 +45,29 @@
   components:
   - type: Stack
     count: 10
+
+# Uplinks
+- type: entity
+  parent: [ BaseItem, StorePresetMercenaryUplink ]
+  id: BaseMercenaryUplinkRadio
+  name: mercenary uplink
+  description: Retro looking old radio... But like, Merc-flavored...
+  suffix: Empty
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/communication.rsi
+    layers:
+    - state: old-radio
+  - type: Item
+    sprite: Objects/Devices/communication.rsi
+    heldPrefix: old-radio
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Tag
+    tags:
+    - MercenaryUplink
