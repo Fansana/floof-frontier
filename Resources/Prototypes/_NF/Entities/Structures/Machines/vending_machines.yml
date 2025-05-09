@@ -169,7 +169,7 @@
     denyState: deny-unshaded
 #   screenState: screen
   - type: Sprite
-    sprite: _NF\Structures\Machines\VendingMachines\mercvend.rsi
+    sprite: _NF/Structures/Machines/VendingMachines/mercvend.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -191,11 +191,14 @@
         type: StoreBoundUserInterface
   - type: ActivatableUI
     key: enum.StoreUiKey.Key
-  - type: Store
-    balance:
-      MercCoin: 0 # Waits for the player to put in money
+  - type: Tag
+    tags:
+    - MercenaryUplink
+#  - type: Store
+#    balance:
+#      MercCoin: 0 # Waits for the player to put in money
   - type: AccessReader
-    access: [["Contractor"], ["Pilot"], ["Mercenary"]]
+    access: [["NuclearOperative"], ["SyndicateAgent"],["Contractor"], ["Pilot"], ["Mercenary"]]
 
 - type: entity
   parent: VendingMachine
