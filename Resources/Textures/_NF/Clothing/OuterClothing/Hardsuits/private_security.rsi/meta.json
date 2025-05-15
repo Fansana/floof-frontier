@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Inspiration/modification from/of https://github.com/tgstation/tgstation/commit/4f6190e2895e09116663ef282d3ce1d8b35c032e. Original Vox state made by Flareguy for SS14, all color modifications and corrections made by Vandanna.",
+  "copyright": "Inspiration/modification from/of https://github.com/tgstation/tgstation/commit/4f6190e2895e09116663ef282d3ce1d8b35c032e. Original Vox state made by Flareguy for SS14, equipped-OUTERCLOTHING-resomi made by svarshiksatanist (Discord), lamia & segment by @noctyrnal, all color modifications (to mercenary and private sec variant) and corrections made by Vandanna.",
   "size": {
     "x": 32,
     "y": 32
@@ -17,6 +17,10 @@
         {
           "name": "equipped-OUTERCLOTHING-vox",
           "directions": 4
+        },
+		{
+            "name": "equipped-OUTERCLOTHING-resomi",
+            "directions": 4
         },
         {
             "name": "inhand-left",
