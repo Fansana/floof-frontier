@@ -114,7 +114,18 @@
   id: TattooEyeRight
   bodyPart: Eyes
   markingCategory: Head
-  speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf, Goblin, Felinid, Vulpkanin, Oni, Harpy, Rodentia] # Delta V - Felinid, Vulpkanin, Oni, Harpy
+  speciesRestriction:
+    - Human
+    - SlimePerson
+    - Reptilian
+    - Dwarf
+    - Goblin
+    - Felinid # Delta V
+    - Vulpkanin # Delta V
+    - Oni # Delta V
+    - Harpy # Delta V
+    - Rodentia # Delta V
+    - Feroxi # Flooftier
   coloring:
     default:
       type:
@@ -128,7 +139,18 @@
   id: TattooEyeLeft
   bodyPart: Eyes
   markingCategory: Head
-  speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf, Goblin, Felinid, Vulpkanin, Oni, Harpy, Rodentia] # Delta V - Felinid, Vulpkanin, Oni, Harpy
+  speciesRestriction:
+    - Human
+    - SlimePerson
+    - Reptilian
+    - Dwarf
+    - Goblin
+    - Felinid # Delta V
+    - Vulpkanin # Delta V
+    - Oni # Delta V
+    - Harpy # Delta V
+    - Rodentia # Delta V
+    - Feroxi # Flooftier
   coloring:
     default:
       type:
