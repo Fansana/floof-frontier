@@ -478,7 +478,6 @@ entities:
       - 280
       - 188
       - 284
-      - 105
       - 287
       - 192
       - 739
@@ -575,28 +574,6 @@ entities:
       parent: 1
 - proto: AirlockExternal
   entities:
-  - uid: 120
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.5,-8.5
-      parent: 1
-  - uid: 146
-    components:
-    - type: Transform
-      pos: -6.5,-9.5
-      parent: 1
-  - uid: 147
-    components:
-    - type: Transform
-      pos: 7.5,-9.5
-      parent: 1
-  - uid: 193
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -6.5,-8.5
-      parent: 1
   - uid: 275
     components:
     - type: Transform
@@ -613,6 +590,28 @@ entities:
       parent: 1
     - type: DeviceLinkSink
       invokeCounter: 1
+- proto: AirlockExternalGlass
+  entities:
+  - uid: 105
+    components:
+    - type: Transform
+      pos: -6.5,-8.5
+      parent: 1
+  - uid: 120
+    components:
+    - type: Transform
+      pos: -6.5,-9.5
+      parent: 1
+  - uid: 146
+    components:
+    - type: Transform
+      pos: 7.5,-9.5
+      parent: 1
+  - uid: 147
+    components:
+    - type: Transform
+      pos: 7.5,-8.5
+      parent: 1
 - proto: AirlockGlass
   entities:
   - uid: 173
@@ -685,7 +684,7 @@ entities:
       pos: -5.5,-3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -16381.018
+      secondsUntilStateChange: -17116.715
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1391,6 +1390,18 @@ entities:
       rot: 3.141592653589793 rad
       pos: 2.5,-15.5
       parent: 1
+- proto: ButtonFrameExit
+  entities:
+  - uid: 861
+    components:
+    - type: Transform
+      pos: -3.5,-7.5
+      parent: 1
+  - uid: 862
+    components:
+    - type: Transform
+      pos: 4.5,-7.5
+      parent: 1
 - proto: CableApcExtension
   entities:
   - uid: 151
@@ -1898,6 +1909,26 @@ entities:
     - type: Transform
       pos: 2.5,-7.5
       parent: 1
+  - uid: 852
+    components:
+    - type: Transform
+      pos: -3.5,-5.5
+      parent: 1
+  - uid: 853
+    components:
+    - type: Transform
+      pos: 7.5,-5.5
+      parent: 1
+  - uid: 854
+    components:
+    - type: Transform
+      pos: 8.5,-5.5
+      parent: 1
+  - uid: 855
+    components:
+    - type: Transform
+      pos: 9.5,-5.5
+      parent: 1
 - proto: CableApcStack
   entities:
   - uid: 215
@@ -2119,6 +2150,13 @@ entities:
     - type: Transform
       pos: 1.5,-10.5
       parent: 1
+- proto: CableTerminal
+  entities:
+  - uid: 851
+    components:
+    - type: Transform
+      pos: -3.5,-5.5
+      parent: 1
 - proto: CargoPallet
   entities:
   - uid: 186
@@ -2211,13 +2249,6 @@ entities:
     components:
     - type: Transform
       pos: 3.5,-7.5
-      parent: 1
-- proto: ComputerWallmountStationRecords
-  entities:
-  - uid: 765
-    components:
-    - type: Transform
-      pos: 3.5,-1.5
       parent: 1
 - proto: ConveyorBelt
   entities:
@@ -2605,7 +2636,6 @@ entities:
       devices:
       - 192
       - 287
-      - 105
       - 284
       - 104
       - 101
@@ -2701,19 +2731,6 @@ entities:
       - 306
 - proto: FirelockEdge
   entities:
-  - uid: 105
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 4.5,-8.5
-      parent: 1
-    - type: Door
-      secondsUntilStateChange: -10219.516
-      state: Closing
-    - type: DeviceNetwork
-      deviceLists:
-      - 298
-      - 306
   - uid: 192
     components:
     - type: Transform
@@ -2744,6 +2761,12 @@ entities:
       deviceLists:
       - 298
       - 306
+  - uid: 321
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 4.5,-8.5
+      parent: 1
 - proto: FirelockGlass
   entities:
   - uid: 188
@@ -4144,6 +4167,30 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 6.5,-14.5
       parent: 1
+- proto: GrilleDiagonal
+  entities:
+  - uid: 856
+    components:
+    - type: Transform
+      pos: -1.5,1.5
+      parent: 1
+  - uid: 857
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 2.5,1.5
+      parent: 1
+  - uid: 858
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 1.5,2.5
+      parent: 1
+  - uid: 859
+    components:
+    - type: Transform
+      pos: -0.5,2.5
+      parent: 1
 - proto: GunSafe
   entities:
   - uid: 742
@@ -4162,16 +4209,6 @@ entities:
       locked: False
 - proto: Gyroscope
   entities:
-  - uid: 321
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -8.5,-12.5
-      parent: 1
-    - type: Thruster
-      enabled: False
-    - type: ApcPowerReceiver
-      powerLoad: 1
   - uid: 322
     components:
     - type: Transform
@@ -4189,6 +4226,11 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 9.5,-12.5
+      parent: 1
+  - uid: 765
+    components:
+    - type: Transform
+      pos: -8.5,-12.5
       parent: 1
 - proto: HandHeldMassScanner
   entities:
@@ -5012,6 +5054,21 @@ entities:
       linkedPorts:
         100:
         - Pressed: DoorBolt
+  - uid: 766
+    components:
+    - type: Transform
+      pos: -3.5,-7.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        120:
+        - Pressed: DoorBolt
+        105:
+        - Pressed: DoorBolt
+        147:
+        - Pressed: DoorBolt
+        146:
+        - Pressed: DoorBolt
   - uid: 771
     components:
     - type: Transform
@@ -5022,6 +5079,21 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         646:
+        - Pressed: DoorBolt
+  - uid: 860
+    components:
+    - type: Transform
+      pos: 4.5,-7.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        147:
+        - Pressed: DoorBolt
+        146:
+        - Pressed: DoorBolt
+        105:
+        - Pressed: DoorBolt
+        120:
         - Pressed: DoorBolt
 - proto: SignDirectionalBridge
   entities:
@@ -5136,11 +5208,10 @@ entities:
       parent: 1
 - proto: SuitStorageWallmountCaptain
   entities:
-  - uid: 766
+  - uid: 193
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 5.5,-3.5
+      pos: 3.5,-1.5
       parent: 1
 - proto: SuitStorageWallmountEVAMercenary
   entities:
