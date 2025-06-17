@@ -2,7 +2,7 @@
 # AlexisLuna
 
 # Shuttle Notes:
-# 
+#
 
 - type: vessel
   id: gondola
@@ -25,7 +25,7 @@
   class:
   minPlayers: 0
   stations:
-    ERP-Gondola:
+    gondola:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
