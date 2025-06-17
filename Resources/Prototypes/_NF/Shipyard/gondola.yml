@@ -5,23 +5,23 @@
 # 
 
 - type: vessel
-  id: ERP-Gondola
+  id: gondola
   parent: BaseVessel
   name: ERP Gondola
   description:  A luxury boat for a romantic getaway, with a sauna, wall-to-wall swimming pool and a well-stocked bar.
-  price: 50000
+  price: 45000
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/_NF/Shuttles/ERP-Gondola.yml
+  shuttlePath: /Maps/_NF/Shuttles/gondola.yml
   class:
   - Civilian
   engine:
   - Plasma
 
 - type: gameMap
-  id: ERP-Gondola
-  mapName: 'ERP-Gondola'
-  mapPath: /Maps/_NF/Shuttles/ERP-Gondola.yml
+  id: gondola
+  mapName: 'gondola'
+  mapPath: /Maps/_NF/Shuttles/gondola.yml
   class:
   minPlayers: 0
   stations:
@@ -29,7 +29,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'ERP-Gondola {1}'
+          mapNameTemplate: 'gondola {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
