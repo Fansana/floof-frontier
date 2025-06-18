@@ -19,6 +19,12 @@
     threshold: 1.1
 
 - type: alarmThreshold
+  parent: stationTemperature
+  id: stationTemperatureSauna
+  upperWarnAround: !type:AlarmThresholdSetting
+    threshold: 0.9
+
+- type: alarmThreshold
   id: stationPressure
   upperBound: !type:AlarmThresholdSetting
     threshold: 550 # HazardHighPressure from Atmospherics.cs
