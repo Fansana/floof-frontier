@@ -24,7 +24,6 @@
   id: gondola
   mapName: 'gondola'
   mapPath: /Maps/_NF/Shuttles/gondola.yml
-  class:
   minPlayers: 0
   stations:
     gondola:
