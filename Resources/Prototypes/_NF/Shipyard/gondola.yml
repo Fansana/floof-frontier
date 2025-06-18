@@ -1,5 +1,7 @@
 # Author Info
 # AlexisLuna
+# Discord leximoonlight
+# GitHub https://github.com/AlexisMoonlight
 
 # Shuttle Notes:
 #
@@ -8,7 +10,7 @@
   id: gondola
   parent: BaseVessel
   name: ERP Gondola
-  description:  A luxury boat for a romantic getaway, with a sauna, wall-to-wall swimming pool and a well-stocked bar.
+  description:  A luxury boat for a romantic getaway. It comes with a wall-to-wall swimming pool, sauna, a well-stocked bar and other amenities.
   price: 45000
   category: Medium
   group: Shipyard
