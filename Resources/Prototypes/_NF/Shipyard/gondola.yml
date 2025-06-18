@@ -29,7 +29,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'gondola {1}'
+          mapNameTemplate: 'ERP Gondola {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
