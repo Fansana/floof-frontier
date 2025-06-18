@@ -7,7 +7,7 @@
   - type: AtmosMonitor
     temperatureThresholdId: stationTemperatureSauna
     gasThresholdPrototypes:
-      Oxygen: stationOxygen
+      Oxygen: stationOxygenSauna
       Nitrogen: stationNitrogen
       CarbonDioxide: stationCO2
       Plasma: stationPlasma
