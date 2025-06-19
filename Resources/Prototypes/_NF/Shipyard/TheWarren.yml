@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: https://github.com/Lokilotus
+# Discord: Lokilotus
+
+# Maintainer Info
+# GitHub: https://github.com/Lokilotus
+# Discord: Lokilotus
+
+# Shuttle Notes:
+# Firelocks might be borked, apologies. Mailing units purposefully forgone for disposals so players can use them to traverse between Hydro and Kitchen quickly if understaffed. 
+
+- type: vessel
+  id: TheWarren
+  parent: BaseVessel
+  name: ESS The Warren
+  description: A large, multi-crew vessel intended for use as a self-sufficient Erotic Bunny Bar. Provided by Elysium Star Shipyards, Ltd.
+  price: 125000
+  category: Large
+  group: Shipyard
+  shuttlePath: /Maps/_NF/Shuttles/TheWarren.yml
+  guidebookPage: ShipyardTheWarren #does not exist ><
+  class:
+  - Civilian
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: TheWarren
+  mapName: 'ESS The Warren'
+  mapPath: /Maps/_NF/Shuttles/TheWarren.yml
+  minPlayers: 0
+  stations:
+    TheWarren:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'The Warren {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
