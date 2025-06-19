@@ -1,0 +1,10 @@
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseShortEnergyRevolverExpedition
+  suffix: Dungeon, Energy Revolver
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponEnergyRevolver
+      amount: 1
