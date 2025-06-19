@@ -1,0 +1,20 @@
+- type: listing
+  id: UplinkSecurityEnergyRevolver
+  name:  EG-4 energy revolver
+  description: A highly advanced energy revolver capable of firing both lethal and disabling bullets.
+  productEntity: WeaponEnergyRevolver
+  icon: { sprite: Goobstation/Objects/Weapons/Guns/Battery/erevolver.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 5
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff

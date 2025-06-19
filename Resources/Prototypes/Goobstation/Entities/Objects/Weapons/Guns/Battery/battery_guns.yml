@@ -2,7 +2,7 @@
   name: EG-4 energy revolver
   parent: [BaseWeaponBatterySmall, BaseC2ContrabandUnredeemable]
   id: WeaponEnergyRevolver
-  description: A highly advabced energy revolver capable of firing both lethal and disabling bullets.
+  description: A highly advanced energy revolver capable of firing both lethal and disabling bullets.
   components:
   - type: Sprite
     sprite: Goobstation/Objects/Weapons/Guns/Battery/erevolver.rsi
