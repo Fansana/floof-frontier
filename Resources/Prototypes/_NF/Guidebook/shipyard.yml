@@ -23,6 +23,7 @@
   - ShipyardEagle
   - ShipyardGarden
   - ShipyardGasbender
+  - ShipyardGondola
   - ShipyardGourd
   - ShipyardHammer
   - ShipyardHauler
@@ -145,6 +146,11 @@
   id: ShipyardGasbender
   name: guide-entry-shipyard-gasbender
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Gasbender.xml"
+
+- type: guideEntry
+  id: ShipyardGondola
+  name: guide-entry-shipyard-gondola
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Gondola.xml"
 
 - type: guideEntry
   id: ShipyardGourd
